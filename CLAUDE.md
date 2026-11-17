@@ -20,7 +20,8 @@ defaults:              # なくてよい。行ごとにも書ける
   volume: 1.0          # 0〜2
   pre: 0.05            # 0〜1.5（前の無音・秒）
   post: 0.1            # 0〜1.5（うしろの無音・秒）
-  gobi: sagaru         # 語尾：sagaru＝VOICEVOX のまま（言い切りで下がる）・taira＝下げない・agaru＝少し上げる
+  gobi: auto           # 語尾：auto＝おまかせ（書かなければこれ。ー・っで終わる→agaru、？→sagaru、ほか→taira）
+                       #   sagaru＝VOICEVOX のまま（言い切りで下がる）・taira＝下げない・agaru＝少し上げる。合わない行だけ行ごとに書く
 lines:
   - id: hah            # 小文字の英数字と - _（ファイル名になる）
     text: ハッ！        # 60字まで
