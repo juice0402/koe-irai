@@ -3,31 +3,50 @@
 # ok を true にするのは司令塔だけ：policies/<名前>.md（エンジンから取った約束の文）とキャラの公式の約束を読んで、
 #   有料・広告つきのゲームとアプリに使えるか／販売価格の上限・事前の連絡がないか／クレジットの書き方／禁止のこと を確かめてから
 # credit はゲームのクレジット画面にそのまま出す文（キャラの約束に書き方の指定があればそれに合わせる）
+# 声の種類（style）は policies/speakers.json（エンジン 0.26.2）
 voices:
-  - name: 青山龍星
-    ok: false
-    note: 確認待ち（低い男の声・熱血のスタイルあり）
-  - name: 玄野武宏
-    ok: false
-    note: 確認待ち（男の声）
-  - name: 白上虎太郎
-    ok: false
-    note: 確認待ち（少年の声）
-  - name: 剣崎雌雄
-    ok: false
-    note: 確認待ち（男の声）
-  - name: 春日部つむぎ
-    ok: false
-    note: 確認待ち（女の声）
   - name: 冥鳴ひまり
-    ok: false
-    note: 確認待ち（女の声）
+    ok: true
+    terms: https://www.meimeihimari.com/terms-of-use
+    checked: 2026-11-17
+    note: 女の声（ノーマル）。商用OK・申請や報告はいらない・クレジット必須。オリジナルキャラの声として使ってよいと書いてある。公序良俗に反する・特定の思想や団体の使い方は禁止
+  - name: 青山龍星
+    ok: true
+    terms: https://www.virvoxproject.com/voicevoxの利用規約
+    checked: 2026-11-17
+    note: 低い男の声（ノーマル・熱血・不機嫌・喜び・しっとり・かなしみ・囁き）。個人ならクレジットで商用OK（エンジンの約束の文）。企業がかかわる使い方は事前の確認が要る。くわしい規約のページはここから読めなかった（アプリに出す前に一度読む）
+  - name: 玄野武宏
+    ok: true
+    terms: https://www.virvoxproject.com/voicevoxの利用規約
+    checked: 2026-11-17
+    note: 男の声（ノーマル・喜び・ツンギレ・悲しみ）。クレジットで商用OK（エンジンの約束の文）。くわしい規約のページはここから読めなかった（アプリに出す前に一度読む）
+  - name: 白上虎太郎
+    ok: true
+    terms: https://www.virvoxproject.com/voicevoxの利用規約
+    checked: 2026-11-17
+    note: 少年の声（ふつう・わーい・びくびく・おこ・びえーん）。クレジットで商用OK（エンジンの約束の文）。くわしい規約のページはここから読めなかった（アプリに出す前に一度読む）
+  - name: 春日部つむぎ
+    ok: true
+    terms: https://tsumugi-official.studio.site/rule
+    checked: 2026-11-17
+    note: 女の声（ノーマル）。クレジットで商用OK（エンジンの約束の文）。差別・誹謗中傷・犯罪をすすめる使い方は禁止。くわしい規約のページはここから読めなかった（アプリに出す前に一度読む）
+  - name: 剣崎雌雄
+    ok: true
+    terms: https://frontier.creatia.cc/fanclubs/413/posts/4507
+    checked: 2026-11-17
+    note: 男の声（ノーマル）。クレジットで商用OK（エンジンの約束の文）。実在の人に迷惑がかかる使い方はしない
   - name: ずんだもん
     ok: false
-    note: 確認待ち（政治・宗教・キャラのイメージを損なう使い方は禁止）
+    terms: https://zunko.jp/con_ongen_kiyaku.html
+    checked: 2026-11-17
+    note: 有料・広告つきもクレジットで OK だが、声だけ別のキャラにあてる使い方は約束に書いていない・声のイメージが強い → 使うなら先に問い合わせ。政治・宗教・情報商材などは禁止
   - name: 四国めたん
     ok: false
-    note: 確認待ち（セクシャルな使い方は禁止）
+    terms: https://zunko.jp/con_ongen_kiyaku.html
+    checked: 2026-11-17
+    note: ずんだもんと同じ約束。セクシャルな使い方は禁止
   - name: No.7
     ok: false
-    note: 確認待ち（女の声）
+    terms: https://voiceseven.com/#j0200
+    checked: 2026-11-17
+    note: 非商用だけ（商用は No.7製作委員会に事前の確認が要る）→ 使わない
