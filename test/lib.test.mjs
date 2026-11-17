@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { loadVoices, parseRequest, validateRequest, findStyleId, lineKey, applyParams, wavSeconds, buildCredits, PARAMS } from '../scripts/lib.mjs';
+import { loadVoices, parseRequest, validateRequest, findStyleId, lineKey, applyParams, wavSeconds, buildCredits, PARAMS, shapeGobi } from '../scripts/lib.mjs';
 
 const voices = loadVoices(`
 voices:
@@ -94,4 +94,32 @@ test('クレジット：使った声だけ・1行', () => {
   assert.equal(c.line, '音声合成：VOICEVOX:青山龍星');
   assert.match(c.md, /https:\/\/example.com\/aoyama/);
   assert.equal(c.json.voices.length, 1);
+});
+
+test('語尾：書かなければ sagaru・まちがった値は止まる・sagaru の鍵は前のまま', () => {
+  const r = req('card', `voice: 青山龍星\nstyle: 熱血\ndefaults: {gobi: taira}\nlines:\n  - {id: a, text: ハッ}\n  - {id: b, text: ヤア, gobi: agaru}\n  - {id: c, text: ヤア, gobi: up}\n`);
+  assert.equal(r.lines[0].gobi, 'taira');
+  assert.equal(r.lines[1].gobi, 'agaru');
+  assert.match(validateRequest(r, voices).join(), /gobi は sagaru・taira・agaru/);
+  const l = req('card', `voice: 青山龍星\nstyle: 熱血\nlines:\n  - {id: a, text: ハッ}\n`).lines[0];
+  assert.equal(l.gobi, 'sagaru');
+  const { gobi, ...noGobi } = l;
+  assert.equal(lineKey('0.24.1', 81, l), lineKey('0.24.1', 81, noGobi));
+  assert.notEqual(lineKey('0.24.1', 81, l), lineKey('0.24.1', 81, { ...l, gobi: 'taira' }));
+});
+
+test('語尾：taira は下げすぎない・agaru は最後を上げる・無声の音と前の句はそのまま', () => {
+  const m = (pitch) => ({ text: 'ア', vowel: pitch ? 'a' : 'cl', pitch });
+  const phrases = [{ moras: [m(5.5), m(5.2)] }, { moras: [m(5.6), m(5.9), m(5.4), m(5.1), m(0)] }];
+  assert.equal(shapeGobi(phrases, 'sagaru'), phrases);
+  const t = shapeGobi(phrases, 'taira');
+  assert.deepEqual(t[1].moras.map((x) => x.pitch), [5.6, 5.9, 5.82, 5.82, 0]);
+  assert.deepEqual(t[0].moras.map((x) => x.pitch), [5.5, 5.2]);
+  const a = shapeGobi(phrases, 'agaru');
+  assert.deepEqual(a[1].moras.map((x) => +x.pitch.toFixed(2)), [5.6, 5.9, 5.82, 6.05, 0]);
+  assert.equal(phrases[1].moras[3].pitch, 5.1); // 元は変えない
+  const one = [{ moras: [m(5.5), m(0)] }];
+  assert.deepEqual(shapeGobi(one, 'agaru')[0].moras.map((x) => x.pitch), [5.5, 0]); // 音が1つだけなら変えない
+  const q = applyParams({ accent_phrases: phrases }, { ...req('card', `voice: 青山龍星\nstyle: 熱血\nlines:\n  - {id: a, text: ハッ, gobi: taira}\n`).lines[0] });
+  assert.equal(q.accent_phrases[1].moras[3].pitch, 5.82);
 });
