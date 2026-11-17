@@ -14,6 +14,13 @@ export const PARAMS = {
   post: { key: 'postPhonemeLength', min: 0.0, max: 1.5, def: 0.1 },
 };
 
+// 語尾（VOICEVOX は言い切りの読み方で語尾が下がる。掛け声は下げないほうが元気に聞こえる）
+// sagaru＝エンジンのまま・taira＝下げない・agaru＝少し上げる
+export const GOBI = ['sagaru', 'taira', 'agaru'];
+export const GOBI_DEF = 'sagaru';
+const TAIRA_DROP = 0.08; // taira：いちばん高い音からこれより下げない（pitch は対数。0.1 で約1割）
+const AGARU_UP = 0.15; // agaru：最後の音をいちばん高い音よりこれだけ上げる
+
 export const TEST_GAME = '_test'; // ためし用。約束を確かめていない声も使えるが、ゲームには入れない
 export const MAX_TEXT = 60;
 export const MAX_LINES = 200;
@@ -63,6 +70,7 @@ export function parseRequest(game, set, text) {
         const v = l?.[name] ?? defaults[name] ?? p.def;
         line[name] = Number(v);
       }
+      line.gobi = String(l?.gobi ?? defaults.gobi ?? GOBI_DEF);
       return line;
     }),
   };
@@ -93,6 +101,7 @@ export function validateRequest(req, voices) {
       const x = l[name];
       if (!Number.isFinite(x) || x < p.min || x > p.max) errs.push(`${at}：${name} は ${p.min}〜${p.max}`);
     }
+    if (!GOBI.includes(l.gobi)) errs.push(`${at}：gobi は ${GOBI.join('・')}`);
   });
   return errs;
 }
@@ -109,6 +118,7 @@ export function findStyleId(speakers, voice, style) {
 export function lineKey(engineVersion, styleId, line) {
   const pick = { engine: engineVersion, styleId, text: line.text };
   for (const name of Object.keys(PARAMS)) pick[name] = line[name];
+  if (line.gobi && line.gobi !== GOBI_DEF) pick.gobi = line.gobi; // sagaru の行は前の鍵のまま（作りなおさない）
   return createHash('sha1').update(JSON.stringify(pick)).digest('hex').slice(0, 16);
 }
 
@@ -116,7 +126,23 @@ export function applyParams(query, line) {
   const q = { ...query };
   for (const [name, p] of Object.entries(PARAMS)) q[p.key] = line[name];
   q.outputStereo = false;
+  if (line.gobi) q.accent_phrases = shapeGobi(query.accent_phrases, line.gobi);
   return q;
+}
+
+// 語尾の高さを直す：最後のアクセント句の、いちばん高い音より後ろの音を下げすぎないようにする
+// （無声の音〔ッ・無声化した母音〕は pitch 0 なので数えない）。元の query は変えない
+export function shapeGobi(phrases, gobi) {
+  if (!Array.isArray(phrases) || phrases.length === 0 || gobi === GOBI_DEF) return phrases;
+  const out = phrases.map((p) => ({ ...p, moras: (p.moras || []).map((m) => ({ ...m })) }));
+  const voiced = out[out.length - 1].moras.filter((m) => m.pitch > 0);
+  if (voiced.length < 2) return out;
+  let peakAt = 0;
+  voiced.forEach((m, i) => { if (m.pitch > voiced[peakAt].pitch) peakAt = i; });
+  const peak = voiced[peakAt].pitch;
+  for (let i = peakAt + 1; i < voiced.length; i++) voiced[i].pitch = Math.max(voiced[i].pitch, peak - TAIRA_DROP);
+  if (gobi === 'agaru') voiced[voiced.length - 1].pitch = peak + AGARU_UP;
+  return out;
 }
 
 // WAV の長さ（秒）。ヘッダから data の大きさを読む
