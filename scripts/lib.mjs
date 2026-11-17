@@ -15,9 +15,19 @@ export const PARAMS = {
 };
 
 // 語尾（VOICEVOX は言い切りの読み方で語尾が下がる。掛け声は下げないほうが元気に聞こえる）
-// sagaru＝エンジンのまま・taira＝下げない・agaru＝少し上げる
+// sagaru＝エンジンのまま・taira＝下げない・agaru＝少し上げる・auto＝語尾の文字でえらぶ（書かなければ auto）
 export const GOBI = ['sagaru', 'taira', 'agaru'];
 export const GOBI_DEF = 'sagaru';
+export const GOBI_AUTO = 'auto';
+
+// おまかせ（11/17 しょーくんが聞きくらべて：そこだっ！＝agaru・決めるぜ！＝taira・いっくよー！＝agaru）
+// ？で終わる → sagaru（エンジンが問いかけで上げる）・ー っ ッ で終わる → agaru・ほか → taira
+export function autoGobi(text) {
+  const t = String(text).trim();
+  if (/[？?]$/.test(t)) return 'sagaru';
+  const body = t.replace(/[！!。．.、,～〜♪…\s]+$/u, '');
+  return /[ーっッ]$/.test(body) ? 'agaru' : 'taira';
+}
 const TAIRA_DROP = 0.08; // taira：いちばん高い音からこれより下げない（pitch は対数。0.1 で約1割）
 const AGARU_UP = 0.15; // agaru：最後の音をいちばん高い音よりこれだけ上げる
 
@@ -70,7 +80,8 @@ export function parseRequest(game, set, text) {
         const v = l?.[name] ?? defaults[name] ?? p.def;
         line[name] = Number(v);
       }
-      line.gobi = String(l?.gobi ?? defaults.gobi ?? GOBI_DEF);
+      const gobi = String(l?.gobi ?? defaults.gobi ?? GOBI_AUTO);
+      line.gobi = gobi === GOBI_AUTO ? autoGobi(line.text) : gobi;
       return line;
     }),
   };
@@ -101,7 +112,7 @@ export function validateRequest(req, voices) {
       const x = l[name];
       if (!Number.isFinite(x) || x < p.min || x > p.max) errs.push(`${at}：${name} は ${p.min}〜${p.max}`);
     }
-    if (!GOBI.includes(l.gobi)) errs.push(`${at}：gobi は ${GOBI.join('・')}`);
+    if (!GOBI.includes(l.gobi)) errs.push(`${at}：gobi は ${[GOBI_AUTO, ...GOBI].join('・')}`);
   });
   return errs;
 }

@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { loadVoices, parseRequest, validateRequest, findStyleId, lineKey, applyParams, wavSeconds, buildCredits, PARAMS, shapeGobi } from '../scripts/lib.mjs';
+import { loadVoices, parseRequest, validateRequest, findStyleId, lineKey, applyParams, wavSeconds, buildCredits, PARAMS, shapeGobi, autoGobi } from '../scripts/lib.mjs';
 
 const voices = loadVoices(`
 voices:
@@ -96,16 +96,25 @@ test('クレジット：使った声だけ・1行', () => {
   assert.equal(c.json.voices.length, 1);
 });
 
-test('語尾：書かなければ sagaru・まちがった値は止まる・sagaru の鍵は前のまま', () => {
+test('語尾：defaults・行ごと・まちがった値は止まる・sagaru の鍵は前のまま', () => {
   const r = req('card', `voice: 青山龍星\nstyle: 熱血\ndefaults: {gobi: taira}\nlines:\n  - {id: a, text: ハッ}\n  - {id: b, text: ヤア, gobi: agaru}\n  - {id: c, text: ヤア, gobi: up}\n`);
   assert.equal(r.lines[0].gobi, 'taira');
   assert.equal(r.lines[1].gobi, 'agaru');
-  assert.match(validateRequest(r, voices).join(), /gobi は sagaru・taira・agaru/);
-  const l = req('card', `voice: 青山龍星\nstyle: 熱血\nlines:\n  - {id: a, text: ハッ}\n`).lines[0];
+  assert.match(validateRequest(r, voices).join(), /gobi は auto・sagaru・taira・agaru/);
+  const l = req('card', `voice: 青山龍星\nstyle: 熱血\nlines:\n  - {id: a, text: ハッ, gobi: sagaru}\n`).lines[0];
   assert.equal(l.gobi, 'sagaru');
   const { gobi, ...noGobi } = l;
   assert.equal(lineKey('0.24.1', 81, l), lineKey('0.24.1', 81, noGobi));
   assert.notEqual(lineKey('0.24.1', 81, l), lineKey('0.24.1', 81, { ...l, gobi: 'taira' }));
+});
+
+test('語尾：書かなければ auto（しょーくんの聞きくらべのとおり）', () => {
+  const r = req('card', `voice: 青山龍星\nstyle: 熱血\nlines:\n  - {id: a, text: そこだっ！}\n  - {id: b, text: 決めるぜ！}\n  - {id: c, text: いっくよー！}\n  - {id: d, text: 大丈夫？}\n  - {id: e, text: やったーっ！！}\n  - {id: f, text: 決めるぜ！, gobi: auto}\n`);
+  assert.deepEqual(r.lines.map((x) => x.gobi), ['agaru', 'taira', 'agaru', 'sagaru', 'agaru', 'taira']);
+  assert.deepEqual(validateRequest(r, voices), []);
+  assert.equal(autoGobi('ヤアッ'), 'agaru');
+  assert.equal(autoGobi('それっ？'), 'sagaru');
+  assert.equal(autoGobi('いくぞ！'), 'taira');
 });
 
 test('語尾：taira は下げすぎない・agaru は最後を上げる・無声の音と前の句はそのまま', () => {

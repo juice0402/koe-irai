@@ -65,7 +65,7 @@ for (const f of listRequestFiles(root)) {
       const wavPath = join(tmp, `${f.game}-${f.set}-${l.id}.wav`);
       writeFileSync(wavPath, wav);
       toMp3(wavPath, join(dir, file));
-      lines.push({ id: l.id, text: l.text, voice: l.voice, style: l.style, file, seconds: wavSeconds(wav), key });
+      lines.push({ id: l.id, text: l.text, voice: l.voice, style: l.style, gobi: l.gobi, file, seconds: wavSeconds(wav), key });
       made++;
     }
   }

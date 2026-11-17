@@ -1,4 +1,5 @@
 # ためし（ゲームには入れない）：掛け声がどう聞こえるか
+# 語尾は書いていないので、ぜんぶ auto（おまかせ）。11/17 の聞きくらべで決めたルールのたしかめ
 voice: 青山龍星
 style: 熱血
 defaults:
@@ -23,28 +24,3 @@ lines:
     voice: 春日部つむぎ
     style: ノーマル
     pitch: 0.05
-  # 語尾のくらべ（11/17 しょーくん「語尾が全部さがってるのが気になった」）：-a＝taira（下げない）・-b＝agaru（少し上げる）
-  - id: soko-a
-    text: そこだっ！
-    gobi: taira
-  - id: soko-b
-    text: そこだっ！
-    gobi: agaru
-  - id: kimeru-a
-    text: 決めるぜ！
-    gobi: taira
-  - id: kimeru-b
-    text: 決めるぜ！
-    gobi: agaru
-  - id: tsumugi-iku-a
-    text: いっくよー！
-    voice: 春日部つむぎ
-    style: ノーマル
-    pitch: 0.05
-    gobi: taira
-  - id: tsumugi-iku-b
-    text: いっくよー！
-    voice: 春日部つむぎ
-    style: ノーマル
-    pitch: 0.05
-    gobi: agaru
