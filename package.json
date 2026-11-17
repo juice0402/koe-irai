@@ -1,0 +1,14 @@
+{
+  "name": "koe-irai",
+  "private": true,
+  "type": "module",
+  "description": "声の依頼箱：ゲームの掛け声を VOICEVOX で作る共通のしくみ",
+  "scripts": {
+    "test": "node --test",
+    "check": "node scripts/check.mjs",
+    "make": "node scripts/make.mjs"
+  },
+  "dependencies": {
+    "yaml": "^2.9.1"
+  }
+}

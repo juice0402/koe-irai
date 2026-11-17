@@ -1,0 +1,55 @@
+name: 声を作る
+
+# requests/ の依頼書から、VOICEVOX のエンジンで声を作って out/ に入れる（scripts/make.mjs）
+# 依頼の自動マージ（irai.yml）が main に入れたあと、これを手で動かす（GITHUB_TOKEN のマージでは push の回が動かないため）
+on:
+  push:
+    branches: [main]
+    paths: ['requests/**', 'voices.yml', 'scripts/make.mjs', 'scripts/lib.mjs']
+  workflow_dispatch:
+    inputs:
+      all:
+        description: 'true のときは全部作りなおす'
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: make
+  cancel-in-progress: false
+
+jobs:
+  make:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    services:
+      voicevox:
+        image: voicevox/voicevox_engine:cpu-latest
+        ports: ['50021:50021']
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm ci
+      - name: ffmpeg
+        run: which ffmpeg || (sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg)
+      - name: VOICEVOX が起きるのを待つ
+        run: |
+          for i in $(seq 1 60); do curl -sf http://127.0.0.1:50021/version && echo && exit 0; sleep 5; done
+          echo "VOICEVOX のエンジンが起きなかった"; exit 1
+      - name: 声を作る
+        run: node scripts/make.mjs ${{ (github.event_name == 'workflow_dispatch' && inputs.all) && '--all' || '' }}
+      - name: out を main に入れる
+        run: |
+          git config user.name "koe-irai"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A out
+          if git diff --cached --quiet; then echo "変わりなし"; exit 0; fi
+          git commit -m "声を作った（${GITHUB_RUN_ID}）"
+          for i in 1 2 3; do git push && exit 0; git pull --rebase; done
+          exit 1

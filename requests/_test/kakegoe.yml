@@ -1,0 +1,25 @@
+# ためし（ゲームには入れない）：掛け声がどう聞こえるか
+voice: 青山龍星
+style: 熱血
+defaults:
+  speed: 1.1
+  intonation: 1.4
+lines:
+  - id: hah
+    text: ハッ！
+  - id: yaa
+    text: ヤアッ！
+  - id: soko
+    text: そこだっ！
+  - id: kimeru
+    text: 決めるぜ！
+  - id: tsumugi-ei
+    text: えいっ！
+    voice: 春日部つむぎ
+    style: ノーマル
+    pitch: 0.05
+  - id: tsumugi-iku
+    text: いっくよー！
+    voice: 春日部つむぎ
+    style: ノーマル
+    pitch: 0.05

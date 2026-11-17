@@ -1,0 +1,60 @@
+name: 依頼の自動マージ
+
+# ゲームのチャットが requests/<記号>/<名前>.yml だけの PR を出したら、点検して main に入れ、「声を作る」を動かす
+# ほかのファイルが入っている PR はコメントして止まる（司令塔が見る）
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    branches: [main]
+
+permissions:
+  contents: write
+  pull-requests: write
+  actions: write
+
+concurrency:
+  group: irai-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  irai:
+    if: github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      GH_TOKEN: ${{ github.token }}
+      PR: ${{ github.event.pull_request.number }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm ci
+      - name: 点検
+        id: check
+        run: |
+          node --test > /tmp/test.log 2>&1 || { tail -30 /tmp/test.log; exit 1; }
+          node scripts/check.mjs | tee /tmp/check.log
+      - name: 依頼書だけか
+        id: only
+        run: |
+          files=$(gh api "repos/$GITHUB_REPOSITORY/pulls/$PR/files?per_page=100" --jq '.[].filename')
+          other=$(echo "$files" | grep -v '^requests/' || true)
+          if [ -z "$other" ]; then echo "only=true" >> "$GITHUB_OUTPUT"; else echo "only=false" >> "$GITHUB_OUTPUT"; fi
+      - name: main に入れて、声を作る
+        if: steps.only.outputs.only == 'true'
+        run: |
+          gh api -X PUT "repos/$GITHUB_REPOSITORY/pulls/$PR/merge" -f merge_method=squash -f sha=${{ github.event.pull_request.head.sha }} --jq .message
+          gh api -X POST "repos/$GITHUB_REPOSITORY/actions/workflows/make.yml/dispatches" -f ref=main
+          gh api "repos/$GITHUB_REPOSITORY/issues/$PR/comments" -f body="依頼書を main に入れて「声を作る」を動かした。数分で out/ に mp3 と manifest.json・CREDITS.md ができる（Actions の「声を作る」が緑になったら取りに行ってね）" > /dev/null
+      - name: ほかのファイルがある
+        if: steps.only.outputs.only != 'true'
+        run: |
+          gh api "repos/$GITHUB_REPOSITORY/issues/$PR/comments" -f body="requests/ のほかのファイルが入っているので、自動では入れない（司令塔が見る）" > /dev/null
+      - name: 止まったとき
+        if: failure()
+        run: |
+          body=$(printf '点検で止まった。直して同じブランチに push してね。\n\n```\n%s\n```' "$(cat /tmp/check.log /tmp/test.log 2>/dev/null | tail -30)")
+          gh api "repos/$GITHUB_REPOSITORY/issues/$PR/comments" -f body="$body" > /dev/null
