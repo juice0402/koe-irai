@@ -1,0 +1,62 @@
+{
+  "game": "_test",
+  "set": "kakegoe",
+  "engine": "0.26.2",
+  "request": "requests/_test/kakegoe.yml",
+  "lines": [
+    {
+      "id": "hah",
+      "text": "ハッ！",
+      "voice": "青山龍星",
+      "style": "熱血",
+      "file": "hah.mp3",
+      "seconds": 0.587,
+      "key": "eb9d9ce45de1f205"
+    },
+    {
+      "id": "yaa",
+      "text": "ヤアッ！",
+      "voice": "青山龍星",
+      "style": "熱血",
+      "file": "yaa.mp3",
+      "seconds": 0.907,
+      "key": "6b5944dfaaf9d8e1"
+    },
+    {
+      "id": "soko",
+      "text": "そこだっ！",
+      "voice": "青山龍星",
+      "style": "熱血",
+      "file": "soko.mp3",
+      "seconds": 0.693,
+      "key": "94d5a813b4f11d85"
+    },
+    {
+      "id": "kimeru",
+      "text": "決めるぜ！",
+      "voice": "青山龍星",
+      "style": "熱血",
+      "file": "kimeru.mp3",
+      "seconds": 0.704,
+      "key": "2ab82255b82a3937"
+    },
+    {
+      "id": "tsumugi-ei",
+      "text": "えいっ！",
+      "voice": "春日部つむぎ",
+      "style": "ノーマル",
+      "file": "tsumugi-ei.mp3",
+      "seconds": 0.459,
+      "key": "f28155460c2f7bc2"
+    },
+    {
+      "id": "tsumugi-iku",
+      "text": "いっくよー！",
+      "voice": "春日部つむぎ",
+      "style": "ノーマル",
+      "file": "tsumugi-iku.mp3",
+      "seconds": 0.693,
+      "key": "744d3a130d8aa395"
+    }
+  ]
+}
