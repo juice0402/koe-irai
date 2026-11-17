@@ -5,5 +5,5 @@
 音声合成：VOICEVOX:春日部つむぎ、VOICEVOX:青山龍星
 
 ## 声ごとの約束
-- 春日部つむぎ：（約束のページは voices.yml に）
-- 青山龍星：（約束のページは voices.yml に）
+- 春日部つむぎ：https://tsumugi-official.studio.site/rule（確かめた日 2026-11-17）
+- 青山龍星：https://www.virvoxproject.com/voicevoxの利用規約（確かめた日 2026-11-17）
