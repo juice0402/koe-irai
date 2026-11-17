@@ -9,106 +9,58 @@
       "text": "ハッ！",
       "voice": "青山龍星",
       "style": "熱血",
+      "gobi": "agaru",
       "file": "hah.mp3",
       "seconds": 0.587,
-      "key": "eb9d9ce45de1f205"
+      "key": "524fa4080e2cee6d"
     },
     {
       "id": "yaa",
       "text": "ヤアッ！",
       "voice": "青山龍星",
       "style": "熱血",
+      "gobi": "agaru",
       "file": "yaa.mp3",
       "seconds": 0.907,
-      "key": "6b5944dfaaf9d8e1"
+      "key": "7f5b88f6460a2407"
     },
     {
       "id": "soko",
       "text": "そこだっ！",
       "voice": "青山龍星",
       "style": "熱血",
+      "gobi": "agaru",
       "file": "soko.mp3",
       "seconds": 0.693,
-      "key": "94d5a813b4f11d85"
+      "key": "a4db5fc7446a3a56"
     },
     {
       "id": "kimeru",
       "text": "決めるぜ！",
       "voice": "青山龍星",
       "style": "熱血",
+      "gobi": "taira",
       "file": "kimeru.mp3",
       "seconds": 0.704,
-      "key": "2ab82255b82a3937"
+      "key": "40584d2d37806d95"
     },
     {
       "id": "tsumugi-ei",
       "text": "えいっ！",
       "voice": "春日部つむぎ",
       "style": "ノーマル",
+      "gobi": "agaru",
       "file": "tsumugi-ei.mp3",
       "seconds": 0.459,
-      "key": "f28155460c2f7bc2"
+      "key": "70b2de701696397f"
     },
     {
       "id": "tsumugi-iku",
       "text": "いっくよー！",
       "voice": "春日部つむぎ",
       "style": "ノーマル",
+      "gobi": "agaru",
       "file": "tsumugi-iku.mp3",
-      "seconds": 0.693,
-      "key": "744d3a130d8aa395"
-    },
-    {
-      "id": "soko-a",
-      "text": "そこだっ！",
-      "voice": "青山龍星",
-      "style": "熱血",
-      "file": "soko-a.mp3",
-      "seconds": 0.693,
-      "key": "b473229d3f4b07de"
-    },
-    {
-      "id": "soko-b",
-      "text": "そこだっ！",
-      "voice": "青山龍星",
-      "style": "熱血",
-      "file": "soko-b.mp3",
-      "seconds": 0.693,
-      "key": "a4db5fc7446a3a56"
-    },
-    {
-      "id": "kimeru-a",
-      "text": "決めるぜ！",
-      "voice": "青山龍星",
-      "style": "熱血",
-      "file": "kimeru-a.mp3",
-      "seconds": 0.704,
-      "key": "40584d2d37806d95"
-    },
-    {
-      "id": "kimeru-b",
-      "text": "決めるぜ！",
-      "voice": "青山龍星",
-      "style": "熱血",
-      "file": "kimeru-b.mp3",
-      "seconds": 0.704,
-      "key": "a85a9ee4f2262267"
-    },
-    {
-      "id": "tsumugi-iku-a",
-      "text": "いっくよー！",
-      "voice": "春日部つむぎ",
-      "style": "ノーマル",
-      "file": "tsumugi-iku-a.mp3",
-      "seconds": 0.693,
-      "key": "706fb73c9b71a2be"
-    },
-    {
-      "id": "tsumugi-iku-b",
-      "text": "いっくよー！",
-      "voice": "春日部つむぎ",
-      "style": "ノーマル",
-      "file": "tsumugi-iku-b.mp3",
       "seconds": 0.693,
       "key": "d414acbcbbfe8e8b"
     }
