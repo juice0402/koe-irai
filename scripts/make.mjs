@@ -1,7 +1,7 @@
 // 依頼書から声を作る（Actions「声を作る」が VOICEVOX のエンジンを横で動かして呼ぶ）
 // out/<game>/<set>/<id>.mp3・manifest.json と out/<game>/CREDITS.md・credits.json を作る。
 // 同じ声・文・数字の行は作りなおさない（--all で全部作りなおす）。依頼書から消えた行の音は消す
-import { mkdirSync, writeFileSync, existsSync, readFileSync, readdirSync, rmSync, mkdtempSync } from 'node:fs';
+import { mkdirSync, writeFileSync, existsSync, readFileSync, readdirSync, rmSync, mkdtempSync, statSync } from 'node:fs';
 import { join } from 'node:path';
 import { tmpdir } from 'node:os';
 import { spawnSync } from 'node:child_process';
@@ -87,12 +87,13 @@ for (const [game, names] of usedByGame) {
 // 依頼書がなくなったセットの out は消す
 const reqSets = new Set(listRequestFiles(root).map((f) => `${f.game}/${f.set}`));
 const outRoot = join(root, 'out');
-if (existsSync(outRoot)) {
+const isDir = (p) => existsSync(p) && statSync(p).isDirectory();
+if (isDir(outRoot)) {
   for (const game of readdirSync(outRoot)) {
     const gdir = join(outRoot, game);
-    if (!existsSync(gdir) || !readdirSync(gdir)) continue;
+    if (!isDir(gdir)) continue;
     for (const set of readdirSync(gdir)) {
-      if (/\.(md|json)$/.test(set)) continue;
+      if (!isDir(join(gdir, set))) continue;
       if (!reqSets.has(`${game}/${set}`)) rmSync(join(gdir, set), { recursive: true, force: true });
     }
     if (!usedByGame.has(game)) rmSync(gdir, { recursive: true, force: true });
