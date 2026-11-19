@@ -1,0 +1,35 @@
+name: ためし（枝）
+
+# koe-try/** の枝に push すると、scripts/try/try.mjs で声を作って artifact で出す（main には入れない・司令塔のためし）
+on:
+  push:
+    branches: ['koe-try/**']
+
+permissions:
+  contents: read
+
+jobs:
+  try:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    services:
+      voicevox:
+        image: voicevox/voicevox_engine:cpu-latest
+        ports: ['50021:50021']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm ci
+      - name: ffmpeg
+        run: which ffmpeg || (sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg)
+      - name: VOICEVOX が起きるのを待つ
+        run: |
+          for i in $(seq 1 60); do curl -sf http://127.0.0.1:50021/version && echo && exit 0; sleep 5; done
+          exit 1
+      - run: node scripts/try/try.mjs
+      - uses: actions/upload-artifact@v4
+        with:
+          name: out-try
+          path: out-try/
