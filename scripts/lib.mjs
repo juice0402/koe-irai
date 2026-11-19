@@ -150,32 +150,50 @@ export function applyParams(query, line) {
   for (const [name, p] of Object.entries(PARAMS)) q[p.key] = line[name];
   q.outputStereo = false;
   let phrases = query.accent_phrases;
-  if (line.nobasu != null) phrases = stretchChoon(phrases, line.nobasu);
+  if (line.nobasu != null) phrases = stretchChoon(phrases, line.nobasu, choonAtEnd(line.text));
   if (line.gobi) phrases = shapeGobi(phrases, line.gobi);
   q.accent_phrases = phrases;
   return q;
 }
 
+// ー（長音）の音をさがす。エンジンは ー を「前の音と同じ母音で、子音のない音」にする（例：うーん → ウ・ウ・ン、あちゃー → ア・チャ・ア）
+// text の ー が終わりにあれば最後の候補、ほかは最初の候補（nobasu の行は ー が1つだけ）
+const MUSEI = { A: 'a', I: 'i', U: 'u', E: 'e', O: 'o' };
+const boin = (m) => MUSEI[m?.vowel] || m?.vowel;
+function choonIndexes(all) {
+  const idx = [];
+  all.forEach((m, i) => {
+    if (m.text === 'ー') return idx.push(i);
+    if (i === 0 || m.consonant) return;
+    const v = boin(m);
+    if ('aiueo'.includes(v) && v.length === 1 && v === boin(all[i - 1])) idx.push(i);
+  });
+  return idx;
+}
+export function choonAtEnd(text) {
+  return String(text).replace(/[！!？?。．.、,～〜♪…\s]+$/u, '').endsWith('ー');
+}
+
 // ー（長音）の音の数（make.mjs が nobasu の行で 0 なら止める）
 export function countChoon(phrases) {
-  return (Array.isArray(phrases) ? phrases : []).reduce((n, p) => n + (p.moras || []).filter((m) => m.text === 'ー').length, 0);
+  return choonIndexes((Array.isArray(phrases) ? phrases : []).flatMap((p) => p.moras || [])).length;
 }
 
 // ー の母音を sec 秒にのばす。息の音（無声＝母音が大文字・高さ 0）になっていたら声にもどす。元の query は変えない
-const MUSEI = { A: 'a', I: 'i', U: 'u', E: 'e', O: 'o' };
-export function stretchChoon(phrases, sec) {
+export function stretchChoon(phrases, sec, atEnd = false) {
   if (!Array.isArray(phrases)) return phrases;
   const out = phrases.map((p) => ({ ...p, moras: (p.moras || []).map((m) => ({ ...m })) }));
   const all = out.flatMap((p) => p.moras);
-  all.forEach((m, i) => {
-    if (m.text !== 'ー') return;
-    if (MUSEI[m.vowel]) m.vowel = MUSEI[m.vowel];
-    if (!(m.pitch > 0)) {
-      const prev = all.slice(0, i).reverse().find((x) => x.pitch > 0);
-      if (prev) m.pitch = prev.pitch;
-    }
-    m.vowel_length = sec;
-  });
+  const idx = choonIndexes(all);
+  if (idx.length === 0) return out;
+  const i = atEnd ? idx[idx.length - 1] : idx[0];
+  const m = all[i];
+  if (MUSEI[m.vowel]) m.vowel = MUSEI[m.vowel];
+  if (!(m.pitch > 0)) {
+    const prev = all.slice(0, i).reverse().find((x) => x.pitch > 0);
+    if (prev) m.pitch = prev.pitch;
+  }
+  m.vowel_length = sec;
   return out;
 }
 
