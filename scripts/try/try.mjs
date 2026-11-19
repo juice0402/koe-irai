@@ -36,20 +36,22 @@ function v4(ph, sec, atEnd) { const o = v2(ph, sec, atEnd), all = o.flatMap((p) 
 // v5：0.2 秒ずつ＋高さを少しずつゆらす（平らすぎないように）
 function v5(ph, sec, atEnd) { const o = v3(ph, sec, atEnd), all = o.flatMap((p) => p.moras), i = choonIdx(all, atEnd); if (i < 0) return o; let k = 0;
   for (let j = i; j < all.length && all[j].vowel === all[i].vowel && !all[j].consonant; j++, k++) all[j].pitch = all[i].pitch + (k % 2 ? 0.02 : -0.01); return o; }
-const VARIANTS = { v0, v3, v4, v5 };
+// v7：うーん の ー は 0.3 秒だけにして、ン を nobasu の秒にのばす（う は弱い声なので、ハミングの ン で長さを出す）
+function v7(ph, sec, atEnd) { const o = v1(ph, 0.3, atEnd), all = o.flatMap((p) => p.moras); const n = [...all].reverse().find((m) => m.vowel === 'N'); if (n) n.vowel_length = sec; return o; }
+const VARIANTS = { v0, v7 };
 const CASES = [
+  { id: 'hono-n', text: 'ん', voice: '春日部つむぎ', style: 'ノーマル', pitch: 0.03, speed: 1.0, intonation: 1.4, nobasu: 1.0, nOnly: true },
+  { id: 'mina-n', text: 'ん', voice: '冥鳴ひまり', style: 'ノーマル', pitch: -0.05, speed: 0.85, intonation: 0.65, nobasu: 0.85, nOnly: true },
   { id: 'hono', text: 'うーん', voice: '春日部つむぎ', style: 'ノーマル', pitch: 0.03, speed: 1.0, intonation: 1.4, nobasu: 1.0 },
-  { id: 'hono-mun', text: 'むーん', voice: '春日部つむぎ', style: 'ノーマル', pitch: 0.03, speed: 1.0, intonation: 1.4, nobasu: 1.0 },
   { id: 'mina', text: 'うーん', voice: '冥鳴ひまり', style: 'ノーマル', pitch: -0.05, speed: 0.85, intonation: 0.65, nobasu: 0.85 },
   { id: 'waka', text: 'うーん', voice: 'WhiteCUL', style: 'ノーマル', pitch: 0.07, speed: 0.78, intonation: 1.3, nobasu: 0.78 },
-  { id: 'hono-achaa', text: 'あちゃー', voice: '春日部つむぎ', style: 'ノーマル', pitch: 0.06, speed: 1.0, intonation: 1.5, nobasu: 0.8 },
 ];
 const dump = {};
 for (const c of CASES) {
   const sid = findStyleId(speakers, c.voice, c.style);
   const q = await (await api(`/audio_query?speaker=${sid}&text=${encodeURIComponent(c.text)}`, { method: 'POST' })).json();
   dump[c.id] = { engine: q.accent_phrases.flatMap((p) => p.moras).map((m) => [m.text, m.consonant, m.vowel, +m.vowel_length.toFixed(3), +m.pitch.toFixed(2)]) };
-  for (const [vn, fn] of Object.entries(VARIANTS)) {
+  for (const [vn, fn] of Object.entries(c.nOnly ? { n: (ph, sec) => { const o = clone(ph); o.flatMap((p) => p.moras).filter((m) => m.vowel === 'N').forEach((m) => (m.vowel_length = sec)); return o; } } : VARIANTS)) {
     const ph = fn(q.accent_phrases, c.nobasu, choonAtEnd(c.text));
     dump[c.id][vn] = ph.flatMap((p) => p.moras).map((m) => [m.text, m.vowel, +m.vowel_length.toFixed(3), +m.pitch.toFixed(2)]);
     const body = { ...q, accent_phrases: ph, speedScale: c.speed, pitchScale: c.pitch, intonationScale: c.intonation, volumeScale: 1, prePhonemeLength: 0.05, postPhonemeLength: 0.1, outputStereo: false };
