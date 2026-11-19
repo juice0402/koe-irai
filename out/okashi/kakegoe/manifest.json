@@ -126,13 +126,13 @@
     },
     {
       "id": "mina-uun",
-      "text": "うーーーーん",
+      "text": "うーん",
       "voice": "冥鳴ひまり",
       "style": "ノーマル",
       "gobi": "sagaru",
       "file": "mina-uun.mp3",
-      "seconds": 1.003,
-      "key": "ed4da0a1d294a15e"
+      "seconds": 0.491,
+      "key": "15b7cdb5f4888b76"
     },
     {
       "id": "waka-sore",
