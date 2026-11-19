@@ -1,0 +1,106 @@
+{
+  "game": "_test",
+  "set": "okashi-uun",
+  "engine": "0.26.2",
+  "request": "requests/_test/okashi-uun.yml",
+  "lines": [
+    {
+      "id": "h1",
+      "text": "うーん",
+      "voice": "春日部つむぎ",
+      "style": "ノーマル",
+      "gobi": "sagaru",
+      "nobasu": 1,
+      "file": "h1.mp3",
+      "seconds": 1.419,
+      "key": "2754f7818f8636b7"
+    },
+    {
+      "id": "h2",
+      "text": "うーん",
+      "voice": "春日部つむぎ",
+      "style": "ノーマル",
+      "gobi": "taira",
+      "nobasu": 1,
+      "file": "h2.mp3",
+      "seconds": 1.419,
+      "key": "54a5489e50e63c28"
+    },
+    {
+      "id": "h3",
+      "text": "ううーん",
+      "voice": "春日部つむぎ",
+      "style": "ノーマル",
+      "gobi": "sagaru",
+      "nobasu": 0.9,
+      "file": "h3.mp3",
+      "seconds": 1.44,
+      "key": "0dc2848ebea094a9"
+    },
+    {
+      "id": "h4",
+      "text": "うーん",
+      "voice": "春日部つむぎ",
+      "style": "ノーマル",
+      "gobi": "taira",
+      "nobasu": 1,
+      "file": "h4.mp3",
+      "seconds": 1.419,
+      "key": "c906c7e4ccbf3696"
+    },
+    {
+      "id": "h5",
+      "text": "んーー",
+      "voice": "春日部つむぎ",
+      "style": "ノーマル",
+      "gobi": "sagaru",
+      "file": "h5.mp3",
+      "seconds": 0.544,
+      "key": "1e8c7c14de677771"
+    },
+    {
+      "id": "m1",
+      "text": "うーん",
+      "voice": "冥鳴ひまり",
+      "style": "ノーマル",
+      "gobi": "sagaru",
+      "nobasu": 0.85,
+      "file": "m1.mp3",
+      "seconds": 1.451,
+      "key": "5ecde7536bb92162"
+    },
+    {
+      "id": "m2",
+      "text": "うーん",
+      "voice": "冥鳴ひまり",
+      "style": "ノーマル",
+      "gobi": "taira",
+      "nobasu": 0.85,
+      "file": "m2.mp3",
+      "seconds": 1.451,
+      "key": "68a220ee07ad988f"
+    },
+    {
+      "id": "m3",
+      "text": "ううーん",
+      "voice": "冥鳴ひまり",
+      "style": "ノーマル",
+      "gobi": "sagaru",
+      "nobasu": 0.8,
+      "file": "m3.mp3",
+      "seconds": 1.579,
+      "key": "cc29e5861d6cc962"
+    },
+    {
+      "id": "m4",
+      "text": "うーん",
+      "voice": "冥鳴ひまり",
+      "style": "ノーマル",
+      "gobi": "taira",
+      "nobasu": 0.85,
+      "file": "m4.mp3",
+      "seconds": 1.451,
+      "key": "68a220ee07ad988f"
+    }
+  ]
+}
