@@ -58,6 +58,28 @@
       "file": "waka-uun-10.mp3",
       "seconds": 1.813,
       "key": "80360777e410669c"
+    },
+    {
+      "id": "hono-nn-10",
+      "text": "んー",
+      "voice": "春日部つむぎ",
+      "style": "ノーマル",
+      "gobi": "sagaru",
+      "nobasu": 1,
+      "file": "hono-nn-10.mp3",
+      "seconds": 1.269,
+      "key": "9ffe92077399a4da"
+    },
+    {
+      "id": "mina-nn-085",
+      "text": "んー",
+      "voice": "冥鳴ひまり",
+      "style": "ノーマル",
+      "gobi": "sagaru",
+      "nobasu": 0.85,
+      "file": "mina-nn-085.mp3",
+      "seconds": 1.344,
+      "key": "d460f7bb97cb11df"
     }
   ]
 }
