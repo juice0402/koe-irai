@@ -86,53 +86,53 @@
     },
     {
       "id": "mina-ha",
-      "text": "……は",
+      "text": "は",
       "voice": "冥鳴ひまり",
       "style": "ノーマル",
       "gobi": "sagaru",
       "file": "mina-ha.mp3",
       "seconds": 0.288,
-      "key": "654c6b21217d8a09"
+      "key": "0b607d67b27854ce"
     },
     {
       "id": "mina-fu",
-      "text": "……ふ",
+      "text": "ふ",
       "voice": "冥鳴ひまり",
       "style": "ノーマル",
       "gobi": "sagaru",
       "file": "mina-fu.mp3",
       "seconds": 0.331,
-      "key": "5f0a1d7ad03e16a3"
+      "key": "c925194635746d81"
     },
     {
       "id": "mina-n",
-      "text": "……ん",
+      "text": "ん",
       "voice": "冥鳴ひまり",
       "style": "ノーマル",
       "gobi": "taira",
       "file": "mina-n.mp3",
       "seconds": 0.395,
-      "key": "6fc604ee915c2908"
+      "key": "ba840493d931df0e"
     },
     {
       "id": "mina-yoshi",
-      "text": "……よし。",
+      "text": "よし。",
       "voice": "冥鳴ひまり",
       "style": "ノーマル",
       "gobi": "sagaru",
       "file": "mina-yoshi.mp3",
       "seconds": 0.565,
-      "key": "e0da097d16a625dc"
+      "key": "ca14115a0cafadda"
     },
     {
       "id": "mina-uun",
-      "text": "……うーーーーん",
+      "text": "うーーーーん",
       "voice": "冥鳴ひまり",
       "style": "ノーマル",
       "gobi": "sagaru",
       "file": "mina-uun.mp3",
       "seconds": 1.003,
-      "key": "f96b63a8528cd098"
+      "key": "ed4da0a1d294a15e"
     },
     {
       "id": "waka-sore",
