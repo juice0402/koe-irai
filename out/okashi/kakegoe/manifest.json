@@ -29,10 +29,10 @@
       "text": "それ！",
       "voice": "春日部つむぎ",
       "style": "ノーマル",
-      "gobi": "sagaru",
+      "gobi": "agaru",
       "file": "hono-sore.mp3",
       "seconds": 0.416,
-      "key": "c8d234b70960d16d"
+      "key": "4e61ebeb4f2534cd"
     },
     {
       "id": "hono-waa",
@@ -49,10 +49,10 @@
       "text": "やった！",
       "voice": "春日部つむぎ",
       "style": "ノーマル",
-      "gobi": "taira",
+      "gobi": "agaru",
       "file": "hono-yatta.mp3",
       "seconds": 0.501,
-      "key": "17b35af4e0faa22c"
+      "key": "d45510ff73c1c696"
     },
     {
       "id": "hono-yoshi",
