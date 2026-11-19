@@ -1,0 +1,66 @@
+# ためし（ゲームには入れない）：まぜまぜおかし屋（okashi）の3人の掛け声の声えらび（11/19 昼のチャット【okashi-hiru】）
+# ほのか＝熱い・おっちょこちょい（10代後半）／みなも＝クール・短い話し方（10代後半）／わかば＝おっとりのお姉さん（20代前半）
+# キャラごとに4つの声の案。しょーくんが聞いてえらぶ → requests/okashi/ に本番の依頼書
+voice: 春日部つむぎ
+style: ノーマル
+lines:
+  # hono-hanamaru（満別花丸・元気）
+  - {id: hono-hanamaru-irassyai, text: いらっしゃいませー！, voice: 満別花丸, style: 元気, speed: 1.05, intonation: 1.35}
+  - {id: hono-hanamaru-oishiku, text: おいしくなーれ！, voice: 満別花丸, style: 元気, speed: 1.05, intonation: 1.35}
+  - {id: hono-hanamaru-yatta, text: やったー！, voice: 満別花丸, style: 元気, speed: 1.05, intonation: 1.35}
+  - {id: hono-hanamaru-ei, text: えいっ！, voice: 満別花丸, style: 元気, speed: 1.05, intonation: 1.35}
+  # hono-aru（猫使アル・うきうき）
+  - {id: hono-aru-irassyai, text: いらっしゃいませー！, voice: 猫使アル, style: うきうき, speed: 1.05, intonation: 1.35}
+  - {id: hono-aru-oishiku, text: おいしくなーれ！, voice: 猫使アル, style: うきうき, speed: 1.05, intonation: 1.35}
+  - {id: hono-aru-yatta, text: やったー！, voice: 猫使アル, style: うきうき, speed: 1.05, intonation: 1.35}
+  - {id: hono-aru-ei, text: えいっ！, voice: 猫使アル, style: うきうき, speed: 1.05, intonation: 1.35}
+  # hono-whitecul（WhiteCUL・たのしい）
+  - {id: hono-whitecul-irassyai, text: いらっしゃいませー！, voice: WhiteCUL, style: たのしい, speed: 1.05, intonation: 1.35}
+  - {id: hono-whitecul-oishiku, text: おいしくなーれ！, voice: WhiteCUL, style: たのしい, speed: 1.05, intonation: 1.35}
+  - {id: hono-whitecul-yatta, text: やったー！, voice: WhiteCUL, style: たのしい, speed: 1.05, intonation: 1.35}
+  - {id: hono-whitecul-ei, text: えいっ！, voice: WhiteCUL, style: たのしい, speed: 1.05, intonation: 1.35}
+  # hono-tsumugi（春日部つむぎ・ノーマル）
+  - {id: hono-tsumugi-irassyai, text: いらっしゃいませー！, voice: 春日部つむぎ, style: ノーマル, speed: 1.05, intonation: 1.35, pitch: 0.04}
+  - {id: hono-tsumugi-oishiku, text: おいしくなーれ！, voice: 春日部つむぎ, style: ノーマル, speed: 1.05, intonation: 1.35, pitch: 0.04}
+  - {id: hono-tsumugi-yatta, text: やったー！, voice: 春日部つむぎ, style: ノーマル, speed: 1.05, intonation: 1.35, pitch: 0.04}
+  - {id: hono-tsumugi-ei, text: えいっ！, voice: 春日部つむぎ, style: ノーマル, speed: 1.05, intonation: 1.35, pitch: 0.04}
+  # mina-bii（猫使ビィ・おちつき）
+  - {id: mina-bii-irassyai, text: ……いらっしゃい, voice: 猫使ビィ, style: おちつき, speed: 0.95, intonation: 0.65}
+  - {id: mina-bii-dekita, text: ……できた, voice: 猫使ビィ, style: おちつき, speed: 0.95, intonation: 0.65}
+  - {id: mina-bii-ii, text: ……ん、いい, voice: 猫使ビィ, style: おちつき, speed: 0.95, intonation: 0.65}
+  - {id: mina-bii-ha, text: ……はっ, voice: 猫使ビィ, style: おちつき, speed: 0.95, intonation: 0.65}
+  # mina-tobari（夜語トバリ・呆れ）
+  - {id: mina-tobari-irassyai, text: ……いらっしゃい, voice: 夜語トバリ, style: 呆れ, speed: 0.95, intonation: 0.65}
+  - {id: mina-tobari-dekita, text: ……できた, voice: 夜語トバリ, style: 呆れ, speed: 0.95, intonation: 0.65}
+  - {id: mina-tobari-ii, text: ……ん、いい, voice: 夜語トバリ, style: 呆れ, speed: 0.95, intonation: 0.65}
+  - {id: mina-tobari-ha, text: ……はっ, voice: 夜語トバリ, style: 呆れ, speed: 0.95, intonation: 0.65}
+  # mina-sayo（小夜/SAYO・ノーマル）
+  - {id: mina-sayo-irassyai, text: ……いらっしゃい, voice: 小夜/SAYO, style: ノーマル, speed: 0.95, intonation: 0.65}
+  - {id: mina-sayo-dekita, text: ……できた, voice: 小夜/SAYO, style: ノーマル, speed: 0.95, intonation: 0.65}
+  - {id: mina-sayo-ii, text: ……ん、いい, voice: 小夜/SAYO, style: ノーマル, speed: 0.95, intonation: 0.65}
+  - {id: mina-sayo-ha, text: ……はっ, voice: 小夜/SAYO, style: ノーマル, speed: 0.95, intonation: 0.65}
+  # mina-himari（冥鳴ひまり・ノーマル）
+  - {id: mina-himari-irassyai, text: ……いらっしゃい, voice: 冥鳴ひまり, style: ノーマル, speed: 0.95, intonation: 0.65, pitch: -0.02}
+  - {id: mina-himari-dekita, text: ……できた, voice: 冥鳴ひまり, style: ノーマル, speed: 0.95, intonation: 0.65, pitch: -0.02}
+  - {id: mina-himari-ii, text: ……ん、いい, voice: 冥鳴ひまり, style: ノーマル, speed: 0.95, intonation: 0.65, pitch: -0.02}
+  - {id: mina-himari-ha, text: ……はっ, voice: 冥鳴ひまり, style: ノーマル, speed: 0.95, intonation: 0.65, pitch: -0.02}
+  # waka-aru（猫使アル・おちつき）
+  - {id: waka-aru-araara, text: あらあら, voice: 猫使アル, style: おちつき, speed: 0.88, intonation: 1.15}
+  - {id: waka-aru-ufufu, text: うふふ, voice: 猫使アル, style: おちつき, speed: 0.88, intonation: 1.15}
+  - {id: waka-aru-irassyai, text: いらっしゃいませぇ, voice: 猫使アル, style: おちつき, speed: 0.88, intonation: 1.15}
+  - {id: waka-aru-sore, text: それっ, voice: 猫使アル, style: おちつき, speed: 0.88, intonation: 1.15}
+  # waka-whitecul（WhiteCUL・ノーマル）
+  - {id: waka-whitecul-araara, text: あらあら, voice: WhiteCUL, style: ノーマル, speed: 0.88, intonation: 1.15}
+  - {id: waka-whitecul-ufufu, text: うふふ, voice: WhiteCUL, style: ノーマル, speed: 0.88, intonation: 1.15}
+  - {id: waka-whitecul-irassyai, text: いらっしゃいませぇ, voice: WhiteCUL, style: ノーマル, speed: 0.88, intonation: 1.15}
+  - {id: waka-whitecul-sore, text: それっ, voice: WhiteCUL, style: ノーマル, speed: 0.88, intonation: 1.15}
+  # waka-tobari（夜語トバリ・ノーマル）
+  - {id: waka-tobari-araara, text: あらあら, voice: 夜語トバリ, style: ノーマル, speed: 0.88, intonation: 1.15}
+  - {id: waka-tobari-ufufu, text: うふふ, voice: 夜語トバリ, style: ノーマル, speed: 0.88, intonation: 1.15}
+  - {id: waka-tobari-irassyai, text: いらっしゃいませぇ, voice: 夜語トバリ, style: ノーマル, speed: 0.88, intonation: 1.15}
+  - {id: waka-tobari-sore, text: それっ, voice: 夜語トバリ, style: ノーマル, speed: 0.88, intonation: 1.15}
+  # waka-himari（冥鳴ひまり・ノーマル）
+  - {id: waka-himari-araara, text: あらあら, voice: 冥鳴ひまり, style: ノーマル, speed: 0.88, intonation: 1.15, pitch: -0.03}
+  - {id: waka-himari-ufufu, text: うふふ, voice: 冥鳴ひまり, style: ノーマル, speed: 0.88, intonation: 1.15, pitch: -0.03}
+  - {id: waka-himari-irassyai, text: いらっしゃいませぇ, voice: 冥鳴ひまり, style: ノーマル, speed: 0.88, intonation: 1.15, pitch: -0.03}
+  - {id: waka-himari-sore, text: それっ, voice: 冥鳴ひまり, style: ノーマル, speed: 0.88, intonation: 1.15, pitch: -0.03}
