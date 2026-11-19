@@ -16,7 +16,7 @@ lines:
   - {id: hono-waa, text: わぁ！, pitch: 0.08, speed: 1.12, intonation: 1.6, gobi: sagaru}
   - {id: hono-yatta, text: やった！, pitch: 0.08, speed: 1.12, intonation: 1.6, gobi: agaru}
   - {id: hono-yoshi, text: よーし！, pitch: 0.08, speed: 1.12, intonation: 1.6, gobi: sagaru}
-  - {id: hono-uun, text: うーーーーん……, pitch: 0.03, speed: 0.72, intonation: 1.4, gobi: sagaru, post: 0.1}   # 11/19 14:00「1秒くらいかけて伸ばす」
+  - {id: hono-uun, text: うーーーーーん……, pitch: 0.03, speed: 0.64, intonation: 1.4, gobi: sagaru, post: 0.1}   # 11/19 14:00「1秒くらいかけて伸ばす」
   - {id: hono-achaa, text: あちゃーーー……, pitch: 0.06, speed: 0.85, intonation: 1.5, gobi: sagaru, post: 0.1}   # 11/19 14:00「最後伸ばしをつよく。あちゃ↓・・・」
   # ---- みなも ----
   - {id: mina-ha, text: ……は, voice: 冥鳴ひまり, style: ノーマル, pitch: -0.02, speed: 0.95, intonation: 0.65, gobi: sagaru}
