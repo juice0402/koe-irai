@@ -1,0 +1,8 @@
+# ためし（ゲームには入れない）：のばす音（nobasu）の聞きくらべ（11/19 まぜまぜの「うーん」「あちゃー」）
+# 声と数字は requests/okashi/kakegoe.yml の hono-uun・hono-achaa・mina-uun・waka-uun と同じ。ー は1つ・「……」はとった
+lines:
+  - {id: hono-uun-08, text: うーん, voice: 春日部つむぎ, style: ノーマル, pitch: 0.03, speed: 0.64, intonation: 1.4, gobi: sagaru, post: 0.1, nobasu: 0.8}
+  - {id: hono-uun-10, text: うーん, voice: 春日部つむぎ, style: ノーマル, pitch: 0.03, speed: 0.64, intonation: 1.4, gobi: sagaru, post: 0.1, nobasu: 1.0}
+  - {id: hono-achaa-08, text: あちゃー, voice: 春日部つむぎ, style: ノーマル, pitch: 0.06, speed: 0.85, intonation: 1.5, gobi: sagaru, post: 0.1, nobasu: 0.8}
+  - {id: mina-uun-10, text: うーん, voice: 冥鳴ひまり, style: ノーマル, pitch: -0.05, speed: 0.85, intonation: 0.65, gobi: sagaru, post: 0.1, nobasu: 1.0}
+  - {id: waka-uun-10, text: うーん, voice: WhiteCUL, style: ノーマル, pitch: 0.07, speed: 0.78, intonation: 1.3, gobi: sagaru, post: 0.1, nobasu: 1.0}

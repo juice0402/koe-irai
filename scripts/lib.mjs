@@ -31,6 +31,11 @@ export function autoGobi(text) {
 const TAIRA_DROP = 0.08; // taira：いちばん高い音からこれより下げない（pitch は対数。0.1 で約1割）
 const AGARU_UP = 0.15; // agaru：最後の音をいちばん高い音よりこれだけ上げる
 
+// のばす音（11/19 しょーくん「うーんを1秒くらいにのばしたい」）：text の ー（長音）1つの母音を、決めた秒の長さにする。
+// ー をいくつ重ねても VOICEVOX はまとめて短く読み、重ねすぎると息の音（無声）になるため
+export const NOBASU_MIN = 0.05;
+export const NOBASU_MAX = 3.0;
+
 export const TEST_GAME = '_test'; // ためし用。約束を確かめていない声も使えるが、ゲームには入れない
 export const MAX_TEXT = 60;
 export const MAX_LINES = 200;
@@ -82,6 +87,7 @@ export function parseRequest(game, set, text) {
       }
       const gobi = String(l?.gobi ?? defaults.gobi ?? GOBI_AUTO);
       line.gobi = gobi === GOBI_AUTO ? autoGobi(line.text) : gobi;
+      line.nobasu = l?.nobasu == null ? null : Number(l.nobasu); // 行ごとだけ（defaults には書かない）
       return line;
     }),
   };
@@ -113,6 +119,11 @@ export function validateRequest(req, voices) {
       if (!Number.isFinite(x) || x < p.min || x > p.max) errs.push(`${at}：${name} は ${p.min}〜${p.max}`);
     }
     if (!GOBI.includes(l.gobi)) errs.push(`${at}：gobi は ${[GOBI_AUTO, ...GOBI].join('・')}`);
+    if (l.nobasu != null) {
+      if (!Number.isFinite(l.nobasu) || l.nobasu < NOBASU_MIN || l.nobasu > NOBASU_MAX) errs.push(`${at}：nobasu は ${NOBASU_MIN}〜${NOBASU_MAX}（秒）`);
+      const n = [...l.text].filter((c) => c === 'ー').length;
+      if (n !== 1) errs.push(`${at}：nobasu の行は、text に ー を1つだけ書く（いま ${n} こ。重ねると息の音になる）`);
+    }
   });
   return errs;
 }
@@ -130,6 +141,7 @@ export function lineKey(engineVersion, styleId, line) {
   const pick = { engine: engineVersion, styleId, text: line.text };
   for (const name of Object.keys(PARAMS)) pick[name] = line[name];
   if (line.gobi && line.gobi !== GOBI_DEF) pick.gobi = line.gobi; // sagaru の行は前の鍵のまま（作りなおさない）
+  if (line.nobasu != null) pick.nobasu = line.nobasu;
   return createHash('sha1').update(JSON.stringify(pick)).digest('hex').slice(0, 16);
 }
 
@@ -137,8 +149,34 @@ export function applyParams(query, line) {
   const q = { ...query };
   for (const [name, p] of Object.entries(PARAMS)) q[p.key] = line[name];
   q.outputStereo = false;
-  if (line.gobi) q.accent_phrases = shapeGobi(query.accent_phrases, line.gobi);
+  let phrases = query.accent_phrases;
+  if (line.nobasu != null) phrases = stretchChoon(phrases, line.nobasu);
+  if (line.gobi) phrases = shapeGobi(phrases, line.gobi);
+  q.accent_phrases = phrases;
   return q;
+}
+
+// ー（長音）の音の数（make.mjs が nobasu の行で 0 なら止める）
+export function countChoon(phrases) {
+  return (Array.isArray(phrases) ? phrases : []).reduce((n, p) => n + (p.moras || []).filter((m) => m.text === 'ー').length, 0);
+}
+
+// ー の母音を sec 秒にのばす。息の音（無声＝母音が大文字・高さ 0）になっていたら声にもどす。元の query は変えない
+const MUSEI = { A: 'a', I: 'i', U: 'u', E: 'e', O: 'o' };
+export function stretchChoon(phrases, sec) {
+  if (!Array.isArray(phrases)) return phrases;
+  const out = phrases.map((p) => ({ ...p, moras: (p.moras || []).map((m) => ({ ...m })) }));
+  const all = out.flatMap((p) => p.moras);
+  all.forEach((m, i) => {
+    if (m.text !== 'ー') return;
+    if (MUSEI[m.vowel]) m.vowel = MUSEI[m.vowel];
+    if (!(m.pitch > 0)) {
+      const prev = all.slice(0, i).reverse().find((x) => x.pitch > 0);
+      if (prev) m.pitch = prev.pitch;
+    }
+    m.vowel_length = sec;
+  });
+  return out;
 }
 
 // 語尾の高さを直す：最後のアクセント句の、いちばん高い音より後ろの音を下げすぎないようにする

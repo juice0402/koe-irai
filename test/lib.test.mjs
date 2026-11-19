@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { loadVoices, parseRequest, validateRequest, findStyleId, lineKey, applyParams, wavSeconds, buildCredits, PARAMS, shapeGobi, autoGobi } from '../scripts/lib.mjs';
+import { loadVoices, parseRequest, validateRequest, findStyleId, lineKey, applyParams, wavSeconds, buildCredits, PARAMS, shapeGobi, autoGobi, stretchChoon, countChoon } from '../scripts/lib.mjs';
 
 const voices = loadVoices(`
 voices:
@@ -131,4 +131,35 @@ test('語尾：taira は下げすぎない・agaru は最後を上げる・無�
   assert.deepEqual(shapeGobi(one, 'agaru')[0].moras.map((x) => x.pitch), [5.5, 0]); // 音が1つだけなら変えない
   const q = applyParams({ accent_phrases: phrases }, { ...req('card', `voice: 青山龍星\nstyle: 熱血\nlines:\n  - {id: a, text: ハッ, gobi: taira}\n`).lines[0] });
   assert.equal(q.accent_phrases[1].moras[3].pitch, 5.82);
+});
+
+test('のばす：ー を1つだけ・秒の幅・鍵が変わる', () => {
+  const r = req('card', `voice: 青山龍星\nstyle: 熱血\nlines:\n  - {id: a, text: うーん, nobasu: 1.0}\n  - {id: b, text: うーーん, nobasu: 1.0}\n  - {id: c, text: うん, nobasu: 1.0}\n  - {id: d, text: うーん, nobasu: 5}\n  - {id: e, text: うーん}\n`);
+  assert.equal(r.lines[0].nobasu, 1.0);
+  assert.equal(r.lines[4].nobasu, null);
+  const e = validateRequest(r, voices).join('\n');
+  assert.match(e, /2 行め.*ー を1つだけ書く（いま 2 こ/);
+  assert.match(e, /3 行め.*ー を1つだけ書く（いま 0 こ/);
+  assert.match(e, /4 行め.*nobasu は 0.05〜3/);
+  assert.doesNotMatch(e, /1 行め/);
+  assert.doesNotMatch(e, /5 行め/);
+  const [a, , , , plain] = r.lines;
+  const { nobasu, ...noNb } = plain;
+  assert.equal(lineKey('0.26.2', 8, plain), lineKey('0.26.2', 8, noNb)); // のばさない行は前の鍵のまま
+  assert.notEqual(lineKey('0.26.2', 8, a), lineKey('0.26.2', 8, { ...a, nobasu: 0.8 }));
+});
+
+test('のばす：ー の母音だけ秒にする・息の音を声にもどす・元は変えない', () => {
+  const ph = [{ moras: [
+    { text: 'ウ', vowel: 'u', vowel_length: 0.1, pitch: 5.8 },
+    { text: 'ー', vowel: 'U', vowel_length: 0.08, pitch: 0 },
+    { text: 'ン', vowel: 'N', vowel_length: 0.09, pitch: 5.5 },
+  ] }];
+  assert.equal(countChoon(ph), 1);
+  const out = stretchChoon(ph, 1.0);
+  assert.deepEqual(out[0].moras.map((m) => [m.vowel, m.vowel_length, m.pitch]), [['u', 0.1, 5.8], ['u', 1.0, 5.8], ['N', 0.09, 5.5]]);
+  assert.equal(ph[0].moras[1].vowel, 'U'); // 元は変えない
+  const q = applyParams({ accent_phrases: ph }, { ...req('card', `voice: 青山龍星\nstyle: 熱血\nlines:\n  - {id: a, text: うーん, nobasu: 0.8, gobi: sagaru}\n`).lines[0] });
+  assert.equal(q.accent_phrases[0].moras[1].vowel_length, 0.8);
+  assert.equal(countChoon([{ moras: [{ text: 'ウ' }] }]), 0);
 });
