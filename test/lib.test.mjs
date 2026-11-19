@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { loadVoices, parseRequest, validateRequest, findStyleId, lineKey, applyParams, wavSeconds, buildCredits, PARAMS, shapeGobi, autoGobi, stretchChoon, countChoon } from '../scripts/lib.mjs';
+import { loadVoices, parseRequest, validateRequest, findStyleId, lineKey, applyParams, wavSeconds, buildCredits, PARAMS, shapeGobi, autoGobi, stretchChoon, countChoon, choonAtEnd } from '../scripts/lib.mjs';
 
 const voices = loadVoices(`
 voices:
@@ -149,17 +149,38 @@ test('のばす：ー を1つだけ・秒の幅・鍵が変わる', () => {
   assert.notEqual(lineKey('0.26.2', 8, a), lineKey('0.26.2', 8, { ...a, nobasu: 0.8 }));
 });
 
-test('のばす：ー の母音だけ秒にする・息の音を声にもどす・元は変えない', () => {
+test('のばす：エンジンの読みの ー（前と同じ母音の音）だけ秒にする・息の音を声にもどす・元は変えない', () => {
+  // うーん → エンジンは ウ・ウ・ン（2つめのウが ー。ここでは息の音になっている）
   const ph = [{ moras: [
-    { text: 'ウ', vowel: 'u', vowel_length: 0.1, pitch: 5.8 },
-    { text: 'ー', vowel: 'U', vowel_length: 0.08, pitch: 0 },
-    { text: 'ン', vowel: 'N', vowel_length: 0.09, pitch: 5.5 },
+    { text: 'ウ', consonant: null, vowel: 'u', vowel_length: 0.1, pitch: 5.8 },
+    { text: 'ウ', consonant: null, vowel: 'U', vowel_length: 0.08, pitch: 0 },
+    { text: 'ン', consonant: null, vowel: 'N', vowel_length: 0.09, pitch: 5.5 },
   ] }];
   assert.equal(countChoon(ph), 1);
   const out = stretchChoon(ph, 1.0);
   assert.deepEqual(out[0].moras.map((m) => [m.vowel, m.vowel_length, m.pitch]), [['u', 0.1, 5.8], ['u', 1.0, 5.8], ['N', 0.09, 5.5]]);
   assert.equal(ph[0].moras[1].vowel, 'U'); // 元は変えない
-  const q = applyParams({ accent_phrases: ph }, { ...req('card', `voice: 青山龍星\nstyle: 熱血\nlines:\n  - {id: a, text: うーん, nobasu: 0.8, gobi: sagaru}\n`).lines[0] });
-  assert.equal(q.accent_phrases[0].moras[1].vowel_length, 0.8);
-  assert.equal(countChoon([{ moras: [{ text: 'ウ' }] }]), 0);
+  // あちゃー → ア・チャ・ア（子音のある チャ は ー ではない・最後の ア が ー）
+  const ac = [{ moras: [
+    { text: 'ア', consonant: null, vowel: 'a', vowel_length: 0.1, pitch: 5.9 },
+    { text: 'チャ', consonant: 'ch', vowel: 'a', vowel_length: 0.1, pitch: 6.0 },
+    { text: 'ア', consonant: null, vowel: 'a', vowel_length: 0.12, pitch: 5.7 },
+  ] }];
+  assert.equal(countChoon(ac), 1);
+  assert.deepEqual(stretchChoon(ac, 0.8, true)[0].moras.map((m) => m.vowel_length), [0.1, 0.1, 0.8]);
+  // 前にも同じ母音が続く所があるとき：ー が終わりなら最後、ほかは最初
+  const two = [{ moras: [
+    { text: 'オ', consonant: null, vowel: 'o', vowel_length: 0.1, pitch: 5.6 },
+    { text: 'オ', consonant: null, vowel: 'o', vowel_length: 0.1, pitch: 5.6 },
+    { text: 'イ', consonant: null, vowel: 'i', vowel_length: 0.1, pitch: 5.5 },
+    { text: 'イ', consonant: null, vowel: 'i', vowel_length: 0.1, pitch: 5.4 },
+  ] }];
+  assert.deepEqual(stretchChoon(two, 0.9, true)[0].moras.map((m) => m.vowel_length), [0.1, 0.1, 0.1, 0.9]);
+  assert.deepEqual(stretchChoon(two, 0.9, false)[0].moras.map((m) => m.vowel_length), [0.1, 0.9, 0.1, 0.1]);
+  assert.equal(choonAtEnd('あちゃー……'), true);
+  assert.equal(choonAtEnd('うーん'), false);
+  // applyParams：text から ー の場所を見て、のばしてから語尾を当てる
+  const q = applyParams({ accent_phrases: ac }, { ...req('card', `voice: 青山龍星\nstyle: 熱血\nlines:\n  - {id: a, text: あちゃー, nobasu: 0.8, gobi: sagaru}\n`).lines[0] });
+  assert.equal(q.accent_phrases[0].moras[2].vowel_length, 0.8);
+  assert.equal(countChoon([{ moras: [{ text: 'ウ', consonant: null, vowel: 'u' }, { text: 'ン', consonant: null, vowel: 'N' }] }]), 0);
 });
