@@ -66,13 +66,13 @@
     },
     {
       "id": "hono-uun",
-      "text": "うーーーーん……",
+      "text": "うーーーーーん……",
       "voice": "春日部つむぎ",
       "style": "ノーマル",
       "gobi": "sagaru",
       "file": "hono-uun.mp3",
-      "seconds": 0.853,
-      "key": "e0da484bd8390e24"
+      "seconds": 0.96,
+      "key": "525b95fa9f89eeb5"
     },
     {
       "id": "hono-achaa",
