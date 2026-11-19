@@ -1,0 +1,188 @@
+{
+  "game": "okashi",
+  "set": "kakegoe",
+  "engine": "0.26.2",
+  "request": "requests/okashi/kakegoe.yml",
+  "lines": [
+    {
+      "id": "hono-irassyai",
+      "text": "いらっしゃいませー！",
+      "voice": "春日部つむぎ",
+      "style": "ノーマル",
+      "gobi": "agaru",
+      "file": "hono-irassyai.mp3",
+      "seconds": 1.045,
+      "key": "f187070c8843411c"
+    },
+    {
+      "id": "hono-oishiku",
+      "text": "おいしくなーれ！",
+      "voice": "春日部つむぎ",
+      "style": "ノーマル",
+      "gobi": "taira",
+      "file": "hono-oishiku.mp3",
+      "seconds": 0.811,
+      "key": "5a60740fa61611fc"
+    },
+    {
+      "id": "hono-yatta",
+      "text": "やったー！",
+      "voice": "春日部つむぎ",
+      "style": "ノーマル",
+      "gobi": "agaru",
+      "file": "hono-yatta.mp3",
+      "seconds": 0.587,
+      "key": "165aed743f5567eb"
+    },
+    {
+      "id": "hono-yoshi",
+      "text": "よーし！",
+      "voice": "春日部つむぎ",
+      "style": "ノーマル",
+      "gobi": "taira",
+      "file": "hono-yoshi.mp3",
+      "seconds": 0.597,
+      "key": "5ff1cd4ca991634d"
+    },
+    {
+      "id": "hono-ei",
+      "text": "えいっ！",
+      "voice": "春日部つむぎ",
+      "style": "ノーマル",
+      "gobi": "agaru",
+      "file": "hono-ei.mp3",
+      "seconds": 0.437,
+      "key": "0e4a12b31e48064d"
+    },
+    {
+      "id": "hono-sore",
+      "text": "それーっ！",
+      "voice": "春日部つむぎ",
+      "style": "ノーマル",
+      "gobi": "agaru",
+      "file": "hono-sore.mp3",
+      "seconds": 0.555,
+      "key": "43556c5ed7b2fb25"
+    },
+    {
+      "id": "hono-achaa",
+      "text": "あちゃー……",
+      "voice": "春日部つむぎ",
+      "style": "ノーマル",
+      "gobi": "agaru",
+      "file": "hono-achaa.mp3",
+      "seconds": 0.555,
+      "key": "320bece4315dedcf"
+    },
+    {
+      "id": "hono-arigato",
+      "text": "ありがとうございましたー！",
+      "voice": "春日部つむぎ",
+      "style": "ノーマル",
+      "gobi": "agaru",
+      "file": "hono-arigato.mp3",
+      "seconds": 1.323,
+      "key": "f2aff879942bb81e"
+    },
+    {
+      "id": "mina-irassyai",
+      "text": "……いらっしゃい",
+      "voice": "冥鳴ひまり",
+      "style": "ノーマル",
+      "gobi": "taira",
+      "file": "mina-irassyai.mp3",
+      "seconds": 0.811,
+      "key": "8e0274c75ee4d340"
+    },
+    {
+      "id": "mina-dekita",
+      "text": "……できた",
+      "voice": "冥鳴ひまり",
+      "style": "ノーマル",
+      "gobi": "taira",
+      "file": "mina-dekita.mp3",
+      "seconds": 0.683,
+      "key": "d0339ae6e1d04ce3"
+    },
+    {
+      "id": "mina-ii",
+      "text": "……ん、いい",
+      "voice": "冥鳴ひまり",
+      "style": "ノーマル",
+      "gobi": "taira",
+      "file": "mina-ii.mp3",
+      "seconds": 1.269,
+      "key": "122aeb490921b204"
+    },
+    {
+      "id": "mina-ha",
+      "text": "……はっ",
+      "voice": "冥鳴ひまり",
+      "style": "ノーマル",
+      "gobi": "agaru",
+      "file": "mina-ha.mp3",
+      "seconds": 0.491,
+      "key": "04a304275a3b31ef"
+    },
+    {
+      "id": "mina-arigato",
+      "text": "……ありがと",
+      "voice": "冥鳴ひまり",
+      "style": "ノーマル",
+      "gobi": "taira",
+      "file": "mina-arigato.mp3",
+      "seconds": 0.736,
+      "key": "1a9d2f74f322523d"
+    },
+    {
+      "id": "waka-araara",
+      "text": "あらあら",
+      "voice": "WhiteCUL",
+      "style": "ノーマル",
+      "gobi": "taira",
+      "file": "waka-araara.mp3",
+      "seconds": 0.736,
+      "key": "6f9de0cb56517318"
+    },
+    {
+      "id": "waka-ufufu",
+      "text": "うふふ",
+      "voice": "WhiteCUL",
+      "style": "ノーマル",
+      "gobi": "taira",
+      "file": "waka-ufufu.mp3",
+      "seconds": 0.747,
+      "key": "c1f5c100d1ddf652"
+    },
+    {
+      "id": "waka-irassyai",
+      "text": "いらっしゃいませぇ",
+      "voice": "WhiteCUL",
+      "style": "ノーマル",
+      "gobi": "taira",
+      "file": "waka-irassyai.mp3",
+      "seconds": 1.387,
+      "key": "c97ef8866cb9714b"
+    },
+    {
+      "id": "waka-sore",
+      "text": "それっ",
+      "voice": "WhiteCUL",
+      "style": "ノーマル",
+      "gobi": "agaru",
+      "file": "waka-sore.mp3",
+      "seconds": 0.779,
+      "key": "981a47b3f6892c94"
+    },
+    {
+      "id": "waka-arigato",
+      "text": "ありがとうねぇ",
+      "voice": "WhiteCUL",
+      "style": "ノーマル",
+      "gobi": "taira",
+      "file": "waka-arigato.mp3",
+      "seconds": 1.152,
+      "key": "f20710d398ce3682"
+    }
+  ]
+}

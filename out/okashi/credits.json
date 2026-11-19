@@ -1,0 +1,24 @@
+{
+  "game": "okashi",
+  "line": "音声合成：VOICEVOX:WhiteCUL、VOICEVOX:春日部つむぎ、VOICEVOX:冥鳴ひまり",
+  "voices": [
+    {
+      "name": "WhiteCUL",
+      "credit": "VOICEVOX:WhiteCUL",
+      "terms": "https://www.whitecul.com/guideline",
+      "checked": "2026-11-19"
+    },
+    {
+      "name": "春日部つむぎ",
+      "credit": "VOICEVOX:春日部つむぎ",
+      "terms": "https://tsumugi-official.studio.site/rule",
+      "checked": "2026-11-17"
+    },
+    {
+      "name": "冥鳴ひまり",
+      "credit": "VOICEVOX:冥鳴ひまり",
+      "terms": "https://www.meimeihimari.com/terms-of-use",
+      "checked": "2026-11-17"
+    }
+  ]
+}
