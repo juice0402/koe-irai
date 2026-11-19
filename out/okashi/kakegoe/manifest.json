@@ -73,7 +73,7 @@
       "nobasu": 1,
       "file": "hono-uun.mp3",
       "seconds": 1.419,
-      "key": "b4bcd2a90a3f723d"
+      "key": "ced930989d4247be"
     },
     {
       "id": "hono-achaa",
@@ -84,7 +84,7 @@
       "nobasu": 0.8,
       "file": "hono-achaa.mp3",
       "seconds": 1.28,
-      "key": "af7620499da3dcdc"
+      "key": "ea4d1b731db4b661"
     },
     {
       "id": "mina-ha",
@@ -135,7 +135,7 @@
       "nobasu": 0.85,
       "file": "mina-uun.mp3",
       "seconds": 1.451,
-      "key": "b67b7780748f837a"
+      "key": "d9de95b2c8458348"
     },
     {
       "id": "waka-sore",
@@ -196,7 +196,7 @@
       "nobasu": 0.78,
       "file": "waka-uun.mp3",
       "seconds": 1.536,
-      "key": "3a64d292211775bc"
+      "key": "7192b6502277556b"
     }
   ]
 }
