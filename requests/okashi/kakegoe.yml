@@ -3,6 +3,7 @@
 # 11/19 13:25 しょーくん「本当の短文だけ（えいっ！やっ！はっ・うーん……レベル）」
 # 11/19 13:45 しょーくん「えいっ！やっ！も語尾下げて、最後伸ばさずに単音ですぐに切って（えい！や！）」「よーしも語尾下げ」「やったー！はやった！で単音で切って」「うーんはトーンを気持ち下げて」
 #   → っ をとって gobi: sagaru・うしろの無音を短く（post 0.03）。うーんは pitch を 0.03 下げる
+# 11/19 15:34 司令塔が nobasu を足した → うーん・あちゃー は ー 1つ＋nobasu（「……」はとる）
 # 11/19 13:50 しょーくん「それ！とやった！は語尾上げて。とくにやった！は やっ↓た↑ね」→ ほのかの2つを gobi: agaru
 voice: 春日部つむぎ
 style: ノーマル
@@ -16,18 +17,18 @@ lines:
   - {id: hono-waa, text: わぁ！, pitch: 0.08, speed: 1.12, intonation: 1.6, gobi: sagaru}
   - {id: hono-yatta, text: やった！, pitch: 0.08, speed: 1.12, intonation: 1.6, gobi: agaru}
   - {id: hono-yoshi, text: よーし！, pitch: 0.08, speed: 1.12, intonation: 1.6, gobi: sagaru}
-  - {id: hono-uun, text: うーーーーーん……, pitch: 0.03, speed: 0.64, intonation: 1.4, gobi: sagaru, post: 0.1}   # 11/19 14:00「1秒くらいかけて伸ばす」
-  - {id: hono-achaa, text: あちゃーーー……, pitch: 0.06, speed: 0.85, intonation: 1.5, gobi: sagaru, post: 0.1}   # 11/19 14:00「最後伸ばしをつよく。あちゃ↓・・・」
+  - {id: hono-uun, text: うーん, pitch: 0.03, speed: 1.0, intonation: 1.4, gobi: sagaru, nobasu: 1.0, post: 0.1}   # 11/19 14:00「1秒くらいかけて伸ばす」→ ー 1つ＋nobasu（のびる長さ＝nobasu÷speed）
+  - {id: hono-achaa, text: あちゃー, pitch: 0.06, speed: 1.0, intonation: 1.5, gobi: sagaru, nobasu: 0.8, post: 0.1}   # 11/19 14:00「最後伸ばしをつよく。あちゃ↓・・・」
   # ---- みなも（11/19 14:16 うーんの前にノイズ＝「……」が息の音になっていた → 「……」をとった） ----
   - {id: mina-ha, text: は, voice: 冥鳴ひまり, style: ノーマル, pitch: -0.02, speed: 0.95, intonation: 0.65, gobi: sagaru}
   - {id: mina-fu, text: ふ, voice: 冥鳴ひまり, style: ノーマル, pitch: -0.02, speed: 0.95, intonation: 0.65, gobi: sagaru}
   - {id: mina-n, text: ん, voice: 冥鳴ひまり, style: ノーマル, pitch: -0.02, speed: 0.95, intonation: 0.65}
   - {id: mina-yoshi, text: よし。, voice: 冥鳴ひまり, style: ノーマル, pitch: -0.02, speed: 0.9, intonation: 1.4, gobi: sagaru, post: 0.1}   # 11/19 13:54・14:00「語尾をよく下げて、し が消えていくように」
-  - {id: mina-uun, text: うーん, voice: 冥鳴ひまり, style: ノーマル, pitch: -0.05, speed: 0.85, intonation: 0.65, gobi: sagaru, post: 0.1}   # 11/19 14:16「うーんの前にノイズ」＝ー を重ねると、のばす所が息の音（無声）になっていた → ー は1つ。長さは司令塔に「のばす」しくみを頼んだ
+  - {id: mina-uun, text: うーん, voice: 冥鳴ひまり, style: ノーマル, pitch: -0.05, speed: 0.85, intonation: 0.65, gobi: sagaru, nobasu: 0.85, post: 0.1}   # 11/19 14:00「1秒くらいかけて伸ばす」
   # ---- わかば（11/19 13:52 しょーくん「もっと高くし、ゆっくり読んでほしい。おっとりな感じ」→ pitch 0.1・speed 0.78・抑揚 1.3） ----
   - {id: waka-sore, text: それ, voice: WhiteCUL, style: ノーマル, pitch: 0.1, speed: 0.78, intonation: 1.3, gobi: sagaru}
   - {id: waka-ei, text: えい, voice: WhiteCUL, style: ノーマル, pitch: 0.1, speed: 0.78, intonation: 1.3, gobi: sagaru}
   - {id: waka-ufufu, text: うふふ, voice: WhiteCUL, style: ノーマル, pitch: 0.1, speed: 0.78, intonation: 1.3, post: 0.1}
   - {id: waka-araara, text: あらあら, voice: WhiteCUL, style: ノーマル, pitch: 0.1, speed: 0.78, intonation: 1.3, post: 0.1}
   - {id: waka-maa, text: まぁ, voice: WhiteCUL, style: ノーマル, pitch: 0.1, speed: 0.78, intonation: 1.3, post: 0.1}
-  - {id: waka-uun, text: うーん……, voice: WhiteCUL, style: ノーマル, pitch: 0.07, speed: 0.78, intonation: 1.3, gobi: sagaru, post: 0.1}
+  - {id: waka-uun, text: うーん, voice: WhiteCUL, style: ノーマル, pitch: 0.07, speed: 0.78, intonation: 1.3, gobi: sagaru, nobasu: 0.78, post: 0.1}
