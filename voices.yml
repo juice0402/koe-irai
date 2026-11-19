@@ -50,3 +50,38 @@ voices:
     terms: https://voiceseven.com/#j0200
     checked: 2026-11-17
     note: 非商用だけ（商用は No.7製作委員会に事前の確認が要る）→ 使わない
+  - name: 猫使アル
+    ok: true
+    terms: https://nekotukarb.wixsite.com/nekonohako/利用規約
+    checked: 2026-11-19
+    note: 女の声（ノーマル・おちつき・うきうき・つよつよ・へろへろ）。クレジットで商用OK・個人は事前の連絡なし（企業の商用は事前の問い合わせ）。クレジットがあれば別のオリジナルキャラの声にしてよい（海日月ぷらむ・プラムchの人物と思われる使い方はだめ）。政治・宗教・公序良俗に反する使い方・R-18 の作品で声だけ使うのは禁止
+  - name: 猫使ビィ
+    ok: true
+    terms: https://nekotukarb.wixsite.com/nekonohako/利用規約
+    checked: 2026-11-19
+    note: 女の声（ノーマル・おちつき・人見知り・つよつよ）。約束は猫使アルと同じ（クレジットで商用OK・別のオリジナルキャラの声にしてよい）
+  - name: 満別花丸
+    ok: true
+    terms: https://100hanamaru.wixsite.com/manbetsu-hanamaru/rule
+    checked: 2026-11-19
+    note: 女の声（ノーマル・元気・ささやき・ぶりっ子・ボーイ）。商用・非商用とも無料・個人も法人も連絡なし。別のオリジナルキャラの声にしてよい（Q&A「ご自由にご利用ください」）。公序良俗・反社会的勢力・政治家や政党を極端にほめる・けなす使い方・悪意のある加工は禁止
+  - name: 小夜/SAYO
+    ok: true
+    terms: https://316soramegu.wixsite.com/sayo-official/guideline
+    checked: 2026-11-19
+    note: 女の声（ノーマル）。声は商用・非商用とも使える（VOICEVOX の約束を守る）・個人は連絡なし。声を別のキャラにあてる使い方は書いていない（実費までの決まりは小夜の絵・二次創作のこと）。誹謗中傷・イメージを大きくこわす・公序良俗に反する使い方は禁止
+  - name: WhiteCUL
+    ok: true
+    terms: https://www.whitecul.com/guideline
+    checked: 2026-11-19
+    note: 女の声（ノーマル・たのしい・かなしい・びえーん）。クレジットで商用OK（エンジンの約束の文）。くわしい規約のページはここから読めなかった（紹介ページでは成人向けはだめ・反社会的な内容と特定の人への攻撃はだめ）。アプリに出す前に一度読む
+  - name: 夜語トバリ
+    ok: true
+    terms: https://yogataritobari.studio.site/#rules
+    checked: 2026-11-19
+    note: 女の声（ノーマル・明るい・哀しみ・呆れ）。クレジットで商用OK（エンジンの約束の文）。くわしい規約のページはここから読めなかった（別のキャラにあてる可否・禁止のことは未確認）。アプリに出す前に一度読む
+  - name: もち子さん
+    ok: false
+    terms: https://vtubermochio.wixsite.com/mochizora/利用規約
+    checked: 2026-11-19
+    note: 「音声作品・音声素材・ゲーム作品等を除いて」商用OK（エンジンの約束の文）＝ゲームには使えない → 使わない

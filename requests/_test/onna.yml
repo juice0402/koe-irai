@@ -1,0 +1,22 @@
+# ためし（ゲームには入れない）：女の声の聞きくらべ（11/19 まぜまぜの3人の声えらび）
+# 語尾はおまかせ（gobi を書かない）
+defaults:
+  speed: 1.1
+  intonation: 1.3
+lines:
+  - {id: 01-aru, text: いっくよー！, voice: 猫使アル, style: うきうき}
+  - {id: 01-aru-2, text: おいしくなあれ！, voice: 猫使アル, style: ノーマル}
+  - {id: 02-bii, text: いっくよー！, voice: 猫使ビィ, style: ノーマル}
+  - {id: 02-bii-2, text: おいしくなあれ！, voice: 猫使ビィ, style: おちつき}
+  - {id: 03-hanamaru, text: いっくよー！, voice: 満別花丸, style: 元気}
+  - {id: 03-hanamaru-2, text: おいしくなあれ！, voice: 満別花丸, style: ノーマル}
+  - {id: 04-sayo, text: いっくよー！, voice: 小夜/SAYO, style: ノーマル}
+  - {id: 04-sayo-2, text: おいしくなあれ！, voice: 小夜/SAYO, style: ノーマル}
+  - {id: 05-whitecul, text: いっくよー！, voice: WhiteCUL, style: たのしい}
+  - {id: 05-whitecul-2, text: おいしくなあれ！, voice: WhiteCUL, style: ノーマル}
+  - {id: 06-tobari, text: いっくよー！, voice: 夜語トバリ, style: 明るい}
+  - {id: 06-tobari-2, text: おいしくなあれ！, voice: 夜語トバリ, style: ノーマル}
+  - {id: 07-tsumugi, text: いっくよー！, voice: 春日部つむぎ, style: ノーマル}
+  - {id: 07-tsumugi-2, text: おいしくなあれ！, voice: 春日部つむぎ, style: ノーマル}
+  - {id: 08-himari, text: いっくよー！, voice: 冥鳴ひまり, style: ノーマル}
+  - {id: 08-himari-2, text: おいしくなあれ！, voice: 冥鳴ひまり, style: ノーマル}
