@@ -196,10 +196,19 @@ test('のばす：っ のあとや文の頭の ー は点検で止める・ん�
 test('のばす：んー は ん（N）の音をのばす', () => {
   assert.equal(choonMode('んー……'), 'N');
   assert.equal(choonMode('うーん'), 'boin');
-  const ph = [{ moras: [{ text: 'ン', consonant: null, vowel: 'N', vowel_length: 0.15, pitch: 5.9 }] }];
+  // エンジンは んー を ン・ン にする（11/19 ひまり：5.37・5.62）
+  const ph = [{ accent: 2, moras: [{ text: 'ン', consonant: null, vowel: 'N', vowel_length: 0.14, pitch: 5.37 }, { text: 'ン', consonant: null, vowel: 'N', vowel_length: 0.224, pitch: 5.62 }] }];
   assert.equal(countChoon(ph), 0);
-  assert.equal(countChoon(ph, 'N'), 1);
+  assert.equal(countChoon(ph, 'N'), 2);
   const q = applyParams({ accent_phrases: ph }, { ...req('card', `voice: 青山龍星\nstyle: 熱血\nlines:\n  - {id: a, text: んー, nobasu: 1.0, gobi: sagaru}\n`).lines[0] });
-  assert.equal(q.accent_phrases[0].moras[0].vowel_length, 1.0);
-  assert.equal(ph[0].moras[0].vowel_length, 0.15); // 元は変えない
+  const ms = q.accent_phrases[0].moras;
+  assert.equal(ms.length, 1); // 1つの ン にまとめる
+  assert.equal(ms[0].vowel_length, 1.0);
+  assert.equal(+ms[0].pitch.toFixed(3), 5.495); // 高さは最初と最後のあいだ
+  assert.equal(q.accent_phrases[0].accent, 1);
+  assert.equal(ph[0].moras.length, 2); // 元は変えない
+  assert.equal(ph[0].moras[0].vowel_length, 0.14);
+  // ン が1つだけのとき
+  const one = applyParams({ accent_phrases: [{ accent: 1, moras: [{ text: 'ン', vowel: 'N', vowel_length: 0.3, pitch: 5.34 }] }] }, { ...req('card', `voice: 青山龍星\nstyle: 熱血\nlines:\n  - {id: a, text: んー, nobasu: 0.85, gobi: sagaru}\n`).lines[0] });
+  assert.deepEqual(one.accent_phrases[0].moras.map((m) => [m.vowel_length, m.pitch]), [[0.85, 5.34]]);
 });

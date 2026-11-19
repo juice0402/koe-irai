@@ -144,7 +144,7 @@ export function lineKey(engineVersion, styleId, line) {
   const pick = { engine: engineVersion, styleId, text: line.text };
   for (const name of Object.keys(PARAMS)) pick[name] = line[name];
   if (line.gobi && line.gobi !== GOBI_DEF) pick.gobi = line.gobi; // sagaru の行は前の鍵のまま（作りなおさない）
-  if (line.nobasu != null) pick.nobasu = line.nobasu;
+  if (line.nobasu != null) { pick.nobasu = line.nobasu; pick.nv = 2; } // nv：のばし方を変えたら上げる（nobasu の行だけ作りなおす）
   return createHash('sha1').update(JSON.stringify(pick)).digest('hex').slice(0, 16);
 }
 
@@ -196,6 +196,7 @@ export function stretchChoon(phrases, sec, atEnd = false, mode = 'boin') {
   if (!Array.isArray(phrases)) return phrases;
   const out = phrases.map((p) => ({ ...p, moras: (p.moras || []).map((m) => ({ ...m })) }));
   const all = out.flatMap((p) => p.moras);
+  if (mode === 'N') return stretchN(out, sec, atEnd);
   const idx = choonIndexes(all, mode);
   if (idx.length === 0) return out;
   const i = atEnd ? idx[idx.length - 1] : idx[0];
@@ -207,6 +208,30 @@ export function stretchChoon(phrases, sec, atEnd = false, mode = 'boin') {
   }
   m.vowel_length = sec;
   return out;
+}
+
+// んー：エンジンは ン・ン の2つの音にする。2つめ（や1つめ）だけをのばすと、声によって途中で小さくなる
+// （11/19 ためしの枝 koe-try/uun：ひまりは2つめ・つむぎは1つめをのばすと -43〜-52dB）。
+// ン が続く所を1つの ン にまとめ、高さを最初と最後のあいだにして、sec 秒にする（どちらの声も -26〜-41dB で止まらない）
+function stretchN(out, sec, atEnd) {
+  const all = out.flatMap((p) => p.moras);
+  const runs = [];
+  all.forEach((m, i) => {
+    if (m.vowel !== 'N') return;
+    if (i > 0 && all[i - 1].vowel === 'N' && runs.length) runs[runs.length - 1].push(m);
+    else runs.push([m]);
+  });
+  if (runs.length === 0) return out;
+  const run = atEnd ? runs[runs.length - 1] : runs[0];
+  const [first, ...rest] = run;
+  const last = run[run.length - 1];
+  if (first.pitch > 0 && last.pitch > 0) first.pitch = (first.pitch + last.pitch) / 2;
+  else if (!(first.pitch > 0)) first.pitch = last.pitch || first.pitch;
+  first.vowel_length = sec;
+  const drop = new Set(rest);
+  const res = out.map((p) => ({ ...p, moras: p.moras.filter((m) => !drop.has(m)) })).filter((p) => p.moras.length);
+  for (const p of res) p.accent = Math.max(1, Math.min(p.accent || 1, p.moras.length));
+  return res;
 }
 
 // 語尾の高さを直す：最後のアクセント句の、いちばん高い音より後ろの音を下げすぎないようにする
