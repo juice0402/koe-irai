@@ -116,23 +116,23 @@
     },
     {
       "id": "mina-yoshi",
-      "text": "……よし",
+      "text": "……よし。",
       "voice": "冥鳴ひまり",
       "style": "ノーマル",
       "gobi": "sagaru",
       "file": "mina-yoshi.mp3",
-      "seconds": 0.48,
-      "key": "5988ad49dd461a0f"
+      "seconds": 0.555,
+      "key": "7ff626cf10c9d23d"
     },
     {
       "id": "mina-uun",
-      "text": "……うーん",
+      "text": "……うーーん",
       "voice": "冥鳴ひまり",
       "style": "ノーマル",
       "gobi": "sagaru",
       "file": "mina-uun.mp3",
-      "seconds": 0.437,
-      "key": "20089e91653ed88f"
+      "seconds": 0.629,
+      "key": "94671bf24b5fbdba"
     },
     {
       "id": "waka-sore",
