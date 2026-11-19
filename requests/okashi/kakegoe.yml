@@ -1,28 +1,32 @@
 # まぜまぜおかし屋（okashi）の掛け声（11/19 しょーくんが声をえらんだ・昼のチャット【okashi-hiru】）
 # ほのか＝春日部つむぎ（高め・元気）／みなも＝冥鳴ひまり（ひくめ・抑揚少なめ）／わかば＝WhiteCUL（少し高め・ゆっくり）
-# 11/19 13:25 しょーくん「ありがとうレベルの文章だと、イントネーションがダメになる。本当の短文だけ（えいっ！やっ！はっ・うーん……レベル）」
+# 11/19 13:25 しょーくん「本当の短文だけ（えいっ！やっ！はっ・うーん……レベル）」
+# 11/19 13:45 しょーくん「えいっ！やっ！も語尾下げて、最後伸ばさずに単音ですぐに切って（えい！や！）」「よーしも語尾下げ」「やったー！はやった！で単音で切って」「うーんはトーンを気持ち下げて」
+#   → っ をとって gobi: sagaru・うしろの無音を短く（post 0.03）。うーんは pitch を 0.03 下げる
 voice: 春日部つむぎ
 style: ノーマル
+defaults:
+  post: 0.03
 lines:
   # ---- ほのか ----
-  - {id: hono-ei, text: えいっ！, pitch: 0.08, speed: 1.12, intonation: 1.6}
-  - {id: hono-ya, text: やっ！, pitch: 0.08, speed: 1.12, intonation: 1.6}
-  - {id: hono-sore, text: それっ！, pitch: 0.08, speed: 1.12, intonation: 1.6}
-  - {id: hono-waa, text: わぁっ！, pitch: 0.08, speed: 1.12, intonation: 1.6}
-  - {id: hono-yatta, text: やったー！, pitch: 0.08, speed: 1.12, intonation: 1.6}
-  - {id: hono-yoshi, text: よーし！, pitch: 0.08, speed: 1.12, intonation: 1.6}
-  - {id: hono-uun, text: うーん……, pitch: 0.06, speed: 1.0, intonation: 1.4, gobi: sagaru}
-  - {id: hono-achaa, text: あちゃー, pitch: 0.06, speed: 1.05, intonation: 1.4, gobi: sagaru}
+  - {id: hono-ei, text: えい！, pitch: 0.08, speed: 1.12, intonation: 1.6, gobi: sagaru}
+  - {id: hono-ya, text: や！, pitch: 0.08, speed: 1.12, intonation: 1.6, gobi: sagaru}
+  - {id: hono-sore, text: それ！, pitch: 0.08, speed: 1.12, intonation: 1.6, gobi: sagaru}
+  - {id: hono-waa, text: わぁ！, pitch: 0.08, speed: 1.12, intonation: 1.6, gobi: sagaru}
+  - {id: hono-yatta, text: やった！, pitch: 0.08, speed: 1.12, intonation: 1.6}
+  - {id: hono-yoshi, text: よーし！, pitch: 0.08, speed: 1.12, intonation: 1.6, gobi: sagaru}
+  - {id: hono-uun, text: うーん……, pitch: 0.03, speed: 1.0, intonation: 1.4, gobi: sagaru, post: 0.1}
+  - {id: hono-achaa, text: あちゃー, pitch: 0.06, speed: 1.05, intonation: 1.4, gobi: sagaru, post: 0.1}
   # ---- みなも ----
-  - {id: mina-ha, text: ……はっ, voice: 冥鳴ひまり, style: ノーマル, pitch: -0.02, speed: 0.95, intonation: 0.65}
-  - {id: mina-fu, text: ……ふっ, voice: 冥鳴ひまり, style: ノーマル, pitch: -0.02, speed: 0.95, intonation: 0.65}
+  - {id: mina-ha, text: ……は, voice: 冥鳴ひまり, style: ノーマル, pitch: -0.02, speed: 0.95, intonation: 0.65, gobi: sagaru}
+  - {id: mina-fu, text: ……ふ, voice: 冥鳴ひまり, style: ノーマル, pitch: -0.02, speed: 0.95, intonation: 0.65, gobi: sagaru}
   - {id: mina-n, text: ……ん, voice: 冥鳴ひまり, style: ノーマル, pitch: -0.02, speed: 0.95, intonation: 0.65}
-  - {id: mina-yoshi, text: ……よし, voice: 冥鳴ひまり, style: ノーマル, pitch: -0.02, speed: 0.95, intonation: 0.65}
-  - {id: mina-uun, text: ……うーん, voice: 冥鳴ひまり, style: ノーマル, pitch: -0.02, speed: 0.95, intonation: 0.65, gobi: sagaru}
+  - {id: mina-yoshi, text: ……よし, voice: 冥鳴ひまり, style: ノーマル, pitch: -0.02, speed: 0.95, intonation: 0.65, gobi: sagaru}
+  - {id: mina-uun, text: ……うーん, voice: 冥鳴ひまり, style: ノーマル, pitch: -0.05, speed: 0.95, intonation: 0.65, gobi: sagaru, post: 0.1}
   # ---- わかば ----
-  - {id: waka-sore, text: それっ, voice: WhiteCUL, style: ノーマル, pitch: 0.05, speed: 0.9, intonation: 1.15}
-  - {id: waka-ei, text: えいっ, voice: WhiteCUL, style: ノーマル, pitch: 0.05, speed: 0.9, intonation: 1.15}
-  - {id: waka-ufufu, text: うふふ, voice: WhiteCUL, style: ノーマル, pitch: 0.05, speed: 0.88, intonation: 1.15}
-  - {id: waka-araara, text: あらあら, voice: WhiteCUL, style: ノーマル, pitch: 0.05, speed: 0.88, intonation: 1.15}
-  - {id: waka-maa, text: まぁ, voice: WhiteCUL, style: ノーマル, pitch: 0.05, speed: 0.88, intonation: 1.15}
-  - {id: waka-uun, text: うーん……, voice: WhiteCUL, style: ノーマル, pitch: 0.05, speed: 0.88, intonation: 1.15, gobi: sagaru}
+  - {id: waka-sore, text: それ, voice: WhiteCUL, style: ノーマル, pitch: 0.05, speed: 0.9, intonation: 1.15, gobi: sagaru}
+  - {id: waka-ei, text: えい, voice: WhiteCUL, style: ノーマル, pitch: 0.05, speed: 0.9, intonation: 1.15, gobi: sagaru}
+  - {id: waka-ufufu, text: うふふ, voice: WhiteCUL, style: ノーマル, pitch: 0.05, speed: 0.88, intonation: 1.15, post: 0.1}
+  - {id: waka-araara, text: あらあら, voice: WhiteCUL, style: ノーマル, pitch: 0.05, speed: 0.88, intonation: 1.15, post: 0.1}
+  - {id: waka-maa, text: まぁ, voice: WhiteCUL, style: ノーマル, pitch: 0.05, speed: 0.88, intonation: 1.15, post: 0.1}
+  - {id: waka-uun, text: うーん……, voice: WhiteCUL, style: ノーマル, pitch: 0.02, speed: 0.88, intonation: 1.15, gobi: sagaru, post: 0.1}
