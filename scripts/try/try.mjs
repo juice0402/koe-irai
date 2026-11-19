@@ -43,10 +43,12 @@ const nIdx = (all) => all.map((m, i) => (m.vowel === 'N' ? i : -1)).filter((i) =
 function N1(ph, sec) { const o = clone(ph), all = o.flatMap((p) => p.moras), ix = nIdx(all); if (ix.length) all[ix[0]].vowel_length = sec; return o; }
 function N2(ph, sec) { const o = clone(ph), all = o.flatMap((p) => p.moras), ix = nIdx(all); if (ix.length) all[ix[ix.length - 1]].vowel_length = sec; return o; }
 function N3(ph, sec) { const o = clone(ph); let first = null; for (const p of o) p.moras = p.moras.filter((m) => { if (m.vowel !== 'N') return true; if (!first) { first = m; return true; } return false; }); if (first) first.vowel_length = sec; const r = o.filter((p) => p.moras.length); for (const p of r) p.accent = Math.max(1, Math.min(p.accent, p.moras.length)); return r; }
-const VARIANTS = { N1, N2, N3 };
+// まとめる＋高さ：Ma＝さいしょの高さ／Mb＝さいごの高さ／Mc＝あいだ
+function Mx(pick) { return (ph, sec) => { const o = clone(ph); const ns = o.flatMap((p) => p.moras).filter((m) => m.vowel === 'N'); const pit = pick(ns.map((m) => m.pitch)); const r = N3(o, sec); const n = r.flatMap((p) => p.moras).find((m) => m.vowel === 'N'); if (n) n.pitch = pit; return r; }; }
+const Ma = Mx((a) => a[0]), Mb = Mx((a) => a[a.length - 1]), Mc = Mx((a) => (a[0] + a[a.length - 1]) / 2);
+const VARIANTS = { N2, Ma, Mb, Mc };
 const CASES = [
   { id: 'mina-nn', text: 'んー', voice: '冥鳴ひまり', style: 'ノーマル', pitch: -0.05, speed: 0.85, intonation: 0.65, nobasu: 0.85 },
-  { id: 'mina-n', text: 'ん', voice: '冥鳴ひまり', style: 'ノーマル', pitch: -0.05, speed: 0.85, intonation: 0.65, nobasu: 0.85 },
   { id: 'hono-nn', text: 'んー', voice: '春日部つむぎ', style: 'ノーマル', pitch: 0.03, speed: 1.0, intonation: 1.4, nobasu: 1.0 },
 ];
 const dump = {};
