@@ -18,12 +18,12 @@ lines:
   - {id: hono-yoshi, text: よーし！, pitch: 0.08, speed: 1.12, intonation: 1.6, gobi: sagaru}
   - {id: hono-uun, text: うーーーーーん……, pitch: 0.03, speed: 0.64, intonation: 1.4, gobi: sagaru, post: 0.1}   # 11/19 14:00「1秒くらいかけて伸ばす」
   - {id: hono-achaa, text: あちゃーーー……, pitch: 0.06, speed: 0.85, intonation: 1.5, gobi: sagaru, post: 0.1}   # 11/19 14:00「最後伸ばしをつよく。あちゃ↓・・・」
-  # ---- みなも ----
-  - {id: mina-ha, text: ……は, voice: 冥鳴ひまり, style: ノーマル, pitch: -0.02, speed: 0.95, intonation: 0.65, gobi: sagaru}
-  - {id: mina-fu, text: ……ふ, voice: 冥鳴ひまり, style: ノーマル, pitch: -0.02, speed: 0.95, intonation: 0.65, gobi: sagaru}
-  - {id: mina-n, text: ……ん, voice: 冥鳴ひまり, style: ノーマル, pitch: -0.02, speed: 0.95, intonation: 0.65}
-  - {id: mina-yoshi, text: ……よし。, voice: 冥鳴ひまり, style: ノーマル, pitch: -0.02, speed: 0.9, intonation: 1.4, gobi: sagaru, post: 0.1}   # 11/19 13:54・14:00「語尾をよく下げて、し が消えていくように」
-  - {id: mina-uun, text: ……うーーーーん, voice: 冥鳴ひまり, style: ノーマル, pitch: -0.05, speed: 0.72, intonation: 0.65, gobi: sagaru, post: 0.1}   # 11/19 14:00「1秒くらいかけて伸ばす」
+  # ---- みなも（11/19 14:16 うーんの前にノイズ＝「……」が息の音になっていた → 「……」をとった） ----
+  - {id: mina-ha, text: は, voice: 冥鳴ひまり, style: ノーマル, pitch: -0.02, speed: 0.95, intonation: 0.65, gobi: sagaru}
+  - {id: mina-fu, text: ふ, voice: 冥鳴ひまり, style: ノーマル, pitch: -0.02, speed: 0.95, intonation: 0.65, gobi: sagaru}
+  - {id: mina-n, text: ん, voice: 冥鳴ひまり, style: ノーマル, pitch: -0.02, speed: 0.95, intonation: 0.65}
+  - {id: mina-yoshi, text: よし。, voice: 冥鳴ひまり, style: ノーマル, pitch: -0.02, speed: 0.9, intonation: 1.4, gobi: sagaru, post: 0.1}   # 11/19 13:54・14:00「語尾をよく下げて、し が消えていくように」
+  - {id: mina-uun, text: うーーーーん, voice: 冥鳴ひまり, style: ノーマル, pitch: -0.05, speed: 0.72, intonation: 0.65, gobi: sagaru, post: 0.1}   # 11/19 14:00「1秒くらいかけて伸ばす」
   # ---- わかば（11/19 13:52 しょーくん「もっと高くし、ゆっくり読んでほしい。おっとりな感じ」→ pitch 0.1・speed 0.78・抑揚 1.3） ----
   - {id: waka-sore, text: それ, voice: WhiteCUL, style: ノーマル, pitch: 0.1, speed: 0.78, intonation: 1.3, gobi: sagaru}
   - {id: waka-ei, text: えい, voice: WhiteCUL, style: ノーマル, pitch: 0.1, speed: 0.78, intonation: 1.3, gobi: sagaru}
