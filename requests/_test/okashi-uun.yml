@@ -11,3 +11,8 @@ lines:
   - {id: m2, text: うーん, voice: 冥鳴ひまり, style: ノーマル, pitch: -0.02, speed: 0.85, intonation: 0.65, gobi: taira, nobasu: 0.85, post: 0.1}
   - {id: m3, text: ううーん, voice: 冥鳴ひまり, style: ノーマル, pitch: -0.02, speed: 0.85, intonation: 0.8, gobi: sagaru, nobasu: 0.8, post: 0.1}
   - {id: m4, text: うーん, voice: 冥鳴ひまり, style: ノーマル, pitch: -0.02, speed: 0.85, intonation: 0.65, nobasu: 0.85, volume: 1.0, post: 0.1}
+  - {id: h6, text: んー, pitch: 0.05, speed: 1.0, intonation: 1.2, gobi: sagaru, nobasu: 1.0, post: 0.1}
+  - {id: h7, text: うーむ, pitch: 0.05, speed: 1.0, intonation: 1.2, gobi: sagaru, nobasu: 1.0, post: 0.1}
+  - {id: h8, text: むーん, pitch: 0.05, speed: 1.0, intonation: 1.2, gobi: sagaru, nobasu: 1.0, post: 0.1}
+  - {id: m5, text: んー, voice: 冥鳴ひまり, style: ノーマル, pitch: -0.02, speed: 0.85, intonation: 0.8, gobi: sagaru, nobasu: 0.85, post: 0.1}
+  - {id: m6, text: うーむ, voice: 冥鳴ひまり, style: ノーマル, pitch: -0.02, speed: 0.85, intonation: 0.8, gobi: sagaru, nobasu: 0.85, post: 0.1}
