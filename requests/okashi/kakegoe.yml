@@ -1,27 +1,28 @@
 # まぜまぜおかし屋（okashi）の掛け声（11/19 しょーくんが声をえらんだ・昼のチャット【okashi-hiru】）
-# ほのか＝春日部つむぎ（高め・元気）／みなも＝冥鳴ひまり（ひくめ・抑揚少なめ）／わかば＝WhiteCUL（ゆっくり・やわらかく）
-# 朝昼（いらっしゃい・焼くとき・ひらめき・ありがとう）と夜（カードの発動・大満足）で使う。セリフの文は声にしない
+# ほのか＝春日部つむぎ（高め・元気）／みなも＝冥鳴ひまり（ひくめ・抑揚少なめ）／わかば＝WhiteCUL（少し高め・ゆっくり）
+# 11/19 13:25 しょーくん「ありがとうレベルの文章だと、イントネーションがダメになる。本当の短文だけ（えいっ！やっ！はっ・うーん……レベル）」
 voice: 春日部つむぎ
 style: ノーマル
 lines:
   # ---- ほのか ----
-  - {id: hono-irassyai, text: いらっしゃいませー！, pitch: 0.08, speed: 1.12, intonation: 1.6}
-  - {id: hono-oishiku, text: おいしくなーれ！, pitch: 0.08, speed: 1.12, intonation: 1.6}
+  - {id: hono-ei, text: えいっ！, pitch: 0.08, speed: 1.12, intonation: 1.6}
+  - {id: hono-ya, text: やっ！, pitch: 0.08, speed: 1.12, intonation: 1.6}
+  - {id: hono-sore, text: それっ！, pitch: 0.08, speed: 1.12, intonation: 1.6}
+  - {id: hono-waa, text: わぁっ！, pitch: 0.08, speed: 1.12, intonation: 1.6}
   - {id: hono-yatta, text: やったー！, pitch: 0.08, speed: 1.12, intonation: 1.6}
   - {id: hono-yoshi, text: よーし！, pitch: 0.08, speed: 1.12, intonation: 1.6}
-  - {id: hono-ei, text: えいっ！, pitch: 0.08, speed: 1.12, intonation: 1.6}
-  - {id: hono-sore, text: それーっ！, pitch: 0.08, speed: 1.12, intonation: 1.6}
-  - {id: hono-achaa, text: あちゃー……, pitch: 0.06, speed: 1.05, intonation: 1.4}
-  - {id: hono-arigato, text: ありがとうございましたー！, pitch: 0.08, speed: 1.15, intonation: 1.6}
+  - {id: hono-uun, text: うーん……, pitch: 0.06, speed: 1.0, intonation: 1.4, gobi: sagaru}
+  - {id: hono-achaa, text: あちゃー, pitch: 0.06, speed: 1.05, intonation: 1.4, gobi: sagaru}
   # ---- みなも ----
-  - {id: mina-irassyai, text: ……いらっしゃい, voice: 冥鳴ひまり, style: ノーマル, pitch: -0.02, speed: 0.95, intonation: 0.65}
-  - {id: mina-dekita, text: ……できた, voice: 冥鳴ひまり, style: ノーマル, pitch: -0.02, speed: 0.95, intonation: 0.65}
-  - {id: mina-ii, text: ……ん、いい, voice: 冥鳴ひまり, style: ノーマル, pitch: -0.02, speed: 0.95, intonation: 0.65}
   - {id: mina-ha, text: ……はっ, voice: 冥鳴ひまり, style: ノーマル, pitch: -0.02, speed: 0.95, intonation: 0.65}
-  - {id: mina-arigato, text: ……ありがと, voice: 冥鳴ひまり, style: ノーマル, pitch: -0.02, speed: 0.95, intonation: 0.65}
+  - {id: mina-fu, text: ……ふっ, voice: 冥鳴ひまり, style: ノーマル, pitch: -0.02, speed: 0.95, intonation: 0.65}
+  - {id: mina-n, text: ……ん, voice: 冥鳴ひまり, style: ノーマル, pitch: -0.02, speed: 0.95, intonation: 0.65}
+  - {id: mina-yoshi, text: ……よし, voice: 冥鳴ひまり, style: ノーマル, pitch: -0.02, speed: 0.95, intonation: 0.65}
+  - {id: mina-uun, text: ……うーん, voice: 冥鳴ひまり, style: ノーマル, pitch: -0.02, speed: 0.95, intonation: 0.65, gobi: sagaru}
   # ---- わかば ----
-  - {id: waka-araara, text: あらあら, voice: WhiteCUL, style: ノーマル, speed: 0.88, intonation: 1.15}
-  - {id: waka-ufufu, text: うふふ, voice: WhiteCUL, style: ノーマル, speed: 0.88, intonation: 1.15}
-  - {id: waka-irassyai, text: いらっしゃいませぇ, voice: WhiteCUL, style: ノーマル, speed: 0.88, intonation: 1.15}
-  - {id: waka-sore, text: それっ, voice: WhiteCUL, style: ノーマル, speed: 0.88, intonation: 1.15}
-  - {id: waka-arigato, text: ありがとうねぇ, voice: WhiteCUL, style: ノーマル, speed: 0.88, intonation: 1.15}
+  - {id: waka-sore, text: それっ, voice: WhiteCUL, style: ノーマル, pitch: 0.05, speed: 0.9, intonation: 1.15}
+  - {id: waka-ei, text: えいっ, voice: WhiteCUL, style: ノーマル, pitch: 0.05, speed: 0.9, intonation: 1.15}
+  - {id: waka-ufufu, text: うふふ, voice: WhiteCUL, style: ノーマル, pitch: 0.05, speed: 0.88, intonation: 1.15}
+  - {id: waka-araara, text: あらあら, voice: WhiteCUL, style: ノーマル, pitch: 0.05, speed: 0.88, intonation: 1.15}
+  - {id: waka-maa, text: まぁ, voice: WhiteCUL, style: ノーマル, pitch: 0.05, speed: 0.88, intonation: 1.15}
+  - {id: waka-uun, text: うーん……, voice: WhiteCUL, style: ノーマル, pitch: 0.05, speed: 0.88, intonation: 1.15, gobi: sagaru}
