@@ -1,0 +1,55 @@
+# ためし（ゲームには入れない）：まぜまぜおかし屋（okashi）のほのかの声えらび・その2（11/19 昼のチャット）
+# みなも＝冥鳴ひまり・わかば＝WhiteCUL に決まったので、ほのかはそのほかの声で、高さ・はやさ・抑揚・声の種類を変えて10案
+voice: 満別花丸
+style: 元気
+lines:
+  # h01：花丸・元気（ふつう）
+  - {id: hono-h01-irassyai, text: いらっしゃいませー！, voice: 満別花丸, style: 元気, speed: 1.05, intonation: 1.35}
+  - {id: hono-h01-oishiku, text: おいしくなーれ！, voice: 満別花丸, style: 元気, speed: 1.05, intonation: 1.35}
+  - {id: hono-h01-yatta, text: やったー！, voice: 満別花丸, style: 元気, speed: 1.05, intonation: 1.35}
+  - {id: hono-h01-ei, text: えいっ！, voice: 満別花丸, style: 元気, speed: 1.05, intonation: 1.35}
+  # h02：花丸・元気（高め・はやめ）
+  - {id: hono-h02-irassyai, text: いらっしゃいませー！, voice: 満別花丸, style: 元気, pitch: 0.05, speed: 1.12, intonation: 1.5}
+  - {id: hono-h02-oishiku, text: おいしくなーれ！, voice: 満別花丸, style: 元気, pitch: 0.05, speed: 1.12, intonation: 1.5}
+  - {id: hono-h02-yatta, text: やったー！, voice: 満別花丸, style: 元気, pitch: 0.05, speed: 1.12, intonation: 1.5}
+  - {id: hono-h02-ei, text: えいっ！, voice: 満別花丸, style: 元気, pitch: 0.05, speed: 1.12, intonation: 1.5}
+  # h03：花丸・ノーマル（抑揚つよめ）
+  - {id: hono-h03-irassyai, text: いらっしゃいませー！, voice: 満別花丸, style: ノーマル, pitch: 0.03, speed: 1.05, intonation: 1.55}
+  - {id: hono-h03-oishiku, text: おいしくなーれ！, voice: 満別花丸, style: ノーマル, pitch: 0.03, speed: 1.05, intonation: 1.55}
+  - {id: hono-h03-yatta, text: やったー！, voice: 満別花丸, style: ノーマル, pitch: 0.03, speed: 1.05, intonation: 1.55}
+  - {id: hono-h03-ei, text: えいっ！, voice: 満別花丸, style: ノーマル, pitch: 0.03, speed: 1.05, intonation: 1.55}
+  # h04：花丸・ぶりっ子
+  - {id: hono-h04-irassyai, text: いらっしゃいませー！, voice: 満別花丸, style: ぶりっ子, speed: 1.05, intonation: 1.3}
+  - {id: hono-h04-oishiku, text: おいしくなーれ！, voice: 満別花丸, style: ぶりっ子, speed: 1.05, intonation: 1.3}
+  - {id: hono-h04-yatta, text: やったー！, voice: 満別花丸, style: ぶりっ子, speed: 1.05, intonation: 1.3}
+  - {id: hono-h04-ei, text: えいっ！, voice: 満別花丸, style: ぶりっ子, speed: 1.05, intonation: 1.3}
+  # h05：アル・うきうき（高め）
+  - {id: hono-h05-irassyai, text: いらっしゃいませー！, voice: 猫使アル, style: うきうき, pitch: 0.04, speed: 1.08, intonation: 1.4}
+  - {id: hono-h05-oishiku, text: おいしくなーれ！, voice: 猫使アル, style: うきうき, pitch: 0.04, speed: 1.08, intonation: 1.4}
+  - {id: hono-h05-yatta, text: やったー！, voice: 猫使アル, style: うきうき, pitch: 0.04, speed: 1.08, intonation: 1.4}
+  - {id: hono-h05-ei, text: えいっ！, voice: 猫使アル, style: うきうき, pitch: 0.04, speed: 1.08, intonation: 1.4}
+  # h06：アル・うきうき（ひくめ）
+  - {id: hono-h06-irassyai, text: いらっしゃいませー！, voice: 猫使アル, style: うきうき, pitch: -0.03, speed: 1.02, intonation: 1.35}
+  - {id: hono-h06-oishiku, text: おいしくなーれ！, voice: 猫使アル, style: うきうき, pitch: -0.03, speed: 1.02, intonation: 1.35}
+  - {id: hono-h06-yatta, text: やったー！, voice: 猫使アル, style: うきうき, pitch: -0.03, speed: 1.02, intonation: 1.35}
+  - {id: hono-h06-ei, text: えいっ！, voice: 猫使アル, style: うきうき, pitch: -0.03, speed: 1.02, intonation: 1.35}
+  # h07：アル・つよつよ（熱い）
+  - {id: hono-h07-irassyai, text: いらっしゃいませー！, voice: 猫使アル, style: つよつよ, pitch: 0.02, speed: 1.08, intonation: 1.45}
+  - {id: hono-h07-oishiku, text: おいしくなーれ！, voice: 猫使アル, style: つよつよ, pitch: 0.02, speed: 1.08, intonation: 1.45}
+  - {id: hono-h07-yatta, text: やったー！, voice: 猫使アル, style: つよつよ, pitch: 0.02, speed: 1.08, intonation: 1.45}
+  - {id: hono-h07-ei, text: えいっ！, voice: 猫使アル, style: つよつよ, pitch: 0.02, speed: 1.08, intonation: 1.45}
+  # h08：つむぎ（高め・元気）
+  - {id: hono-h08-irassyai, text: いらっしゃいませー！, voice: 春日部つむぎ, style: ノーマル, pitch: 0.08, speed: 1.12, intonation: 1.6}
+  - {id: hono-h08-oishiku, text: おいしくなーれ！, voice: 春日部つむぎ, style: ノーマル, pitch: 0.08, speed: 1.12, intonation: 1.6}
+  - {id: hono-h08-yatta, text: やったー！, voice: 春日部つむぎ, style: ノーマル, pitch: 0.08, speed: 1.12, intonation: 1.6}
+  - {id: hono-h08-ei, text: えいっ！, voice: 春日部つむぎ, style: ノーマル, pitch: 0.08, speed: 1.12, intonation: 1.6}
+  # h09：トバリ・明るい
+  - {id: hono-h09-irassyai, text: いらっしゃいませー！, voice: 夜語トバリ, style: 明るい, pitch: 0.04, speed: 1.08, intonation: 1.45}
+  - {id: hono-h09-oishiku, text: おいしくなーれ！, voice: 夜語トバリ, style: 明るい, pitch: 0.04, speed: 1.08, intonation: 1.45}
+  - {id: hono-h09-yatta, text: やったー！, voice: 夜語トバリ, style: 明るい, pitch: 0.04, speed: 1.08, intonation: 1.45}
+  - {id: hono-h09-ei, text: えいっ！, voice: 夜語トバリ, style: 明るい, pitch: 0.04, speed: 1.08, intonation: 1.45}
+  # h10：SAYO（高め・元気）
+  - {id: hono-h10-irassyai, text: いらっしゃいませー！, voice: 小夜/SAYO, style: ノーマル, pitch: 0.06, speed: 1.08, intonation: 1.55}
+  - {id: hono-h10-oishiku, text: おいしくなーれ！, voice: 小夜/SAYO, style: ノーマル, pitch: 0.06, speed: 1.08, intonation: 1.55}
+  - {id: hono-h10-yatta, text: やったー！, voice: 小夜/SAYO, style: ノーマル, pitch: 0.06, speed: 1.08, intonation: 1.55}
+  - {id: hono-h10-ei, text: えいっ！, voice: 小夜/SAYO, style: ノーマル, pitch: 0.06, speed: 1.08, intonation: 1.55}
