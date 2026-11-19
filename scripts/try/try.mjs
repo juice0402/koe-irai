@@ -30,7 +30,13 @@ function v2(ph, sec, atEnd) { const o = v1(ph, sec, atEnd), all = o.flatMap((p) 
 // v3：v2 ＋ のばす所を 0.2 秒ずつの同じ母音の音に分ける（長い1音は小さくなりやすい？）
 function v3(ph, sec, atEnd) { const o = v2(ph, sec, atEnd), all = o.flatMap((p) => p.moras), i = choonIdx(all, atEnd); if (i < 0) return o; const m = all[i]; const n = Math.max(1, Math.round(sec / 0.2));
   for (const p of o) { const k = p.moras.indexOf(m); if (k < 0) continue; p.moras.splice(k, 1, ...Array.from({ length: n }, () => ({ ...m, vowel_length: sec / n }))); } return o; }
-const VARIANTS = { v0, v1, v2, v3 };
+// v4：0.12 秒ずつに分ける
+function v4(ph, sec, atEnd) { const o = v2(ph, sec, atEnd), all = o.flatMap((p) => p.moras), i = choonIdx(all, atEnd); if (i < 0) return o; const m = all[i]; const n = Math.max(1, Math.round(sec / 0.12));
+  for (const p of o) { const k = p.moras.indexOf(m); if (k < 0) continue; p.moras.splice(k, 1, ...Array.from({ length: n }, () => ({ ...m, vowel_length: sec / n }))); } return o; }
+// v5：0.2 秒ずつ＋高さを少しずつゆらす（平らすぎないように）
+function v5(ph, sec, atEnd) { const o = v3(ph, sec, atEnd), all = o.flatMap((p) => p.moras), i = choonIdx(all, atEnd); if (i < 0) return o; let k = 0;
+  for (let j = i; j < all.length && all[j].vowel === all[i].vowel && !all[j].consonant; j++, k++) all[j].pitch = all[i].pitch + (k % 2 ? 0.02 : -0.01); return o; }
+const VARIANTS = { v0, v3, v4, v5 };
 const CASES = [
   { id: 'hono', text: 'うーん', voice: '春日部つむぎ', style: 'ノーマル', pitch: 0.03, speed: 1.0, intonation: 1.4, nobasu: 1.0 },
   { id: 'hono-mun', text: 'むーん', voice: '春日部つむぎ', style: 'ノーマル', pitch: 0.03, speed: 1.0, intonation: 1.4, nobasu: 1.0 },

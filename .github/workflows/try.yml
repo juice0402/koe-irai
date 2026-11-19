@@ -6,7 +6,7 @@ on:
     branches: ['koe-try/**']
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   try:
@@ -29,7 +29,14 @@ jobs:
           for i in $(seq 1 60); do curl -sf http://127.0.0.1:50021/version && echo && exit 0; sleep 5; done
           exit 1
       - run: node scripts/try/try.mjs
-      - uses: actions/upload-artifact@v4
-        with:
-          name: out-try
-          path: out-try/
+      - name: 50ms ごとの音の大きさ
+        run: |
+          for f in out-try/*.mp3; do
+            echo "$f $(ffmpeg -i "$f" -af 'asetnsamples=n=2205,astats=metadata=1:reset=1,ametadata=print:key=lavfi.astats.Overall.RMS_level' -f null - 2>&1 | grep -o 'RMS_level=[-0-9.inf]*' | cut -d= -f2 | awk '{printf "%s ", ($1=="-inf")?"-99":int($1)}')" | tee -a out-try/rms.txt
+          done
+      - name: 枝にのせる（司令塔が取る）
+        run: |
+          rm -f out-try/*.wav
+          git config user.name "koe-irai"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -f out-try && git commit -q -m "ためしの音（${GITHUB_RUN_ID}）" && git push
