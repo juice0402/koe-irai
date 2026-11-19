@@ -101,6 +101,39 @@
       "file": "m4.mp3",
       "seconds": 1.451,
       "key": "68a220ee07ad988f"
+    },
+    {
+      "id": "h7",
+      "text": "うーむ",
+      "voice": "春日部つむぎ",
+      "style": "ノーマル",
+      "gobi": "sagaru",
+      "nobasu": 1,
+      "file": "h7.mp3",
+      "seconds": 1.461,
+      "key": "a45b6cef885e25d9"
+    },
+    {
+      "id": "h8",
+      "text": "むーん",
+      "voice": "春日部つむぎ",
+      "style": "ノーマル",
+      "gobi": "sagaru",
+      "nobasu": 1,
+      "file": "h8.mp3",
+      "seconds": 1.451,
+      "key": "517ce1b71649ccfe"
+    },
+    {
+      "id": "m6",
+      "text": "うーむ",
+      "voice": "冥鳴ひまり",
+      "style": "ノーマル",
+      "gobi": "sagaru",
+      "nobasu": 0.85,
+      "file": "m6.mp3",
+      "seconds": 1.525,
+      "key": "13d211dfb7070d6d"
     }
   ]
 }
