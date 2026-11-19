@@ -5,7 +5,7 @@ import { mkdirSync, writeFileSync, existsSync, readFileSync, readdirSync, rmSync
 import { join } from 'node:path';
 import { tmpdir } from 'node:os';
 import { spawnSync } from 'node:child_process';
-import { listRequestFiles, loadVoices, parseRequest, validateRequest, findStyleId, lineKey, applyParams, wavSeconds, buildCredits, readText } from './lib.mjs';
+import { listRequestFiles, loadVoices, parseRequest, validateRequest, findStyleId, lineKey, applyParams, countChoon, wavSeconds, buildCredits, readText } from './lib.mjs';
 
 const root = process.cwd();
 const ENGINE = process.env.VOICEVOX_URL || 'http://127.0.0.1:50021';
@@ -61,11 +61,12 @@ for (const f of listRequestFiles(root)) {
       kept++;
     } else {
       const query = await (await api(`/audio_query?speaker=${styleId}&text=${encodeURIComponent(l.text)}`, { method: 'POST' })).json();
+      if (l.nobasu != null && countChoon(query.accent_phrases) === 0) throw new Error(`${f.rel} の ${l.id}：nobasu の ー の音がエンジンの読みに見つからない（text を見直す）`);
       const wav = Buffer.from(await (await api(`/synthesis?speaker=${styleId}`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(applyParams(query, l)) })).arrayBuffer());
       const wavPath = join(tmp, `${f.game}-${f.set}-${l.id}.wav`);
       writeFileSync(wavPath, wav);
       toMp3(wavPath, join(dir, file));
-      lines.push({ id: l.id, text: l.text, voice: l.voice, style: l.style, gobi: l.gobi, file, seconds: wavSeconds(wav), key });
+      lines.push({ id: l.id, text: l.text, voice: l.voice, style: l.style, gobi: l.gobi, ...(l.nobasu != null ? { nobasu: l.nobasu } : {}), file, seconds: wavSeconds(wav), key });
       made++;
     }
   }
