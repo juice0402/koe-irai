@@ -66,23 +66,23 @@
     },
     {
       "id": "hono-uun",
-      "text": "うーん……",
+      "text": "うーーーん……",
       "voice": "春日部つむぎ",
       "style": "ノーマル",
       "gobi": "sagaru",
       "file": "hono-uun.mp3",
-      "seconds": 0.48,
-      "key": "8b2f744fc46d38fc"
+      "seconds": 0.747,
+      "key": "dd4397393d2162ce"
     },
     {
       "id": "hono-achaa",
-      "text": "あちゃー",
+      "text": "あちゃーー……",
       "voice": "春日部つむぎ",
       "style": "ノーマル",
       "gobi": "sagaru",
       "file": "hono-achaa.mp3",
-      "seconds": 0.555,
-      "key": "00d0fd048d1b92f1"
+      "seconds": 0.725,
+      "key": "4d4355769a9437b0"
     },
     {
       "id": "mina-ha",
@@ -121,18 +121,18 @@
       "style": "ノーマル",
       "gobi": "sagaru",
       "file": "mina-yoshi.mp3",
-      "seconds": 0.555,
-      "key": "7ff626cf10c9d23d"
+      "seconds": 0.565,
+      "key": "e0da097d16a625dc"
     },
     {
       "id": "mina-uun",
-      "text": "……うーーん",
+      "text": "……うーーーん",
       "voice": "冥鳴ひまり",
       "style": "ノーマル",
       "gobi": "sagaru",
       "file": "mina-uun.mp3",
-      "seconds": 0.629,
-      "key": "94671bf24b5fbdba"
+      "seconds": 0.757,
+      "key": "fd39ef193d31caff"
     },
     {
       "id": "waka-sore",
