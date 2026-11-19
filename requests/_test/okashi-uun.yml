@@ -1,0 +1,13 @@
+# ためし（ゲームには入れない）：okashi の「うーん」が、のばしたときに息の音・小さい声にならない形をさがす（11/19 昼のチャット）
+voice: 春日部つむぎ
+style: ノーマル
+lines:
+  - {id: h1, text: うーん, pitch: 0.08, speed: 1.0, intonation: 1.6, gobi: sagaru, nobasu: 1.0, post: 0.1}
+  - {id: h2, text: うーん, pitch: 0.03, speed: 1.0, intonation: 1.0, gobi: taira, nobasu: 1.0, post: 0.1}
+  - {id: h3, text: ううーん, pitch: 0.05, speed: 1.0, intonation: 1.2, gobi: sagaru, nobasu: 0.9, post: 0.1}
+  - {id: h4, text: うーん, pitch: 0.05, speed: 1.0, intonation: 1.2, nobasu: 1.0, post: 0.1}
+  - {id: h5, text: んーー, pitch: 0.05, speed: 1.0, intonation: 1.2, gobi: sagaru, post: 0.1}
+  - {id: m1, text: うーん, voice: 冥鳴ひまり, style: ノーマル, pitch: 0.0, speed: 0.85, intonation: 0.9, gobi: sagaru, nobasu: 0.85, post: 0.1}
+  - {id: m2, text: うーん, voice: 冥鳴ひまり, style: ノーマル, pitch: -0.02, speed: 0.85, intonation: 0.65, gobi: taira, nobasu: 0.85, post: 0.1}
+  - {id: m3, text: ううーん, voice: 冥鳴ひまり, style: ノーマル, pitch: -0.02, speed: 0.85, intonation: 0.8, gobi: sagaru, nobasu: 0.8, post: 0.1}
+  - {id: m4, text: うーん, voice: 冥鳴ひまり, style: ノーマル, pitch: -0.02, speed: 0.85, intonation: 0.65, nobasu: 0.85, volume: 1.0, post: 0.1}
