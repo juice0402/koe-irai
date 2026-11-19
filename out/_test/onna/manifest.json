@@ -1,0 +1,168 @@
+{
+  "game": "_test",
+  "set": "onna",
+  "engine": "0.26.2",
+  "request": "requests/_test/onna.yml",
+  "lines": [
+    {
+      "id": "01-aru",
+      "text": "いっくよー！",
+      "voice": "猫使アル",
+      "style": "うきうき",
+      "gobi": "agaru",
+      "file": "01-aru.mp3",
+      "seconds": 0.683,
+      "key": "1bf6d685db96a594"
+    },
+    {
+      "id": "01-aru-2",
+      "text": "おいしくなあれ！",
+      "voice": "猫使アル",
+      "style": "ノーマル",
+      "gobi": "taira",
+      "file": "01-aru-2.mp3",
+      "seconds": 0.896,
+      "key": "7388ebd5176f5ebe"
+    },
+    {
+      "id": "02-bii",
+      "text": "いっくよー！",
+      "voice": "猫使ビィ",
+      "style": "ノーマル",
+      "gobi": "agaru",
+      "file": "02-bii.mp3",
+      "seconds": 0.779,
+      "key": "9715eaa5392d7c1d"
+    },
+    {
+      "id": "02-bii-2",
+      "text": "おいしくなあれ！",
+      "voice": "猫使ビィ",
+      "style": "おちつき",
+      "gobi": "taira",
+      "file": "02-bii-2.mp3",
+      "seconds": 1.024,
+      "key": "2b76d00ad25191a1"
+    },
+    {
+      "id": "03-hanamaru",
+      "text": "いっくよー！",
+      "voice": "満別花丸",
+      "style": "元気",
+      "gobi": "agaru",
+      "file": "03-hanamaru.mp3",
+      "seconds": 0.747,
+      "key": "8ed8ed95ad366a59"
+    },
+    {
+      "id": "03-hanamaru-2",
+      "text": "おいしくなあれ！",
+      "voice": "満別花丸",
+      "style": "ノーマル",
+      "gobi": "taira",
+      "file": "03-hanamaru-2.mp3",
+      "seconds": 0.821,
+      "key": "f43dc8cf2c8ed763"
+    },
+    {
+      "id": "04-sayo",
+      "text": "いっくよー！",
+      "voice": "小夜/SAYO",
+      "style": "ノーマル",
+      "gobi": "agaru",
+      "file": "04-sayo.mp3",
+      "seconds": 0.832,
+      "key": "8b76e46d54703cdc"
+    },
+    {
+      "id": "04-sayo-2",
+      "text": "おいしくなあれ！",
+      "voice": "小夜/SAYO",
+      "style": "ノーマル",
+      "gobi": "taira",
+      "file": "04-sayo-2.mp3",
+      "seconds": 0.949,
+      "key": "dc97e41cdb8e023b"
+    },
+    {
+      "id": "05-whitecul",
+      "text": "いっくよー！",
+      "voice": "WhiteCUL",
+      "style": "たのしい",
+      "gobi": "agaru",
+      "file": "05-whitecul.mp3",
+      "seconds": 0.661,
+      "key": "18d255c691096778"
+    },
+    {
+      "id": "05-whitecul-2",
+      "text": "おいしくなあれ！",
+      "voice": "WhiteCUL",
+      "style": "ノーマル",
+      "gobi": "taira",
+      "file": "05-whitecul-2.mp3",
+      "seconds": 0.971,
+      "key": "89e7a798e807f303"
+    },
+    {
+      "id": "06-tobari",
+      "text": "いっくよー！",
+      "voice": "夜語トバリ",
+      "style": "明るい",
+      "gobi": "agaru",
+      "file": "06-tobari.mp3",
+      "seconds": 0.779,
+      "key": "0b72282ccfaf27f4"
+    },
+    {
+      "id": "06-tobari-2",
+      "text": "おいしくなあれ！",
+      "voice": "夜語トバリ",
+      "style": "ノーマル",
+      "gobi": "taira",
+      "file": "06-tobari-2.mp3",
+      "seconds": 0.928,
+      "key": "02fb8f5dac937a3b"
+    },
+    {
+      "id": "07-tsumugi",
+      "text": "いっくよー！",
+      "voice": "春日部つむぎ",
+      "style": "ノーマル",
+      "gobi": "agaru",
+      "file": "07-tsumugi.mp3",
+      "seconds": 0.693,
+      "key": "1fee82dbc76f9078"
+    },
+    {
+      "id": "07-tsumugi-2",
+      "text": "おいしくなあれ！",
+      "voice": "春日部つむぎ",
+      "style": "ノーマル",
+      "gobi": "taira",
+      "file": "07-tsumugi-2.mp3",
+      "seconds": 0.843,
+      "key": "082363becb6d0084"
+    },
+    {
+      "id": "08-himari",
+      "text": "いっくよー！",
+      "voice": "冥鳴ひまり",
+      "style": "ノーマル",
+      "gobi": "agaru",
+      "file": "08-himari.mp3",
+      "seconds": 0.64,
+      "key": "d1aa20f41a5c63f2"
+    },
+    {
+      "id": "08-himari-2",
+      "text": "おいしくなあれ！",
+      "voice": "冥鳴ひまり",
+      "style": "ノーマル",
+      "gobi": "taira",
+      "file": "08-himari-2.mp3",
+      "seconds": 0.843,
+      "key": "3730ae4614939aad"
+    }
+  ]
+}

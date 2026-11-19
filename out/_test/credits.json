@@ -1,7 +1,13 @@
 {
   "game": "_test",
-  "line": "音声合成：VOICEVOX:春日部つむぎ、VOICEVOX:青山龍星",
+  "line": "音声合成：VOICEVOX:WhiteCUL、VOICEVOX:春日部つむぎ、VOICEVOX:小夜/SAYO、VOICEVOX:青山龍星、VOICEVOX:猫使アル、VOICEVOX:猫使ビィ、VOICEVOX:満別花丸、VOICEVOX:冥鳴ひまり、VOICEVOX:夜語トバリ",
   "voices": [
+    {
+      "name": "WhiteCUL",
+      "credit": "VOICEVOX:WhiteCUL",
+      "terms": "https://www.whitecul.com/guideline",
+      "checked": "2026-11-19"
+    },
     {
       "name": "春日部つむぎ",
       "credit": "VOICEVOX:春日部つむぎ",
@@ -9,10 +15,46 @@
       "checked": "2026-11-17"
     },
     {
+      "name": "小夜/SAYO",
+      "credit": "VOICEVOX:小夜/SAYO",
+      "terms": "https://316soramegu.wixsite.com/sayo-official/guideline",
+      "checked": "2026-11-19"
+    },
+    {
       "name": "青山龍星",
       "credit": "VOICEVOX:青山龍星",
       "terms": "https://www.virvoxproject.com/voicevoxの利用規約",
       "checked": "2026-11-17"
+    },
+    {
+      "name": "猫使アル",
+      "credit": "VOICEVOX:猫使アル",
+      "terms": "https://nekotukarb.wixsite.com/nekonohako/利用規約",
+      "checked": "2026-11-19"
+    },
+    {
+      "name": "猫使ビィ",
+      "credit": "VOICEVOX:猫使ビィ",
+      "terms": "https://nekotukarb.wixsite.com/nekonohako/利用規約",
+      "checked": "2026-11-19"
+    },
+    {
+      "name": "満別花丸",
+      "credit": "VOICEVOX:満別花丸",
+      "terms": "https://100hanamaru.wixsite.com/manbetsu-hanamaru/rule",
+      "checked": "2026-11-19"
+    },
+    {
+      "name": "冥鳴ひまり",
+      "credit": "VOICEVOX:冥鳴ひまり",
+      "terms": "https://www.meimeihimari.com/terms-of-use",
+      "checked": "2026-11-17"
+    },
+    {
+      "name": "夜語トバリ",
+      "credit": "VOICEVOX:夜語トバリ",
+      "terms": "https://yogataritobari.studio.site/#rules",
+      "checked": "2026-11-19"
     }
   ]
 }
