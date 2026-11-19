@@ -141,8 +141,8 @@
       "style": "ノーマル",
       "gobi": "sagaru",
       "file": "waka-sore.mp3",
-      "seconds": 0.544,
-      "key": "fd5420a64f5dca3a"
+      "seconds": 0.629,
+      "key": "ca3f71bffe44d384"
     },
     {
       "id": "waka-ei",
@@ -151,8 +151,8 @@
       "style": "ノーマル",
       "gobi": "sagaru",
       "file": "waka-ei.mp3",
-      "seconds": 0.384,
-      "key": "8ace42272fcc35c1"
+      "seconds": 0.459,
+      "key": "7aafb07897129b77"
     },
     {
       "id": "waka-ufufu",
@@ -161,8 +161,8 @@
       "style": "ノーマル",
       "gobi": "taira",
       "file": "waka-ufufu.mp3",
-      "seconds": 0.747,
-      "key": "2a79afb0ab3e5f50"
+      "seconds": 0.853,
+      "key": "a6d0da608f157ca4"
     },
     {
       "id": "waka-araara",
@@ -171,8 +171,8 @@
       "style": "ノーマル",
       "gobi": "taira",
       "file": "waka-araara.mp3",
-      "seconds": 0.736,
-      "key": "b757dca8958cb357"
+      "seconds": 0.843,
+      "key": "d5e260e0988c70bb"
     },
     {
       "id": "waka-maa",
@@ -181,8 +181,8 @@
       "style": "ノーマル",
       "gobi": "taira",
       "file": "waka-maa.mp3",
-      "seconds": 0.501,
-      "key": "82102f84b5143132"
+      "seconds": 0.555,
+      "key": "f2cc6a762ab4e353"
     },
     {
       "id": "waka-uun",
@@ -191,8 +191,8 @@
       "style": "ノーマル",
       "gobi": "sagaru",
       "file": "waka-uun.mp3",
-      "seconds": 0.597,
-      "key": "a29e149f182e0a59"
+      "seconds": 0.683,
+      "key": "eb90eef782d70e54"
     }
   ]
 }
