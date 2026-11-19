@@ -42,7 +42,7 @@ function v7(ph, sec, atEnd) { const o = v1(ph, 0.3, atEnd), all = o.flatMap((p) 
 const nIdx = (all) => all.map((m, i) => (m.vowel === 'N' ? i : -1)).filter((i) => i >= 0);
 function N1(ph, sec) { const o = clone(ph), all = o.flatMap((p) => p.moras), ix = nIdx(all); if (ix.length) all[ix[0]].vowel_length = sec; return o; }
 function N2(ph, sec) { const o = clone(ph), all = o.flatMap((p) => p.moras), ix = nIdx(all); if (ix.length) all[ix[ix.length - 1]].vowel_length = sec; return o; }
-function N3(ph, sec) { const o = clone(ph); let first = null; for (const p of o) p.moras = p.moras.filter((m) => { if (m.vowel !== 'N') return true; if (!first) { first = m; return true; } return false; }); if (first) first.vowel_length = sec; return o.filter((p) => p.moras.length); }
+function N3(ph, sec) { const o = clone(ph); let first = null; for (const p of o) p.moras = p.moras.filter((m) => { if (m.vowel !== 'N') return true; if (!first) { first = m; return true; } return false; }); if (first) first.vowel_length = sec; const r = o.filter((p) => p.moras.length); for (const p of r) p.accent = Math.max(1, Math.min(p.accent, p.moras.length)); return r; }
 const VARIANTS = { N1, N2, N3 };
 const CASES = [
   { id: 'mina-nn', text: 'んー', voice: '冥鳴ひまり', style: 'ノーマル', pitch: -0.05, speed: 0.85, intonation: 0.65, nobasu: 0.85 },
@@ -54,6 +54,7 @@ for (const c of CASES) {
   const sid = findStyleId(speakers, c.voice, c.style);
   const q = await (await api(`/audio_query?speaker=${sid}&text=${encodeURIComponent(c.text)}`, { method: 'POST' })).json();
   dump[c.id] = { engine: q.accent_phrases.flatMap((p) => p.moras).map((m) => [m.text, m.consonant, m.vowel, +m.vowel_length.toFixed(3), +m.pitch.toFixed(2)]), phrases: q.accent_phrases.length };
+  console.log('ENGINE', c.id, JSON.stringify(q.accent_phrases.map((p) => ({ accent: p.accent, moras: p.moras.map((m) => [m.text, m.vowel, +m.vowel_length.toFixed(3), +m.pitch.toFixed(2)]), pause: !!p.pause_mora }))));
   for (const [vn, fn] of Object.entries(VARIANTS)) {
     const ph = fn(q.accent_phrases, c.nobasu);
     const body = { ...q, accent_phrases: ph, speedScale: c.speed, pitchScale: c.pitch, intonationScale: c.intonation, volumeScale: 1, prePhonemeLength: 0.05, postPhonemeLength: 0.1, outputStereo: false };
