@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { loadVoices, parseRequest, validateRequest, findStyleId, lineKey, applyParams, wavSeconds, buildCredits, PARAMS, shapeGobi, autoGobi, stretchChoon, countChoon, choonAtEnd } from '../scripts/lib.mjs';
+import { loadVoices, parseRequest, validateRequest, findStyleId, lineKey, applyParams, wavSeconds, buildCredits, PARAMS, shapeGobi, autoGobi, stretchChoon, countChoon, choonAtEnd, choonMode } from '../scripts/lib.mjs';
 
 const voices = loadVoices(`
 voices:
@@ -185,11 +185,21 @@ test('のばす：エンジンの読みの ー（前と同じ母音の音）だ�
   assert.equal(countChoon([{ moras: [{ text: 'ウ', consonant: null, vowel: 'u' }, { text: 'ン', consonant: null, vowel: 'N' }] }]), 0);
 });
 
-test('のばす：ん・っ のあとや文の頭の ー は点検で止める', () => {
+test('のばす：っ のあとや文の頭の ー は点検で止める・んー はよい', () => {
   const r = req('card', `voice: 青山龍星\nstyle: 熱血\nlines:\n  - {id: a, text: んー, nobasu: 1.0}\n  - {id: b, text: あっー, nobasu: 1.0}\n  - {id: c, text: ーん, nobasu: 1.0}\n  - {id: d, text: うーん, nobasu: 1.0}\n  - {id: e, text: あちゃー, nobasu: 0.8}\n`);
   const e = validateRequest(r, voices).join('\n');
-  assert.match(e, /1 行め.*ー の前が「ん」/);
   assert.match(e, /2 行め.*ー の前が「っ」/);
   assert.match(e, /3 行め.*ー の前が「なし」/);
-  assert.doesNotMatch(e, /4 行め|5 行め/);
+  assert.doesNotMatch(e, /1 行め|4 行め|5 行め/);
+});
+
+test('のばす：んー は ん（N）の音をのばす', () => {
+  assert.equal(choonMode('んー……'), 'N');
+  assert.equal(choonMode('うーん'), 'boin');
+  const ph = [{ moras: [{ text: 'ン', consonant: null, vowel: 'N', vowel_length: 0.15, pitch: 5.9 }] }];
+  assert.equal(countChoon(ph), 0);
+  assert.equal(countChoon(ph, 'N'), 1);
+  const q = applyParams({ accent_phrases: ph }, { ...req('card', `voice: 青山龍星\nstyle: 熱血\nlines:\n  - {id: a, text: んー, nobasu: 1.0, gobi: sagaru}\n`).lines[0] });
+  assert.equal(q.accent_phrases[0].moras[0].vowel_length, 1.0);
+  assert.equal(ph[0].moras[0].vowel_length, 0.15); // 元は変えない
 });

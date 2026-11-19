@@ -125,7 +125,7 @@ export function validateRequest(req, voices) {
       if (n !== 1) errs.push(`${at}：nobasu の行は、text に ー を1つだけ書く（いま ${n} こ。重ねると息の音になる）`);
       const chars = [...l.text];
       const before = chars[chars.indexOf('ー') - 1];
-      if (n === 1 && (!before || /[んンっッ、。，．！？!?…・「」\s]/u.test(before))) errs.push(`${at}：nobasu の ー の前が「${before ?? 'なし'}」なので、のばせない（ん・っ のあとや文の頭の ー は、エンジンが音にしない。あ・う などの母音のある音のあとに ー を書く）`);
+      if (n === 1 && (!before || /[っッ、。，．！？!?…・「」\s]/u.test(before))) errs.push(`${at}：nobasu の ー の前が「${before ?? 'なし'}」なので、のばせない（っ のあとや文の頭の ー は、エンジンが音にしない。あ・う・ん などのあとに ー を書く）`);
     }
   });
   return errs;
@@ -153,7 +153,7 @@ export function applyParams(query, line) {
   for (const [name, p] of Object.entries(PARAMS)) q[p.key] = line[name];
   q.outputStereo = false;
   let phrases = query.accent_phrases;
-  if (line.nobasu != null) phrases = stretchChoon(phrases, line.nobasu, choonAtEnd(line.text));
+  if (line.nobasu != null) phrases = stretchChoon(phrases, line.nobasu, choonAtEnd(line.text), choonMode(line.text));
   if (line.gobi) phrases = shapeGobi(phrases, line.gobi);
   q.accent_phrases = phrases;
   return q;
@@ -163,8 +163,17 @@ export function applyParams(query, line) {
 // text の ー が終わりにあれば最後の候補、ほかは最初の候補（nobasu の行は ー が1つだけ）
 const MUSEI = { A: 'a', I: 'i', U: 'u', E: 'e', O: 'o' };
 const boin = (m) => MUSEI[m?.vowel] || m?.vowel;
-function choonIndexes(all) {
+// んー（ん のあとの ー）は、ん（N）の音そのものをのばす（11/19 しょーくん「うーん」→「んー」：つむぎ・ひまりの声は「う」が弱く息っぽいため）
+export function choonMode(text) {
+  const c = [...String(text)];
+  return /[んン]/u.test(c[c.indexOf('ー') - 1] || '') ? 'N' : 'boin';
+}
+function choonIndexes(all, mode = 'boin') {
   const idx = [];
+  if (mode === 'N') {
+    all.forEach((m, i) => { if (m.vowel === 'N') idx.push(i); });
+    return idx;
+  }
   all.forEach((m, i) => {
     if (m.text === 'ー') return idx.push(i);
     if (i === 0 || m.consonant) return;
@@ -178,16 +187,16 @@ export function choonAtEnd(text) {
 }
 
 // ー（長音）の音の数（make.mjs が nobasu の行で 0 なら止める）
-export function countChoon(phrases) {
-  return choonIndexes((Array.isArray(phrases) ? phrases : []).flatMap((p) => p.moras || [])).length;
+export function countChoon(phrases, mode = 'boin') {
+  return choonIndexes((Array.isArray(phrases) ? phrases : []).flatMap((p) => p.moras || []), mode).length;
 }
 
 // ー の母音を sec 秒にのばす。息の音（無声＝母音が大文字・高さ 0）になっていたら声にもどす。元の query は変えない
-export function stretchChoon(phrases, sec, atEnd = false) {
+export function stretchChoon(phrases, sec, atEnd = false, mode = 'boin') {
   if (!Array.isArray(phrases)) return phrases;
   const out = phrases.map((p) => ({ ...p, moras: (p.moras || []).map((m) => ({ ...m })) }));
   const all = out.flatMap((p) => p.moras);
-  const idx = choonIndexes(all);
+  const idx = choonIndexes(all, mode);
   if (idx.length === 0) return out;
   const i = atEnd ? idx[idx.length - 1] : idx[0];
   const m = all[i];
