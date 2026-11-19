@@ -1,0 +1,63 @@
+{
+  "game": "_test",
+  "set": "nobasu",
+  "engine": "0.26.2",
+  "request": "requests/_test/nobasu.yml",
+  "lines": [
+    {
+      "id": "hono-uun-08",
+      "text": "うーん",
+      "voice": "春日部つむぎ",
+      "style": "ノーマル",
+      "gobi": "sagaru",
+      "nobasu": 0.8,
+      "file": "hono-uun-08.mp3",
+      "seconds": 1.92,
+      "key": "508d1e293c16ee6f"
+    },
+    {
+      "id": "hono-uun-10",
+      "text": "うーん",
+      "voice": "春日部つむぎ",
+      "style": "ノーマル",
+      "gobi": "sagaru",
+      "nobasu": 1,
+      "file": "hono-uun-10.mp3",
+      "seconds": 2.229,
+      "key": "f1ba066bfd37d88c"
+    },
+    {
+      "id": "hono-achaa-08",
+      "text": "あちゃー",
+      "voice": "春日部つむぎ",
+      "style": "ノーマル",
+      "gobi": "sagaru",
+      "nobasu": 0.8,
+      "file": "hono-achaa-08.mp3",
+      "seconds": 1.525,
+      "key": "061869ae82da2443"
+    },
+    {
+      "id": "mina-uun-10",
+      "text": "うーん",
+      "voice": "冥鳴ひまり",
+      "style": "ノーマル",
+      "gobi": "sagaru",
+      "nobasu": 1,
+      "file": "mina-uun-10.mp3",
+      "seconds": 1.621,
+      "key": "0591d411deecaa60"
+    },
+    {
+      "id": "waka-uun-10",
+      "text": "うーん",
+      "voice": "WhiteCUL",
+      "style": "ノーマル",
+      "gobi": "sagaru",
+      "nobasu": 1,
+      "file": "waka-uun-10.mp3",
+      "seconds": 1.813,
+      "key": "80360777e410669c"
+    }
+  ]
+}
