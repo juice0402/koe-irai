@@ -36,38 +36,57 @@ const tmp = mkdtempSync(join(tmpdir(), 'koe-'));
 const usedByGame = new Map();
 let made = 0, kept = 0;
 const summary = [];
+const skipped = []; // 作れなかった行・依頼書（ほかは作る。前の音があれば残す・11/19【okashi-hiru】「1行のまちがいで全部止まる」）
 
 for (const f of listRequestFiles(root)) {
-  const req = parseRequest(f.game, f.set, readText(f.path));
-  const errs = validateRequest(req, voices);
-  if (errs.length) throw new Error(errs.join('\n'));
   const dir = join(root, 'out', f.game, f.set);
-  mkdirSync(dir, { recursive: true });
   const mPath = join(dir, 'manifest.json');
   const old = existsSync(mPath) ? JSON.parse(readFileSync(mPath, 'utf8')) : { lines: [] };
+  let req;
+  try {
+    req = parseRequest(f.game, f.set, readText(f.path));
+    const errs = validateRequest(req, voices);
+    if (errs.length) throw new Error(errs.join('\n'));
+  } catch (e) {
+    // 依頼書ごと作れない：out はさわらない（前の音のまま・クレジットも前の声で）
+    skipped.push(`${f.rel}：依頼書ごと飛ばした（前の音のまま）\n${e.message}`);
+    if (old.lines.length) usedByGame.set(f.game, (usedByGame.get(f.game) || []).concat(old.lines.map((l) => l.voice)));
+    continue;
+  }
+  mkdirSync(dir, { recursive: true });
   const oldByKey = new Map(old.lines.map((l) => [l.id, l]));
   const lines = [];
   for (const l of req.lines) {
+    const file = `${l.id}.mp3`;
+    const prev = oldByKey.get(l.id);
+    const keepPrev = (why) => {
+      const has = prev && existsSync(join(dir, prev.file));
+      if (has) lines.push(prev);
+      skipped.push(`${f.rel} の ${l.id}：${why}（${has ? '前の音のまま' : 'まだ音なし'}）`);
+    };
     const styleId = findStyleId(speakers, l.voice, l.style);
     if (styleId == null) {
       const styles = (speakers.find((s) => s.name === l.voice)?.styles || []).map((s) => s.name).join('・');
-      throw new Error(`${f.rel} の ${l.id}：エンジンに「${l.voice}」の「${l.style}」がない（あるのは：${styles || 'なし'}）`);
+      keepPrev(`エンジンに「${l.voice}」の「${l.style}」がない（あるのは：${styles || 'なし'}）`);
+      continue;
     }
     const key = lineKey(engineVersion, styleId, l);
-    const file = `${l.id}.mp3`;
-    const prev = oldByKey.get(l.id);
     if (!all && prev && prev.key === key && existsSync(join(dir, file))) {
       lines.push(prev);
       kept++;
-    } else {
+      continue;
+    }
+    try {
       const query = await (await api(`/audio_query?speaker=${styleId}&text=${encodeURIComponent(l.text)}`, { method: 'POST' })).json();
-      if (l.nobasu != null && countChoon(query.accent_phrases) === 0) throw new Error(`${f.rel} の ${l.id}：nobasu の ー の音がエンジンの読みに見つからない（text を見直す）`);
+      if (l.nobasu != null && countChoon(query.accent_phrases) === 0) throw new Error('nobasu の ー の音がエンジンの読みに見つからない（text を見直す）');
       const wav = Buffer.from(await (await api(`/synthesis?speaker=${styleId}`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(applyParams(query, l)) })).arrayBuffer());
       const wavPath = join(tmp, `${f.game}-${f.set}-${l.id}.wav`);
       writeFileSync(wavPath, wav);
       toMp3(wavPath, join(dir, file));
       lines.push({ id: l.id, text: l.text, voice: l.voice, style: l.style, gobi: l.gobi, ...(l.nobasu != null ? { nobasu: l.nobasu } : {}), file, seconds: wavSeconds(wav), key });
       made++;
+    } catch (e) {
+      keepPrev(e.message);
     }
   }
   // 依頼書から消えた行の音を消す
@@ -80,6 +99,8 @@ for (const f of listRequestFiles(root)) {
 }
 
 for (const [game, names] of usedByGame) {
+  if (!names.length) continue;
+  mkdirSync(join(root, 'out', game), { recursive: true });
   const c = buildCredits(game, names, voices);
   writeFileSync(join(root, 'out', game, 'CREDITS.md'), c.md);
   writeFileSync(join(root, 'out', game, 'credits.json'), JSON.stringify(c.json, null, 2) + '\n');
@@ -101,6 +122,9 @@ if (isDir(outRoot)) {
   }
 }
 
-const msg = `VOICEVOX ${engineVersion}：作った ${made}・そのまま ${kept}\n${summary.join('\n')}`;
+const skipMsg = skipped.length ? `\n\n### 作れなかった（${skipped.length}）\n${skipped.map((x) => `- ${x}`).join('\n')}` : '';
+const msg = `VOICEVOX ${engineVersion}：作った ${made}・そのまま ${kept}\n${summary.join('\n')}${skipMsg}`;
 console.log(msg);
 if (process.env.GITHUB_STEP_SUMMARY) writeFileSync(process.env.GITHUB_STEP_SUMMARY, `## 声を作った\n\n${msg}\n`, { flag: 'a' });
+// 作れなかった行があれば、out を main に入れたあとで Actions を赤にする（make.yml の「作れなかった行」）
+if (skipped.length) writeFileSync(process.env.KOE_SKIPPED || join(tmpdir(), 'koe-skipped.txt'), skipped.join('\n') + '\n');

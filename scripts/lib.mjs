@@ -123,6 +123,9 @@ export function validateRequest(req, voices) {
       if (!Number.isFinite(l.nobasu) || l.nobasu < NOBASU_MIN || l.nobasu > NOBASU_MAX) errs.push(`${at}：nobasu は ${NOBASU_MIN}〜${NOBASU_MAX}（秒）`);
       const n = [...l.text].filter((c) => c === 'ー').length;
       if (n !== 1) errs.push(`${at}：nobasu の行は、text に ー を1つだけ書く（いま ${n} こ。重ねると息の音になる）`);
+      const chars = [...l.text];
+      const before = chars[chars.indexOf('ー') - 1];
+      if (n === 1 && (!before || /[んンっッ、。，．！？!?…・「」\s]/u.test(before))) errs.push(`${at}：nobasu の ー の前が「${before ?? 'なし'}」なので、のばせない（ん・っ のあとや文の頭の ー は、エンジンが音にしない。あ・う などの母音のある音のあとに ー を書く）`);
     }
   });
   return errs;

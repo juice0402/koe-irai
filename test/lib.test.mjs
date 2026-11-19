@@ -184,3 +184,12 @@ test('のばす：エンジンの読みの ー（前と同じ母音の音）だ�
   assert.equal(q.accent_phrases[0].moras[2].vowel_length, 0.8);
   assert.equal(countChoon([{ moras: [{ text: 'ウ', consonant: null, vowel: 'u' }, { text: 'ン', consonant: null, vowel: 'N' }] }]), 0);
 });
+
+test('のばす：ん・っ のあとや文の頭の ー は点検で止める', () => {
+  const r = req('card', `voice: 青山龍星\nstyle: 熱血\nlines:\n  - {id: a, text: んー, nobasu: 1.0}\n  - {id: b, text: あっー, nobasu: 1.0}\n  - {id: c, text: ーん, nobasu: 1.0}\n  - {id: d, text: うーん, nobasu: 1.0}\n  - {id: e, text: あちゃー, nobasu: 0.8}\n`);
+  const e = validateRequest(r, voices).join('\n');
+  assert.match(e, /1 行め.*ー の前が「ん」/);
+  assert.match(e, /2 行め.*ー の前が「っ」/);
+  assert.match(e, /3 行め.*ー の前が「なし」/);
+  assert.doesNotMatch(e, /4 行め|5 行め/);
+});

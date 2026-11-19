@@ -43,6 +43,8 @@ jobs:
           for i in $(seq 1 60); do curl -sf http://127.0.0.1:50021/version && echo && exit 0; sleep 5; done
           echo "VOICEVOX のエンジンが起きなかった"; exit 1
       - name: 声を作る
+        env:
+          KOE_SKIPPED: ${{ runner.temp }}/koe-skipped.txt
         run: node scripts/make.mjs ${{ (github.event_name == 'workflow_dispatch' && inputs.all) && '--all' || '' }}
       - name: out を main に入れる
         run: |
@@ -53,3 +55,9 @@ jobs:
           git commit -m "声を作った（${GITHUB_RUN_ID}）"
           for i in 1 2 3; do git push && exit 0; git pull --rebase; done
           exit 1
+      - name: 作れなかった行（ほかの声は入れたあとで、赤にして知らせる）
+        if: always()
+        run: |
+          f="${{ runner.temp }}/koe-skipped.txt"
+          if [ -s "$f" ]; then echo "作れなかった行がある（ほかは作って入れた）："; cat "$f"; exit 1; fi
+          echo "ぜんぶ作れた"
