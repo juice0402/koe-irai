@@ -42,6 +42,74 @@
         10.16
       ],
       "key": "d9918ad7bb84f9d4"
+    },
+    {
+      "id": "kurabe-aoede",
+      "text": "いらっしゃいませ！今日もおいしいお菓子、できてますよ！",
+      "engine": "gemini",
+      "model": "gemini-3.8-flash-tts",
+      "voice": "Aoede",
+      "style": "元気な女の子。明るく弾むように、にこにこしながら",
+      "takes": 1,
+      "file": "kurabe-aoede.mp3",
+      "files": [
+        "kurabe-aoede.mp3"
+      ],
+      "seconds": [
+        3.8
+      ],
+      "key": "c78dddd9073477f2"
+    },
+    {
+      "id": "kurabe-zephyr",
+      "text": "いらっしゃいませ！今日もおいしいお菓子、できてますよ！",
+      "engine": "gemini",
+      "model": "gemini-3.8-flash-tts",
+      "voice": "Zephyr",
+      "style": "元気な女の子。明るく弾むように、にこにこしながら",
+      "takes": 1,
+      "file": "kurabe-zephyr.mp3",
+      "files": [
+        "kurabe-zephyr.mp3"
+      ],
+      "seconds": [
+        4.72
+      ],
+      "key": "32264f47377154bb"
+    },
+    {
+      "id": "kurabe-achernar",
+      "text": "いらっしゃいませ！今日もおいしいお菓子、できてますよ！",
+      "engine": "gemini",
+      "model": "gemini-3.8-flash-tts",
+      "voice": "Achernar",
+      "style": "元気な女の子。明るく弾むように、にこにこしながら",
+      "takes": 1,
+      "file": "kurabe-achernar.mp3",
+      "files": [
+        "kurabe-achernar.mp3"
+      ],
+      "seconds": [
+        4.36
+      ],
+      "key": "fe596bd1c4d17538"
+    },
+    {
+      "id": "kurabe-kore",
+      "text": "いらっしゃいませ！今日もおいしいお菓子、できてますよ！",
+      "engine": "gemini",
+      "model": "gemini-3.8-flash-tts",
+      "voice": "Kore",
+      "style": "元気な女の子。明るく弾むように、にこにこしながら",
+      "takes": 1,
+      "file": "kurabe-kore.mp3",
+      "files": [
+        "kurabe-kore.mp3"
+      ],
+      "seconds": [
+        4.08
+      ],
+      "key": "50077293eea6f103"
     }
   ]
 }
