@@ -1,0 +1,43 @@
+# まぜまぜおかし屋の声の作りなおし（11/20 しょーくん「声の感じ・キャラに合わない」「言い方・発音」→ 作りなおし・3人とも）
+# 聞きくらべ用のためし（ゲームには入れない）。えらんだら requests/okashi/kakegoe.yml を直す
+# 前より数字をひかえめに（抑揚 1.6 → 1.1 前後・はやさ 1.0 前後）。語尾は 11/19 のしょーくんの決まりのまま（えい！や！は下げてすぐ切る・それ！やった！は上げる・よーしは下げる）
+# ほのか（元気な見習い）：A 満別花丸・元気／B 猫使アル・うきうき
+# みなも（クール・ひくめ・短く）：A 猫使ビィ・おちつき／B 小夜/SAYO
+# わかば（おっとりお姉さん）：A 猫使アル・おちつき／B 満別花丸・ノーマル
+voice: 満別花丸
+style: 元気
+defaults:
+  post: 0.04
+lines:
+  # ---- ほのか A 満別花丸・元気 ----
+  - {id: hono-a-ei, text: えい！, speed: 1.05, intonation: 1.1, gobi: sagaru}
+  - {id: hono-a-sore, text: それ！, speed: 1.05, intonation: 1.1, gobi: agaru}
+  - {id: hono-a-yatta, text: やった！, speed: 1.05, intonation: 1.1, gobi: agaru}
+  - {id: hono-a-yoshi, text: よーし！, speed: 1.05, intonation: 1.1, gobi: sagaru}
+  - {id: hono-a-achaa, text: あちゃー, speed: 1.0, intonation: 1.1, gobi: sagaru, nobasu: 0.6, post: 0.1}
+  # ---- ほのか B 猫使アル・うきうき ----
+  - {id: hono-b-ei, text: えい！, voice: 猫使アル, style: うきうき, speed: 1.05, intonation: 1.1, gobi: sagaru}
+  - {id: hono-b-sore, text: それ！, voice: 猫使アル, style: うきうき, speed: 1.05, intonation: 1.1, gobi: agaru}
+  - {id: hono-b-yatta, text: やった！, voice: 猫使アル, style: うきうき, speed: 1.05, intonation: 1.1, gobi: agaru}
+  - {id: hono-b-yoshi, text: よーし！, voice: 猫使アル, style: うきうき, speed: 1.05, intonation: 1.1, gobi: sagaru}
+  - {id: hono-b-achaa, text: あちゃー, voice: 猫使アル, style: うきうき, speed: 1.0, intonation: 1.1, gobi: sagaru, nobasu: 0.6, post: 0.1}
+  # ---- みなも A 猫使ビィ・おちつき ----
+  - {id: mina-a-yoshi, text: よし。, voice: 猫使ビィ, style: おちつき, speed: 0.95, intonation: 0.9, gobi: sagaru, post: 0.1}
+  - {id: mina-a-fu, text: ふ, voice: 猫使ビィ, style: おちつき, speed: 0.95, intonation: 0.9, gobi: sagaru}
+  - {id: mina-a-n, text: ん, voice: 猫使ビィ, style: おちつき, speed: 0.95, intonation: 0.9}
+  - {id: mina-a-uun, text: んー, voice: 猫使ビィ, style: おちつき, speed: 0.95, intonation: 0.9, gobi: sagaru, nobasu: 0.8, post: 0.1}
+  # ---- みなも B 小夜/SAYO ----
+  - {id: mina-b-yoshi, text: よし。, voice: 小夜/SAYO, style: ノーマル, pitch: -0.03, speed: 0.95, intonation: 0.9, gobi: sagaru, post: 0.1}
+  - {id: mina-b-fu, text: ふ, voice: 小夜/SAYO, style: ノーマル, pitch: -0.03, speed: 0.95, intonation: 0.9, gobi: sagaru}
+  - {id: mina-b-n, text: ん, voice: 小夜/SAYO, style: ノーマル, pitch: -0.03, speed: 0.95, intonation: 0.9}
+  - {id: mina-b-uun, text: んー, voice: 小夜/SAYO, style: ノーマル, pitch: -0.03, speed: 0.95, intonation: 0.9, gobi: sagaru, nobasu: 0.8, post: 0.1}
+  # ---- わかば A 猫使アル・おちつき ----
+  - {id: waka-a-ufufu, text: うふふ, voice: 猫使アル, style: おちつき, speed: 0.9, intonation: 1.1, post: 0.1}
+  - {id: waka-a-araara, text: あらあら, voice: 猫使アル, style: おちつき, speed: 0.9, intonation: 1.1, post: 0.1}
+  - {id: waka-a-maa, text: まぁ, voice: 猫使アル, style: おちつき, speed: 0.9, intonation: 1.1, post: 0.1}
+  - {id: waka-a-ei, text: えい, voice: 猫使アル, style: おちつき, speed: 0.9, intonation: 1.1, gobi: sagaru}
+  # ---- わかば B 満別花丸・ノーマル ----
+  - {id: waka-b-ufufu, text: うふふ, style: ノーマル, speed: 0.9, intonation: 1.1, post: 0.1}
+  - {id: waka-b-araara, text: あらあら, style: ノーマル, speed: 0.9, intonation: 1.1, post: 0.1}
+  - {id: waka-b-maa, text: まぁ, style: ノーマル, speed: 0.9, intonation: 1.1, post: 0.1}
+  - {id: waka-b-ei, text: えい, style: ノーマル, speed: 0.9, intonation: 1.1, gobi: sagaru}
