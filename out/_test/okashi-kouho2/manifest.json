@@ -1,0 +1,272 @@
+{
+  "game": "_test",
+  "set": "okashi-kouho2",
+  "engine": "0.26.2",
+  "request": "requests/_test/okashi-kouho2.yml",
+  "lines": [
+    {
+      "id": "hono-a-ei",
+      "text": "えい！",
+      "voice": "満別花丸",
+      "style": "元気",
+      "gobi": "sagaru",
+      "file": "hono-a-ei.mp3",
+      "seconds": 0.363,
+      "key": "8a2f05213b4ab9ca"
+    },
+    {
+      "id": "hono-a-sore",
+      "text": "それ！",
+      "voice": "満別花丸",
+      "style": "元気",
+      "gobi": "agaru",
+      "file": "hono-a-sore.mp3",
+      "seconds": 0.384,
+      "key": "350d1897b0f4ceb0"
+    },
+    {
+      "id": "hono-a-yatta",
+      "text": "やった！",
+      "voice": "満別花丸",
+      "style": "元気",
+      "gobi": "agaru",
+      "file": "hono-a-yatta.mp3",
+      "seconds": 0.533,
+      "key": "bb26722b3d18a209"
+    },
+    {
+      "id": "hono-a-yoshi",
+      "text": "よーし！",
+      "voice": "満別花丸",
+      "style": "元気",
+      "gobi": "sagaru",
+      "file": "hono-a-yoshi.mp3",
+      "seconds": 0.555,
+      "key": "b18a733baa9fa441"
+    },
+    {
+      "id": "hono-a-achaa",
+      "text": "あちゃー",
+      "voice": "満別花丸",
+      "style": "元気",
+      "gobi": "sagaru",
+      "nobasu": 0.6,
+      "file": "hono-a-achaa.mp3",
+      "seconds": 1.067,
+      "key": "52a61508a8988323"
+    },
+    {
+      "id": "hono-b-ei",
+      "text": "えい！",
+      "voice": "猫使アル",
+      "style": "うきうき",
+      "gobi": "sagaru",
+      "file": "hono-b-ei.mp3",
+      "seconds": 0.459,
+      "key": "40a5a866541f803d"
+    },
+    {
+      "id": "hono-b-sore",
+      "text": "それ！",
+      "voice": "猫使アル",
+      "style": "うきうき",
+      "gobi": "agaru",
+      "file": "hono-b-sore.mp3",
+      "seconds": 0.448,
+      "key": "7b19f142c8a3119b"
+    },
+    {
+      "id": "hono-b-yatta",
+      "text": "やった！",
+      "voice": "猫使アル",
+      "style": "うきうき",
+      "gobi": "agaru",
+      "file": "hono-b-yatta.mp3",
+      "seconds": 0.619,
+      "key": "ae7bb328ff949284"
+    },
+    {
+      "id": "hono-b-yoshi",
+      "text": "よーし！",
+      "voice": "猫使アル",
+      "style": "うきうき",
+      "gobi": "sagaru",
+      "file": "hono-b-yoshi.mp3",
+      "seconds": 0.555,
+      "key": "a09e65a8ae575e8a"
+    },
+    {
+      "id": "hono-b-achaa",
+      "text": "あちゃー",
+      "voice": "猫使アル",
+      "style": "うきうき",
+      "gobi": "sagaru",
+      "nobasu": 0.6,
+      "file": "hono-b-achaa.mp3",
+      "seconds": 1.056,
+      "key": "7eeec880a1ec9ebb"
+    },
+    {
+      "id": "mina-a-yoshi",
+      "text": "よし。",
+      "voice": "猫使ビィ",
+      "style": "おちつき",
+      "gobi": "sagaru",
+      "file": "mina-a-yoshi.mp3",
+      "seconds": 0.597,
+      "key": "b47b7bcf69e6430e"
+    },
+    {
+      "id": "mina-a-fu",
+      "text": "ふ",
+      "voice": "猫使ビィ",
+      "style": "おちつき",
+      "gobi": "sagaru",
+      "file": "mina-a-fu.mp3",
+      "seconds": 0.405,
+      "key": "332e490a3f7886c9"
+    },
+    {
+      "id": "mina-a-n",
+      "text": "ん",
+      "voice": "猫使ビィ",
+      "style": "おちつき",
+      "gobi": "taira",
+      "file": "mina-a-n.mp3",
+      "seconds": 0.363,
+      "key": "2a284eec1e635218"
+    },
+    {
+      "id": "mina-a-uun",
+      "text": "んー",
+      "voice": "猫使ビィ",
+      "style": "おちつき",
+      "gobi": "sagaru",
+      "nobasu": 0.8,
+      "file": "mina-a-uun.mp3",
+      "seconds": 1.003,
+      "key": "66435b8bc3ab2803"
+    },
+    {
+      "id": "mina-b-yoshi",
+      "text": "よし。",
+      "voice": "小夜/SAYO",
+      "style": "ノーマル",
+      "gobi": "sagaru",
+      "file": "mina-b-yoshi.mp3",
+      "seconds": 0.683,
+      "key": "951f46ae58094a05"
+    },
+    {
+      "id": "mina-b-fu",
+      "text": "ふ",
+      "voice": "小夜/SAYO",
+      "style": "ノーマル",
+      "gobi": "sagaru",
+      "file": "mina-b-fu.mp3",
+      "seconds": 0.384,
+      "key": "d22d278333440614"
+    },
+    {
+      "id": "mina-b-n",
+      "text": "ん",
+      "voice": "小夜/SAYO",
+      "style": "ノーマル",
+      "gobi": "taira",
+      "file": "mina-b-n.mp3",
+      "seconds": 0.32,
+      "key": "734c3bc7db5488ef"
+    },
+    {
+      "id": "mina-b-uun",
+      "text": "んー",
+      "voice": "小夜/SAYO",
+      "style": "ノーマル",
+      "gobi": "sagaru",
+      "nobasu": 0.8,
+      "file": "mina-b-uun.mp3",
+      "seconds": 1.003,
+      "key": "f5b652d09e63062c"
+    },
+    {
+      "id": "waka-a-ufufu",
+      "text": "うふふ",
+      "voice": "猫使アル",
+      "style": "おちつき",
+      "gobi": "taira",
+      "file": "waka-a-ufufu.mp3",
+      "seconds": 0.725,
+      "key": "59ff92c03819f874"
+    },
+    {
+      "id": "waka-a-araara",
+      "text": "あらあら",
+      "voice": "猫使アル",
+      "style": "おちつき",
+      "gobi": "taira",
+      "file": "waka-a-araara.mp3",
+      "seconds": 0.736,
+      "key": "63fb1d3ed11a18c3"
+    },
+    {
+      "id": "waka-a-maa",
+      "text": "まぁ",
+      "voice": "猫使アル",
+      "style": "おちつき",
+      "gobi": "taira",
+      "file": "waka-a-maa.mp3",
+      "seconds": 0.565,
+      "key": "023abaad12a19273"
+    },
+    {
+      "id": "waka-a-ei",
+      "text": "えい",
+      "voice": "猫使アル",
+      "style": "おちつき",
+      "gobi": "sagaru",
+      "file": "waka-a-ei.mp3",
+      "seconds": 0.523,
+      "key": "bb8779a1cc7a98a6"
+    },
+    {
+      "id": "waka-b-ufufu",
+      "text": "うふふ",
+      "voice": "満別花丸",
+      "style": "ノーマル",
+      "gobi": "taira",
+      "file": "waka-b-ufufu.mp3",
+      "seconds": 0.629,
+      "key": "a6806cc2885779c7"
+    },
+    {
+      "id": "waka-b-araara",
+      "text": "あらあら",
+      "voice": "満別花丸",
+      "style": "ノーマル",
+      "gobi": "taira",
+      "file": "waka-b-araara.mp3",
+      "seconds": 0.683,
+      "key": "67495da161f07abb"
+    },
+    {
+      "id": "waka-b-maa",
+      "text": "まぁ",
+      "voice": "満別花丸",
+      "style": "ノーマル",
+      "gobi": "taira",
+      "file": "waka-b-maa.mp3",
+      "seconds": 0.565,
+      "key": "0e785adea14c62de"
+    },
+    {
+      "id": "waka-b-ei",
+      "text": "えい",
+      "voice": "満別花丸",
+      "style": "ノーマル",
+      "gobi": "sagaru",
+      "file": "waka-b-ei.mp3",
+      "seconds": 0.405,
+      "key": "15d3690c1fd97a6d"
+    }
+  ]
+}
