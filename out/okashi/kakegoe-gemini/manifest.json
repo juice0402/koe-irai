@@ -1,0 +1,79 @@
+{
+  "game": "okashi",
+  "set": "kakegoe-gemini",
+  "engine": "gemini",
+  "model": "gemini-3.8-flash-tts",
+  "request": "requests/okashi/kakegoe-gemini.yml",
+  "lines": [
+    {
+      "id": "hono-all",
+      "text": "えい！\nや！\nそれ！\nわぁ！\nやった！\nよーし！\nんー。\nあちゃー。",
+      "engine": "gemini",
+      "model": "gemini-3.8-flash-tts",
+      "voice": "Leda",
+      "style": "元気な見習いパティシエの女の子。お菓子づくりの掛け声を、ひとつずつしっかり間をあけて言う。えい・や・それ は気合いをこめて短く、わぁ は目をかがやかせて、やった は大よろこび、よーし はやる気まんまん、んー は首をかしげて考えこむ、あちゃー は失敗してしょんぼり",
+      "takes": 2,
+      "file": "hono-all.mp3",
+      "files": [
+        "hono-all.mp3",
+        "hono-all_2.mp3"
+      ],
+      "seconds": [
+        12.84,
+        12.28
+      ],
+      "key": "de4c12accd8984f5"
+    },
+    {
+      "id": "mina-all-kore",
+      "text": "は。\nふ。\nん。\nよし。\nんー。",
+      "engine": "gemini",
+      "model": "gemini-3.8-flash-tts",
+      "voice": "Kore",
+      "style": "クールで口数の少ない飴細工職人の女の子。低めの落ち着いた声で、そっけなく短く。ひとつずつしっかり間をあけて言う。は・ふ は小さく息をはくように、ん は小さくうなずく、よし は静かに気合いを入れる、んー は考えこむ",
+      "takes": 1,
+      "file": "mina-all-kore.mp3",
+      "files": [
+        "mina-all-kore.mp3"
+      ],
+      "seconds": [
+        9.04
+      ],
+      "key": "02c148d60c06ee97"
+    },
+    {
+      "id": "mina-all-despina",
+      "text": "は。\nふ。\nん。\nよし。\nんー。",
+      "engine": "gemini",
+      "model": "gemini-3.8-flash-tts",
+      "voice": "Despina",
+      "style": "クールで口数の少ない飴細工職人の女の子。低めの落ち着いた声で、そっけなく短く。ひとつずつしっかり間をあけて言う。は・ふ は小さく息をはくように、ん は小さくうなずく、よし は静かに気合いを入れる、んー は考えこむ",
+      "takes": 1,
+      "file": "mina-all-despina.mp3",
+      "files": [
+        "mina-all-despina.mp3"
+      ],
+      "seconds": [
+        7.8
+      ],
+      "key": "ac70649952eda1c1"
+    },
+    {
+      "id": "waka-all-achernar",
+      "text": "それっ。\nえいっ。\nうふふ。\nあらあら。\nまぁ。\nうーん。",
+      "engine": "gemini",
+      "model": "gemini-3.8-flash-tts",
+      "voice": "Achernar",
+      "style": "おっとりした優しいお姉さん。ゆったり、ふんわり、ほほえみながら。ひとつずつしっかり間をあけて言う。それ・えい は力をぬいてかわいく、うふふ は上品に笑う、あらあら・まぁ はやさしくおどろく、うーん はのんびり考える",
+      "takes": 1,
+      "file": "waka-all-achernar.mp3",
+      "files": [
+        "waka-all-achernar.mp3"
+      ],
+      "seconds": [
+        11.72
+      ],
+      "key": "cc94a1d4fe3586e1"
+    }
+  ]
+}
