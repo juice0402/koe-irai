@@ -1,0 +1,294 @@
+{
+  "game": "_test",
+  "set": "okashi-kouho3",
+  "engine": "0.26.2",
+  "request": "requests/_test/okashi-kouho3.yml",
+  "lines": [
+    {
+      "id": "hono-a-ei",
+      "text": "えい！",
+      "voice": "春日部つむぎ",
+      "style": "ノーマル",
+      "gobi": "taira",
+      "file": "hono-a-ei.mp3",
+      "seconds": 0.405,
+      "key": "4d140b01c106dc0e"
+    },
+    {
+      "id": "hono-a-ya",
+      "text": "や！",
+      "voice": "春日部つむぎ",
+      "style": "ノーマル",
+      "gobi": "taira",
+      "file": "hono-a-ya.mp3",
+      "seconds": 0.299,
+      "key": "770f65e41b8b616b"
+    },
+    {
+      "id": "hono-a-sore",
+      "text": "それ！",
+      "voice": "春日部つむぎ",
+      "style": "ノーマル",
+      "gobi": "taira",
+      "file": "hono-a-sore.mp3",
+      "seconds": 0.469,
+      "key": "50204e0166cc08a2"
+    },
+    {
+      "id": "hono-a-waa",
+      "text": "わぁ！",
+      "voice": "春日部つむぎ",
+      "style": "ノーマル",
+      "gobi": "taira",
+      "file": "hono-a-waa.mp3",
+      "seconds": 0.405,
+      "key": "9be645ef578a0b99"
+    },
+    {
+      "id": "hono-a-yatta",
+      "text": "やった！",
+      "voice": "春日部つむぎ",
+      "style": "ノーマル",
+      "gobi": "taira",
+      "file": "hono-a-yatta.mp3",
+      "seconds": 0.576,
+      "key": "eb7f07faa330400a"
+    },
+    {
+      "id": "hono-a-yoshi",
+      "text": "よーし！",
+      "voice": "春日部つむぎ",
+      "style": "ノーマル",
+      "gobi": "taira",
+      "file": "hono-a-yoshi.mp3",
+      "seconds": 0.608,
+      "key": "45f454f31d3c1130"
+    },
+    {
+      "id": "hono-a-uun",
+      "text": "んー",
+      "voice": "春日部つむぎ",
+      "style": "ノーマル",
+      "gobi": "agaru",
+      "nobasu": 0.9,
+      "file": "hono-a-uun.mp3",
+      "seconds": 1.045,
+      "key": "74853f906fd3ece1"
+    },
+    {
+      "id": "hono-a-achaa",
+      "text": "あちゃー",
+      "voice": "春日部つむぎ",
+      "style": "ノーマル",
+      "gobi": "agaru",
+      "nobasu": 0.6,
+      "file": "hono-a-achaa.mp3",
+      "seconds": 1.077,
+      "key": "c38047ca4321143d"
+    },
+    {
+      "id": "hono-b-ei",
+      "text": "えい！",
+      "voice": "春日部つむぎ",
+      "style": "ノーマル",
+      "gobi": "sagaru",
+      "file": "hono-b-ei.mp3",
+      "seconds": 0.384,
+      "key": "e69f3f77b33bdf15"
+    },
+    {
+      "id": "hono-b-ya",
+      "text": "や！",
+      "voice": "春日部つむぎ",
+      "style": "ノーマル",
+      "gobi": "sagaru",
+      "file": "hono-b-ya.mp3",
+      "seconds": 0.288,
+      "key": "3febc7e64f9c3993"
+    },
+    {
+      "id": "hono-b-sore",
+      "text": "それ！",
+      "voice": "春日部つむぎ",
+      "style": "ノーマル",
+      "gobi": "agaru",
+      "file": "hono-b-sore.mp3",
+      "seconds": 0.448,
+      "key": "47860d6bd4f11527"
+    },
+    {
+      "id": "hono-b-waa",
+      "text": "わぁ！",
+      "voice": "春日部つむぎ",
+      "style": "ノーマル",
+      "gobi": "sagaru",
+      "file": "hono-b-waa.mp3",
+      "seconds": 0.373,
+      "key": "76be1b6bb253a684"
+    },
+    {
+      "id": "hono-b-yatta",
+      "text": "やった！",
+      "voice": "春日部つむぎ",
+      "style": "ノーマル",
+      "gobi": "agaru",
+      "file": "hono-b-yatta.mp3",
+      "seconds": 0.555,
+      "key": "561d2d36b1ecc034"
+    },
+    {
+      "id": "hono-b-yoshi",
+      "text": "よーし！",
+      "voice": "春日部つむぎ",
+      "style": "ノーマル",
+      "gobi": "sagaru",
+      "file": "hono-b-yoshi.mp3",
+      "seconds": 0.576,
+      "key": "b3c8a556e1c0829f"
+    },
+    {
+      "id": "hono-b-uun",
+      "text": "んー",
+      "voice": "春日部つむぎ",
+      "style": "ノーマル",
+      "gobi": "sagaru",
+      "nobasu": 0.9,
+      "file": "hono-b-uun.mp3",
+      "seconds": 1.045,
+      "key": "50a657adaab06165"
+    },
+    {
+      "id": "hono-b-achaa",
+      "text": "あちゃー",
+      "voice": "春日部つむぎ",
+      "style": "ノーマル",
+      "gobi": "sagaru",
+      "nobasu": 0.6,
+      "file": "hono-b-achaa.mp3",
+      "seconds": 1.077,
+      "key": "293eefffbaae6bb1"
+    },
+    {
+      "id": "waka-a-sore",
+      "text": "それ",
+      "voice": "WhiteCUL",
+      "style": "ノーマル",
+      "gobi": "taira",
+      "file": "waka-a-sore.mp3",
+      "seconds": 0.523,
+      "key": "4b901a3c11fa874d"
+    },
+    {
+      "id": "waka-a-ei",
+      "text": "えい",
+      "voice": "WhiteCUL",
+      "style": "ノーマル",
+      "gobi": "taira",
+      "file": "waka-a-ei.mp3",
+      "seconds": 0.384,
+      "key": "ef556d52aee456d7"
+    },
+    {
+      "id": "waka-a-ufufu",
+      "text": "うふふ",
+      "voice": "WhiteCUL",
+      "style": "ノーマル",
+      "gobi": "taira",
+      "file": "waka-a-ufufu.mp3",
+      "seconds": 0.693,
+      "key": "b737a9c5762ec39a"
+    },
+    {
+      "id": "waka-a-araara",
+      "text": "あらあら",
+      "voice": "WhiteCUL",
+      "style": "ノーマル",
+      "gobi": "taira",
+      "file": "waka-a-araara.mp3",
+      "seconds": 0.693,
+      "key": "fbb0072a99433dcd"
+    },
+    {
+      "id": "waka-a-maa",
+      "text": "まぁ",
+      "voice": "WhiteCUL",
+      "style": "ノーマル",
+      "gobi": "taira",
+      "file": "waka-a-maa.mp3",
+      "seconds": 0.469,
+      "key": "e1c2bf91f05c76bf"
+    },
+    {
+      "id": "waka-a-uun",
+      "text": "うーん",
+      "voice": "WhiteCUL",
+      "style": "ノーマル",
+      "gobi": "taira",
+      "nobasu": 0.8,
+      "file": "waka-a-uun.mp3",
+      "seconds": 1.291,
+      "key": "9ca0eb38538d4cb8"
+    },
+    {
+      "id": "waka-b-sore",
+      "text": "それ",
+      "voice": "WhiteCUL",
+      "style": "たのしい",
+      "gobi": "sagaru",
+      "file": "waka-b-sore.mp3",
+      "seconds": 0.491,
+      "key": "b837fe6b8aecd1d0"
+    },
+    {
+      "id": "waka-b-ei",
+      "text": "えい",
+      "voice": "WhiteCUL",
+      "style": "たのしい",
+      "gobi": "sagaru",
+      "file": "waka-b-ei.mp3",
+      "seconds": 0.395,
+      "key": "729c4e1dda02a0e3"
+    },
+    {
+      "id": "waka-b-ufufu",
+      "text": "うふふ",
+      "voice": "WhiteCUL",
+      "style": "たのしい",
+      "gobi": "taira",
+      "file": "waka-b-ufufu.mp3",
+      "seconds": 0.672,
+      "key": "f5d00c5d79e5941d"
+    },
+    {
+      "id": "waka-b-araara",
+      "text": "あらあら",
+      "voice": "WhiteCUL",
+      "style": "たのしい",
+      "gobi": "taira",
+      "file": "waka-b-araara.mp3",
+      "seconds": 0.715,
+      "key": "2b13c1016648ed83"
+    },
+    {
+      "id": "waka-b-maa",
+      "text": "まぁ",
+      "voice": "WhiteCUL",
+      "style": "たのしい",
+      "gobi": "taira",
+      "file": "waka-b-maa.mp3",
+      "seconds": 0.437,
+      "key": "68e98b2808e9b2b8"
+    },
+    {
+      "id": "waka-b-uun",
+      "text": "うーん",
+      "voice": "WhiteCUL",
+      "style": "たのしい",
+      "gobi": "sagaru",
+      "nobasu": 0.8,
+      "file": "waka-b-uun.mp3",
+      "seconds": 1.28,
+      "key": "3bb3e69f7a944588"
+    }
+  ]
+}

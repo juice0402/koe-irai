@@ -89,53 +89,53 @@
     {
       "id": "mina-ha",
       "text": "は",
-      "voice": "冥鳴ひまり",
+      "voice": "小夜/SAYO",
       "style": "ノーマル",
       "gobi": "sagaru",
       "file": "mina-ha.mp3",
-      "seconds": 0.288,
-      "key": "0b607d67b27854ce"
+      "seconds": 0.352,
+      "key": "debc0b9237909b69"
     },
     {
       "id": "mina-fu",
       "text": "ふ",
-      "voice": "冥鳴ひまり",
+      "voice": "小夜/SAYO",
       "style": "ノーマル",
       "gobi": "sagaru",
       "file": "mina-fu.mp3",
-      "seconds": 0.331,
-      "key": "c925194635746d81"
+      "seconds": 0.373,
+      "key": "8cd2e51379b191c0"
     },
     {
       "id": "mina-n",
       "text": "ん",
-      "voice": "冥鳴ひまり",
+      "voice": "小夜/SAYO",
       "style": "ノーマル",
       "gobi": "taira",
       "file": "mina-n.mp3",
-      "seconds": 0.395,
-      "key": "ba840493d931df0e"
+      "seconds": 0.309,
+      "key": "3d46edd45a78ee4e"
     },
     {
       "id": "mina-yoshi",
       "text": "よし。",
-      "voice": "冥鳴ひまり",
+      "voice": "小夜/SAYO",
       "style": "ノーマル",
       "gobi": "sagaru",
       "file": "mina-yoshi.mp3",
-      "seconds": 0.565,
-      "key": "ca14115a0cafadda"
+      "seconds": 0.683,
+      "key": "6e728671fe6a750c"
     },
     {
       "id": "mina-uun",
       "text": "んー",
-      "voice": "冥鳴ひまり",
+      "voice": "小夜/SAYO",
       "style": "ノーマル",
       "gobi": "sagaru",
-      "nobasu": 0.85,
+      "nobasu": 0.8,
       "file": "mina-uun.mp3",
-      "seconds": 1.184,
-      "key": "ce90ff5c0ca7763f"
+      "seconds": 1.003,
+      "key": "f5b652d09e63062c"
     },
     {
       "id": "waka-sore",

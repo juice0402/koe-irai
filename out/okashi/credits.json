@@ -1,6 +1,6 @@
 {
   "game": "okashi",
-  "line": "音声合成：VOICEVOX:WhiteCUL、VOICEVOX:春日部つむぎ、VOICEVOX:冥鳴ひまり",
+  "line": "音声合成：VOICEVOX:WhiteCUL、VOICEVOX:春日部つむぎ、VOICEVOX:小夜/SAYO",
   "voices": [
     {
       "name": "WhiteCUL",
@@ -15,10 +15,10 @@
       "checked": "2026-11-17"
     },
     {
-      "name": "冥鳴ひまり",
-      "credit": "VOICEVOX:冥鳴ひまり",
-      "terms": "https://www.meimeihimari.com/terms-of-use",
-      "checked": "2026-11-17"
+      "name": "小夜/SAYO",
+      "credit": "VOICEVOX:小夜/SAYO",
+      "terms": "https://316soramegu.wixsite.com/sayo-official/guideline",
+      "checked": "2026-11-19"
     }
   ]
 }
