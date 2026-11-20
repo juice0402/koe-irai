@@ -45,6 +45,7 @@ jobs:
       - name: 声を作る
         env:
           KOE_SKIPPED: ${{ runner.temp }}/koe-skipped.txt
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: node scripts/make.mjs ${{ (github.event_name == 'workflow_dispatch' && inputs.all) && '--all' || '' }}
       - name: out を main に入れる
         run: |

@@ -6,6 +6,7 @@ import { join } from 'node:path';
 import { tmpdir } from 'node:os';
 import { spawnSync } from 'node:child_process';
 import { listRequestFiles, loadVoices, parseRequest, validateRequest, findStyleId, lineKey, applyParams, countChoon, choonMode, wavSeconds, buildCredits, readText } from './lib.mjs';
+import { isGemini, parseGemini, validateGemini, geminiKey, takeNames, synthGemini } from './gemini.mjs';
 
 const root = process.cwd();
 const ENGINE = process.env.VOICEVOX_URL || 'http://127.0.0.1:50021';
@@ -37,14 +38,73 @@ const usedByGame = new Map();
 let made = 0, kept = 0;
 const summary = [];
 const skipped = []; // 作れなかった行・依頼書（ほかは作る。前の音があれば残す・11/19【okashi-hiru】「1行のまちがいで全部止まる」）
+let geminiMade = 0, geminiStop = ''; // Gemini で作った本数・無料枠を使いきったらその日は呼ばない
+
+// engine: gemini の依頼書（11/20）。takes 本ずつ作る（<id>.mp3・<id>_2.mp3・<id>_3.mp3。wav: true なら .wav も）
+async function makeGemini(f, raw, dir, mPath, old) {
+  let req;
+  try {
+    req = parseGemini(f.game, f.set, raw);
+    const errs = validateGemini(req);
+    if (errs.length) throw new Error(errs.join('\n'));
+  } catch (e) {
+    skipped.push(`${f.rel}：依頼書ごと飛ばした（前の音のまま）\n${e.message}`);
+    usedByGame.set(f.game, usedByGame.get(f.game) || []);
+    return;
+  }
+  mkdirSync(dir, { recursive: true });
+  const oldById = new Map(old.lines.map((l) => [l.id, l]));
+  const lines = [];
+  for (const l of req.lines) {
+    const key = geminiKey(req, l);
+    const mp3s = takeNames(l.id, l.takes);
+    const wavs = req.wav ? takeNames(l.id, l.takes, 'wav') : [];
+    const prev = oldById.get(l.id);
+    const prevOk = !!prev && (prev.files || [prev.file]).every((x) => existsSync(join(dir, x)));
+    if (!all && prevOk && prev.key === key) {
+      lines.push(prev);
+      kept++;
+      continue;
+    }
+    try {
+      if (geminiStop) throw new Error(geminiStop);
+      const seconds = [];
+      for (let t = 0; t < l.takes; t++) {
+        const wav = await synthGemini({ apiKey: process.env.GEMINI_API_KEY, model: req.model, line: l });
+        const wavPath = join(tmp, `${f.game}-${f.set}-${l.id}-${t + 1}.wav`);
+        writeFileSync(wavPath, wav);
+        toMp3(wavPath, join(dir, mp3s[t]));
+        if (req.wav) writeFileSync(join(dir, wavs[t]), wav);
+        seconds.push(wavSeconds(wav));
+        geminiMade++;
+      }
+      lines.push({ id: l.id, text: l.text, engine: 'gemini', model: req.model, voice: l.voice, style: l.style, takes: l.takes, file: mp3s[0], files: [...mp3s, ...wavs], seconds, key });
+      made++;
+    } catch (e) {
+      if (/使いきった|鍵/.test(e.message)) geminiStop = e.message;
+      if (prevOk) lines.push(prev);
+      skipped.push(`${f.rel} の ${l.id}：${e.message}（${prevOk ? '前の音のまま' : 'まだ音なし'}）`);
+    }
+  }
+  const keep = new Set(lines.flatMap((l) => l.files || [l.file]));
+  for (const name of readdirSync(dir)) if (/\.(mp3|wav)$/.test(name) && !keep.has(name)) rmSync(join(dir, name));
+  writeFileSync(mPath, JSON.stringify({ game: f.game, set: f.set, engine: 'gemini', model: req.model, request: f.rel, lines }, null, 2) + '\n');
+  usedByGame.set(f.game, usedByGame.get(f.game) || []); // Gemini の声はクレジットの義務なし（CREDITS.md は VOICEVOX の声だけ）
+  summary.push(`- ${f.rel}：${lines.length} 行（Gemini）`);
+}
 
 for (const f of listRequestFiles(root)) {
   const dir = join(root, 'out', f.game, f.set);
   const mPath = join(dir, 'manifest.json');
   const old = existsSync(mPath) ? JSON.parse(readFileSync(mPath, 'utf8')) : { lines: [] };
+  const raw = readText(f.path);
+  if (isGemini(raw)) {
+    await makeGemini(f, raw, dir, mPath, old);
+    continue;
+  }
   let req;
   try {
-    req = parseRequest(f.game, f.set, readText(f.path));
+    req = parseRequest(f.game, f.set, raw);
     const errs = validateRequest(req, voices);
     if (errs.length) throw new Error(errs.join('\n'));
   } catch (e) {
@@ -123,7 +183,7 @@ if (isDir(outRoot)) {
 }
 
 const skipMsg = skipped.length ? `\n\n### 作れなかった（${skipped.length}）\n${skipped.map((x) => `- ${x}`).join('\n')}` : '';
-const msg = `VOICEVOX ${engineVersion}：作った ${made}・そのまま ${kept}\n${summary.join('\n')}${skipMsg}`;
+const msg = `VOICEVOX ${engineVersion}：作った ${made}（うち Gemini ${geminiMade} 本）・そのまま ${kept}\n${summary.join('\n')}${skipMsg}`;
 console.log(msg);
 if (process.env.GITHUB_STEP_SUMMARY) writeFileSync(process.env.GITHUB_STEP_SUMMARY, `## 声を作った\n\n${msg}\n`, { flag: 'a' });
 // 作れなかった行があれば、out を main に入れたあとで Actions を赤にする（make.yml の「作れなかった行」）

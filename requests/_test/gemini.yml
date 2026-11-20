@@ -1,0 +1,13 @@
+# Gemini の声のためし（11/20 司令塔）
+engine: gemini
+voice: Leda
+style: 元気な女の子。明るく弾むように、にこにこしながら
+takes: 3
+lines:
+  - id: genki
+    text: いらっしゃいませ！今日もおいしいお菓子、できてますよ！
+  - id: nare
+    text: むかしむかし、甘い香りのただよう森のはずれに、小さなお菓子屋さんがありました。
+    voice: Kore
+    style: やさしく落ち着いた語り。絵本を読み聞かせるように
+    takes: 1
