@@ -1,0 +1,47 @@
+# まぜまぜおかし屋：ことばごとの聞きくらべ（11/20 しょーくん「声はまだまだ調整が必要」「文による」・ほのかは「もっと元気に」）
+# ほのか（つむぎ）g＝元気（抑揚 1.5・はやさ 1.1）いまの語尾／r＝元気・語尾を逆に
+# みなも（小夜）k＝ひくめ・そっけなく／y＝やわらか
+# わかば（WhiteCUL・たのしい）o＝おっとり（ゆっくり）／t＝高め・やさしく
+voice: 春日部つむぎ
+style: ノーマル
+defaults:
+  post: 0.04
+lines:
+  - {id: hono-g-ei, text: えい！, pitch: 0.06, speed: 1.1, intonation: 1.5, gobi: sagaru}
+  - {id: hono-r-ei, text: えい！, pitch: 0.06, speed: 1.1, intonation: 1.5, gobi: agaru}
+  - {id: hono-g-ya, text: や！, pitch: 0.06, speed: 1.1, intonation: 1.5, gobi: sagaru}
+  - {id: hono-r-ya, text: や！, pitch: 0.06, speed: 1.1, intonation: 1.5, gobi: agaru}
+  - {id: hono-g-sore, text: それ！, pitch: 0.06, speed: 1.1, intonation: 1.5, gobi: agaru}
+  - {id: hono-r-sore, text: それ！, pitch: 0.06, speed: 1.1, intonation: 1.5, gobi: sagaru}
+  - {id: hono-g-waa, text: わぁ！, pitch: 0.06, speed: 1.1, intonation: 1.5, gobi: sagaru}
+  - {id: hono-r-waa, text: わぁ！, pitch: 0.06, speed: 1.1, intonation: 1.5, gobi: agaru}
+  - {id: hono-g-yatta, text: やった！, pitch: 0.06, speed: 1.1, intonation: 1.5, gobi: agaru}
+  - {id: hono-r-yatta, text: やった！, pitch: 0.06, speed: 1.1, intonation: 1.5, gobi: sagaru}
+  - {id: hono-g-yoshi, text: よーし！, pitch: 0.06, speed: 1.1, intonation: 1.5, gobi: sagaru}
+  - {id: hono-r-yoshi, text: よーし！, pitch: 0.06, speed: 1.1, intonation: 1.5, gobi: agaru}
+  - {id: hono-g-uun, text: んー, pitch: 0.06, speed: 1.1, intonation: 1.5, gobi: sagaru, nobasu: 0.9, post: 0.1, volume: 2.0}
+  - {id: hono-r-uun, text: んー, pitch: 0.06, speed: 1.1, intonation: 1.5, gobi: agaru, nobasu: 0.9, post: 0.1, volume: 2.0}
+  - {id: hono-g-achaa, text: あちゃー, pitch: 0.06, speed: 1.1, intonation: 1.5, gobi: sagaru, nobasu: 0.6, post: 0.1}
+  - {id: hono-r-achaa, text: あちゃー, pitch: 0.06, speed: 1.1, intonation: 1.5, gobi: agaru, nobasu: 0.6, post: 0.1}
+  - {id: mina-k-ha, text: は, voice: 小夜/SAYO, style: ノーマル, pitch: -0.07, speed: 1.0, intonation: 0.6, gobi: sagaru, volume: 1.3}
+  - {id: mina-y-ha, text: は, voice: 小夜/SAYO, style: ノーマル, pitch: 0.0, speed: 0.9, intonation: 1.1, gobi: sagaru, volume: 1.3}
+  - {id: mina-k-fu, text: ふ, voice: 小夜/SAYO, style: ノーマル, pitch: -0.07, speed: 1.0, intonation: 0.6, gobi: sagaru, volume: 1.4}
+  - {id: mina-y-fu, text: ふ, voice: 小夜/SAYO, style: ノーマル, pitch: 0.0, speed: 0.9, intonation: 1.1, gobi: sagaru, volume: 1.4}
+  - {id: mina-k-n, text: ん, voice: 小夜/SAYO, style: ノーマル, pitch: -0.07, speed: 1.0, intonation: 0.6, volume: 2.0}
+  - {id: mina-y-n, text: ん, voice: 小夜/SAYO, style: ノーマル, pitch: 0.0, speed: 0.9, intonation: 1.1, volume: 2.0}
+  - {id: mina-k-yoshi, text: よし。, voice: 小夜/SAYO, style: ノーマル, pitch: -0.07, speed: 1.0, intonation: 0.6, gobi: sagaru, post: 0.1}
+  - {id: mina-y-yoshi, text: よし。, voice: 小夜/SAYO, style: ノーマル, pitch: 0.0, speed: 0.9, intonation: 1.1, gobi: sagaru, post: 0.1}
+  - {id: mina-k-uun, text: んー, voice: 小夜/SAYO, style: ノーマル, pitch: -0.07, speed: 1.0, intonation: 0.6, gobi: sagaru, nobasu: 0.8, post: 0.1}
+  - {id: mina-y-uun, text: んー, voice: 小夜/SAYO, style: ノーマル, pitch: 0.0, speed: 0.9, intonation: 1.1, gobi: sagaru, nobasu: 0.8, post: 0.1}
+  - {id: waka-o-sore, text: それ, voice: WhiteCUL, style: たのしい, pitch: 0.02, speed: 0.8, intonation: 1.2, gobi: sagaru}
+  - {id: waka-t-sore, text: それ, voice: WhiteCUL, style: たのしい, pitch: 0.06, speed: 0.9, intonation: 1.25, gobi: sagaru}
+  - {id: waka-o-ei, text: えい, voice: WhiteCUL, style: たのしい, pitch: 0.02, speed: 0.8, intonation: 1.2, gobi: sagaru}
+  - {id: waka-t-ei, text: えい, voice: WhiteCUL, style: たのしい, pitch: 0.06, speed: 0.9, intonation: 1.25, gobi: sagaru}
+  - {id: waka-o-ufufu, text: うふふ, voice: WhiteCUL, style: たのしい, pitch: 0.02, speed: 0.8, intonation: 1.2, post: 0.1}
+  - {id: waka-t-ufufu, text: うふふ, voice: WhiteCUL, style: たのしい, pitch: 0.06, speed: 0.9, intonation: 1.25, post: 0.1}
+  - {id: waka-o-araara, text: あらあら, voice: WhiteCUL, style: たのしい, pitch: 0.02, speed: 0.8, intonation: 1.2, post: 0.1}
+  - {id: waka-t-araara, text: あらあら, voice: WhiteCUL, style: たのしい, pitch: 0.06, speed: 0.9, intonation: 1.25, post: 0.1}
+  - {id: waka-o-maa, text: まぁ, voice: WhiteCUL, style: たのしい, pitch: 0.02, speed: 0.8, intonation: 1.2, post: 0.1}
+  - {id: waka-t-maa, text: まぁ, voice: WhiteCUL, style: たのしい, pitch: 0.06, speed: 0.9, intonation: 1.25, post: 0.1}
+  - {id: waka-o-uun, text: うーん, voice: WhiteCUL, style: たのしい, pitch: 0.02, speed: 0.8, intonation: 1.2, gobi: sagaru, nobasu: 0.8, post: 0.1}
+  - {id: waka-t-uun, text: うーん, voice: WhiteCUL, style: たのしい, pitch: 0.06, speed: 0.9, intonation: 1.25, gobi: sagaru, nobasu: 0.8, post: 0.1}
