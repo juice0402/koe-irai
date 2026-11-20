@@ -1,6 +1,6 @@
 # まぜまぜおかし屋（okashi）の掛け声（11/19 しょーくんが声をえらんだ・昼のチャット【okashi-hiru】）
 # ほのか＝春日部つむぎ（高め・元気）／みなも＝小夜/SAYO（11/20 冥鳴ひまりから）／わかば＝WhiteCUL（少し高め・ゆっくり）
-# 11/20 しょーくん「声の感じ・キャラに合わない」「言い方・発音」→ みなもは声をかえる・ほのかとわかばは声はそのままで言い方とトーンを直す（ききくらべ requests/_test/okashi-kouho3.yml）
+# 11/20 しょーくん「声の感じ・キャラに合わない」「言い方・発音」→ みなもは声をかえる・ほのかとわかばは声はそのままで言い方とトーンを直す（ききくらべ requests/_test/okashi-kouho3.yml）→ ほのか B ひかえめ・わかば B たのしい・みなも 小夜 で決まり
 # 11/19 13:25 しょーくん「本当の短文だけ（えいっ！やっ！はっ・うーん……レベル）」
 # 11/19 13:45 しょーくん「えいっ！やっ！も語尾下げて、最後伸ばさずに単音ですぐに切って（えい！や！）」「よーしも語尾下げ」「やったー！はやった！で単音で切って」「うーんはトーンを気持ち下げて」
 #   → っ をとって gobi: sagaru・うしろの無音を短く（post 0.03）。うーんは pitch を 0.03 下げる
@@ -12,25 +12,25 @@ style: ノーマル
 defaults:
   post: 0.03
 lines:
-  # ---- ほのか ----
-  - {id: hono-ei, text: えい！, pitch: 0.08, speed: 1.12, intonation: 1.6, gobi: sagaru}
-  - {id: hono-ya, text: や！, pitch: 0.08, speed: 1.12, intonation: 1.6, gobi: sagaru}
-  - {id: hono-sore, text: それ！, pitch: 0.08, speed: 1.12, intonation: 1.6, gobi: agaru}
-  - {id: hono-waa, text: わぁ！, pitch: 0.08, speed: 1.12, intonation: 1.6, gobi: sagaru}
-  - {id: hono-yatta, text: やった！, pitch: 0.08, speed: 1.12, intonation: 1.6, gobi: agaru}
-  - {id: hono-yoshi, text: よーし！, pitch: 0.08, speed: 1.12, intonation: 1.6, gobi: sagaru}
-  - {id: hono-uun, text: んー, pitch: 0.03, speed: 1.0, intonation: 1.4, gobi: sagaru, nobasu: 1.0, post: 0.1, volume: 2.0}   # 11/19 17:00 うーん→んー（つむぎは う が息っぽい・しょーくんがえらんだ）。ほかの声より小さいので volume 2.0
-  - {id: hono-achaa, text: あちゃー, pitch: 0.06, speed: 1.0, intonation: 1.5, gobi: sagaru, nobasu: 0.8, post: 0.1}   # 11/19 14:00「最後伸ばしをつよく。あちゃ↓・・・」
+  # ---- ほのか（11/20 しょーくんがききくらべで「B ひかえめ」をえらんだ：前の pitch 0.08・speed 1.12・抑揚 1.6 は強すぎ → ひかえめに。語尾は 11/19 の決まりのまま） ----
+  - {id: hono-ei, text: えい！, pitch: 0.05, speed: 1.05, intonation: 1.25, gobi: sagaru}
+  - {id: hono-ya, text: や！, pitch: 0.05, speed: 1.05, intonation: 1.25, gobi: sagaru}
+  - {id: hono-sore, text: それ！, pitch: 0.05, speed: 1.05, intonation: 1.25, gobi: agaru}
+  - {id: hono-waa, text: わぁ！, pitch: 0.05, speed: 1.05, intonation: 1.25, gobi: sagaru}
+  - {id: hono-yatta, text: やった！, pitch: 0.05, speed: 1.05, intonation: 1.25, gobi: agaru}
+  - {id: hono-yoshi, text: よーし！, pitch: 0.05, speed: 1.05, intonation: 1.25, gobi: sagaru}
+  - {id: hono-uun, text: んー, pitch: 0.02, speed: 1.0, intonation: 1.2, gobi: sagaru, nobasu: 0.9, post: 0.1, volume: 2.0}
+  - {id: hono-achaa, text: あちゃー, pitch: 0.04, speed: 1.0, intonation: 1.25, gobi: sagaru, nobasu: 0.6, post: 0.1}
   # ---- みなも（11/20 しょーくんがききくらべで小夜/SAYO をえらんだ・前は冥鳴ひまり）。ひかえめな数字（抑揚 0.9・はやさ 0.95）。小さい音は volume で上げる ----
   - {id: mina-ha, text: は, voice: 小夜/SAYO, style: ノーマル, pitch: -0.03, speed: 0.95, intonation: 0.9, gobi: sagaru, volume: 1.3}
   - {id: mina-fu, text: ふ, voice: 小夜/SAYO, style: ノーマル, pitch: -0.03, speed: 0.95, intonation: 0.9, gobi: sagaru, volume: 1.4}
   - {id: mina-n, text: ん, voice: 小夜/SAYO, style: ノーマル, pitch: -0.03, speed: 0.95, intonation: 0.9, volume: 2.0}
   - {id: mina-yoshi, text: よし。, voice: 小夜/SAYO, style: ノーマル, pitch: -0.03, speed: 0.95, intonation: 0.9, gobi: sagaru, post: 0.1, volume: 1.2}
   - {id: mina-uun, text: んー, voice: 小夜/SAYO, style: ノーマル, pitch: -0.03, speed: 0.95, intonation: 0.9, gobi: sagaru, nobasu: 0.8, post: 0.1}
-  # ---- わかば（11/19 13:52 しょーくん「もっと高くし、ゆっくり読んでほしい。おっとりな感じ」→ pitch 0.1・speed 0.78・抑揚 1.3） ----
-  - {id: waka-sore, text: それ, voice: WhiteCUL, style: ノーマル, pitch: 0.1, speed: 0.78, intonation: 1.3, gobi: sagaru}
-  - {id: waka-ei, text: えい, voice: WhiteCUL, style: ノーマル, pitch: 0.1, speed: 0.78, intonation: 1.3, gobi: sagaru}
-  - {id: waka-ufufu, text: うふふ, voice: WhiteCUL, style: ノーマル, pitch: 0.1, speed: 0.78, intonation: 1.3, post: 0.1}
-  - {id: waka-araara, text: あらあら, voice: WhiteCUL, style: ノーマル, pitch: 0.1, speed: 0.78, intonation: 1.3, post: 0.1}
-  - {id: waka-maa, text: まぁ, voice: WhiteCUL, style: ノーマル, pitch: 0.1, speed: 0.78, intonation: 1.3, post: 0.1}
-  - {id: waka-uun, text: うーん, voice: WhiteCUL, style: ノーマル, pitch: 0.07, speed: 0.78, intonation: 1.3, gobi: sagaru, nobasu: 0.78, post: 0.1}
+  # ---- わかば（11/20 しょーくんがききくらべで「B たのしい」をえらんだ：WhiteCUL の声の種類「たのしい」でやわらかく。前の pitch 0.1・speed 0.78 は強すぎ） ----
+  - {id: waka-sore, text: それ, voice: WhiteCUL, style: たのしい, pitch: 0.02, speed: 0.9, intonation: 1.1, gobi: sagaru}
+  - {id: waka-ei, text: えい, voice: WhiteCUL, style: たのしい, pitch: 0.02, speed: 0.9, intonation: 1.1, gobi: sagaru}
+  - {id: waka-ufufu, text: うふふ, voice: WhiteCUL, style: たのしい, pitch: 0.02, speed: 0.9, intonation: 1.1, post: 0.1}
+  - {id: waka-araara, text: あらあら, voice: WhiteCUL, style: たのしい, pitch: 0.02, speed: 0.9, intonation: 1.1, post: 0.1}
+  - {id: waka-maa, text: まぁ, voice: WhiteCUL, style: たのしい, pitch: 0.02, speed: 0.9, intonation: 1.1, post: 0.1}
+  - {id: waka-uun, text: うーん, voice: WhiteCUL, style: たのしい, pitch: 0.0, speed: 0.9, intonation: 1.1, gobi: sagaru, nobasu: 0.8, post: 0.1}
