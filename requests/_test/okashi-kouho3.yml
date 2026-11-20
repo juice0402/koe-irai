@@ -1,0 +1,41 @@
+# まぜまぜおかし屋：ほのか（春日部つむぎ）とわかば（WhiteCUL）は声はそのまま、言い方とトーンを直す（11/20 しょーくん）
+# いまの数字：ほのか pitch 0.08・speed 1.12・抑揚 1.6／わかば pitch 0.1・speed 0.78・抑揚 1.3（どちらも強め → 発音がくずれやすい）
+# ほのか A しぜん：数字をほぼ素のまま・語尾はおまかせ／B ひかえめ：少し高く元気に・語尾は 11/19 の決まり（えい！や！よーし！は下げる・それ！やった！は上げる）
+# わかば A しぜん：ノーマル・素に近い・語尾おまかせ／B たのしい：声の種類「たのしい」でやわらかく少しゆっくり
+voice: 春日部つむぎ
+style: ノーマル
+defaults:
+  post: 0.04
+lines:
+  # ---- ほのか A しぜん ----
+  - {id: hono-a-ei, text: えい！, pitch: 0.02, speed: 1.0, intonation: 1.0}
+  - {id: hono-a-ya, text: や！, pitch: 0.02, speed: 1.0, intonation: 1.0}
+  - {id: hono-a-sore, text: それ！, pitch: 0.02, speed: 1.0, intonation: 1.0}
+  - {id: hono-a-waa, text: わぁ！, pitch: 0.02, speed: 1.0, intonation: 1.0}
+  - {id: hono-a-yatta, text: やった！, pitch: 0.02, speed: 1.0, intonation: 1.0}
+  - {id: hono-a-yoshi, text: よーし！, pitch: 0.02, speed: 1.0, intonation: 1.0}
+  - {id: hono-a-uun, text: んー, pitch: 0.0, speed: 1.0, intonation: 1.0, nobasu: 0.9, post: 0.1, volume: 2.0}
+  - {id: hono-a-achaa, text: あちゃー, pitch: 0.02, speed: 1.0, intonation: 1.0, nobasu: 0.6, post: 0.1}
+  # ---- ほのか B ひかえめ ----
+  - {id: hono-b-ei, text: えい！, pitch: 0.05, speed: 1.05, intonation: 1.25, gobi: sagaru}
+  - {id: hono-b-ya, text: や！, pitch: 0.05, speed: 1.05, intonation: 1.25, gobi: sagaru}
+  - {id: hono-b-sore, text: それ！, pitch: 0.05, speed: 1.05, intonation: 1.25, gobi: agaru}
+  - {id: hono-b-waa, text: わぁ！, pitch: 0.05, speed: 1.05, intonation: 1.25, gobi: sagaru}
+  - {id: hono-b-yatta, text: やった！, pitch: 0.05, speed: 1.05, intonation: 1.25, gobi: agaru}
+  - {id: hono-b-yoshi, text: よーし！, pitch: 0.05, speed: 1.05, intonation: 1.25, gobi: sagaru}
+  - {id: hono-b-uun, text: んー, pitch: 0.02, speed: 1.0, intonation: 1.2, gobi: sagaru, nobasu: 0.9, post: 0.1, volume: 2.0}
+  - {id: hono-b-achaa, text: あちゃー, pitch: 0.04, speed: 1.0, intonation: 1.25, gobi: sagaru, nobasu: 0.6, post: 0.1}
+  # ---- わかば A しぜん（WhiteCUL・ノーマル） ----
+  - {id: waka-a-sore, text: それ, voice: WhiteCUL, style: ノーマル, pitch: 0.0, speed: 0.95, intonation: 1.0}
+  - {id: waka-a-ei, text: えい, voice: WhiteCUL, style: ノーマル, pitch: 0.0, speed: 0.95, intonation: 1.0}
+  - {id: waka-a-ufufu, text: うふふ, voice: WhiteCUL, style: ノーマル, pitch: 0.0, speed: 0.95, intonation: 1.0, post: 0.1}
+  - {id: waka-a-araara, text: あらあら, voice: WhiteCUL, style: ノーマル, pitch: 0.0, speed: 0.95, intonation: 1.0, post: 0.1}
+  - {id: waka-a-maa, text: まぁ, voice: WhiteCUL, style: ノーマル, pitch: 0.0, speed: 0.95, intonation: 1.0, post: 0.1}
+  - {id: waka-a-uun, text: うーん, voice: WhiteCUL, style: ノーマル, pitch: 0.0, speed: 0.95, intonation: 1.0, nobasu: 0.8, post: 0.1}
+  # ---- わかば B たのしい（WhiteCUL・たのしい） ----
+  - {id: waka-b-sore, text: それ, voice: WhiteCUL, style: たのしい, pitch: 0.02, speed: 0.9, intonation: 1.1, gobi: sagaru}
+  - {id: waka-b-ei, text: えい, voice: WhiteCUL, style: たのしい, pitch: 0.02, speed: 0.9, intonation: 1.1, gobi: sagaru}
+  - {id: waka-b-ufufu, text: うふふ, voice: WhiteCUL, style: たのしい, pitch: 0.02, speed: 0.9, intonation: 1.1, post: 0.1}
+  - {id: waka-b-araara, text: あらあら, voice: WhiteCUL, style: たのしい, pitch: 0.02, speed: 0.9, intonation: 1.1, post: 0.1}
+  - {id: waka-b-maa, text: まぁ, voice: WhiteCUL, style: たのしい, pitch: 0.02, speed: 0.9, intonation: 1.1, post: 0.1}
+  - {id: waka-b-uun, text: うーん, voice: WhiteCUL, style: たのしい, pitch: 0.0, speed: 0.9, intonation: 1.1, gobi: sagaru, nobasu: 0.8, post: 0.1}
