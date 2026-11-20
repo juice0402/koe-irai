@@ -11,8 +11,8 @@
       "style": "ノーマル",
       "gobi": "sagaru",
       "file": "hono-ei.mp3",
-      "seconds": 0.352,
-      "key": "a95581fc3d93c9f9"
+      "seconds": 0.373,
+      "key": "c5a1ed08b7a509b0"
     },
     {
       "id": "hono-ya",
@@ -21,8 +21,8 @@
       "style": "ノーマル",
       "gobi": "sagaru",
       "file": "hono-ya.mp3",
-      "seconds": 0.267,
-      "key": "d06ede31f1089c06"
+      "seconds": 0.277,
+      "key": "5f9449072640fec8"
     },
     {
       "id": "hono-sore",
@@ -31,8 +31,8 @@
       "style": "ノーマル",
       "gobi": "agaru",
       "file": "hono-sore.mp3",
-      "seconds": 0.416,
-      "key": "4e61ebeb4f2534cd"
+      "seconds": 0.437,
+      "key": "df137950a2baa8d9"
     },
     {
       "id": "hono-waa",
@@ -41,8 +41,8 @@
       "style": "ノーマル",
       "gobi": "sagaru",
       "file": "hono-waa.mp3",
-      "seconds": 0.341,
-      "key": "066c1bf97bb21cf9"
+      "seconds": 0.363,
+      "key": "80afdd6b1b0d75cd"
     },
     {
       "id": "hono-yatta",
@@ -51,8 +51,8 @@
       "style": "ノーマル",
       "gobi": "agaru",
       "file": "hono-yatta.mp3",
-      "seconds": 0.501,
-      "key": "d45510ff73c1c696"
+      "seconds": 0.544,
+      "key": "7510d55f9c4c9c3b"
     },
     {
       "id": "hono-yoshi",
@@ -61,8 +61,8 @@
       "style": "ノーマル",
       "gobi": "sagaru",
       "file": "hono-yoshi.mp3",
-      "seconds": 0.544,
-      "key": "6b7ec4816ea34e77"
+      "seconds": 0.565,
+      "key": "3ab5b54694f8da72"
     },
     {
       "id": "hono-uun",
@@ -70,10 +70,10 @@
       "voice": "春日部つむぎ",
       "style": "ノーマル",
       "gobi": "sagaru",
-      "nobasu": 1,
+      "nobasu": 0.9,
       "file": "hono-uun.mp3",
-      "seconds": 1.152,
-      "key": "12269113cfdb6eea"
+      "seconds": 1.045,
+      "key": "50a657adaab06165"
     },
     {
       "id": "hono-achaa",
@@ -81,10 +81,10 @@
       "voice": "春日部つむぎ",
       "style": "ノーマル",
       "gobi": "sagaru",
-      "nobasu": 0.8,
+      "nobasu": 0.6,
       "file": "hono-achaa.mp3",
-      "seconds": 1.28,
-      "key": "ea4d1b731db4b661"
+      "seconds": 1.077,
+      "key": "293eefffbaae6bb1"
     },
     {
       "id": "mina-ha",
@@ -141,62 +141,62 @@
       "id": "waka-sore",
       "text": "それ",
       "voice": "WhiteCUL",
-      "style": "ノーマル",
+      "style": "たのしい",
       "gobi": "sagaru",
       "file": "waka-sore.mp3",
-      "seconds": 0.629,
-      "key": "ca3f71bffe44d384"
+      "seconds": 0.48,
+      "key": "120da2f71929d33d"
     },
     {
       "id": "waka-ei",
       "text": "えい",
       "voice": "WhiteCUL",
-      "style": "ノーマル",
+      "style": "たのしい",
       "gobi": "sagaru",
       "file": "waka-ei.mp3",
-      "seconds": 0.459,
-      "key": "7aafb07897129b77"
+      "seconds": 0.384,
+      "key": "4ffd46bf4d15e305"
     },
     {
       "id": "waka-ufufu",
       "text": "うふふ",
       "voice": "WhiteCUL",
-      "style": "ノーマル",
+      "style": "たのしい",
       "gobi": "taira",
       "file": "waka-ufufu.mp3",
-      "seconds": 0.853,
-      "key": "a6d0da608f157ca4"
+      "seconds": 0.672,
+      "key": "f5d00c5d79e5941d"
     },
     {
       "id": "waka-araara",
       "text": "あらあら",
       "voice": "WhiteCUL",
-      "style": "ノーマル",
+      "style": "たのしい",
       "gobi": "taira",
       "file": "waka-araara.mp3",
-      "seconds": 0.843,
-      "key": "d5e260e0988c70bb"
+      "seconds": 0.715,
+      "key": "2b13c1016648ed83"
     },
     {
       "id": "waka-maa",
       "text": "まぁ",
       "voice": "WhiteCUL",
-      "style": "ノーマル",
+      "style": "たのしい",
       "gobi": "taira",
       "file": "waka-maa.mp3",
-      "seconds": 0.555,
-      "key": "f2cc6a762ab4e353"
+      "seconds": 0.437,
+      "key": "68e98b2808e9b2b8"
     },
     {
       "id": "waka-uun",
       "text": "うーん",
       "voice": "WhiteCUL",
-      "style": "ノーマル",
+      "style": "たのしい",
       "gobi": "sagaru",
-      "nobasu": 0.78,
+      "nobasu": 0.8,
       "file": "waka-uun.mp3",
-      "seconds": 1.536,
-      "key": "7192b6502277556b"
+      "seconds": 1.28,
+      "key": "3bb3e69f7a944588"
     }
   ]
 }
