@@ -1,6 +1,6 @@
 # koe-irai（声の依頼箱・公開）
 
-全ゲームで使う「声」の共通のしくみ（2026-11-17 司令塔が作った）。ゲームのチャットが依頼書を出すと、GitHub の Actions が VOICEVOX（無料の読み上げ）で掛け声などの短い声を作る。セリフの文は声にしない（テキストだけ）。
+全ゲームで使う「声」の共通のしくみ（2026-11-17 司令塔が作った）。ゲームのチャットが依頼書を出すと、GitHub の Actions が声を作る。掛け声などの短い声は VOICEVOX（無料の読み上げ）、自然な抑揚のセリフ・語りは Gemini（下の「Gemini の声」・11/20〜）。
 
 ## 頼み方（ゲームのチャット）
 1. add_repo（juice0402/koe-irai・push）→ clone → ブランチ `koe/<記号>-<名前>`
@@ -37,13 +37,32 @@ lines:
                        #   春日部つむぎ・冥鳴ひまりは「う」が弱く息っぽい → うーん より んー（11/19 測った）
 ```
 
+## Gemini の声（engine: gemini・11/20〜）
+- Google の Gemini API の読み上げ（TTS）。指示どおりの感情・自然な抑揚で読む。鍵は GitHub の Secrets の `GEMINI_API_KEY`（チャット・依頼書・コードに書かない）
+- 無料枠：送った文は Google が製品の改善に使い、人が読むこともある（公開してよい文だけ送る）。1日の回数に上限があり、使いきると「あしたまた作る」で止まる → 次の日に「声を作る」を手で動かす
+- クレジットの義務なし。音の一覧（出どころ）には「koe-irai・Gemini TTS:<声>」と書く
+- 同じ文でも毎回すこしちがう声になる → takes で何本か作って選ぶ。依頼書のその行を変えると作りなおされるので、選んだ音は先に自分の assets にコピーしておく
+```yaml
+engine: gemini
+model: gemini-3.8-flash-tts    # なくてよい（軽いのは gemini-3.8-flash-lite-tts）
+voice: Leda                    # 30の声（scripts/gemini.mjs の GEMINI_VOICES に日本語の説明つき）
+                               #   女の子向き：Leda（若い）・Aoede（さわやか）・Zephyr（明るい）・Achernar（やわらか）・Kore（しっかり）
+style: 元気な女の子、明るく弾むように   # 読み方の指示（日本語でよい・300字まで・行ごとにも書ける）
+takes: 3                       # 1〜3（なければ1）。<id>.mp3・<id>_2.mp3・<id>_3.mp3
+wav: true                      # なくてよい（.wav もほしいとき）
+lines:
+  - id: hello
+    text: こんにちは！今日もがんばろうね！  # 1000字まで。読みまちがえる字はかなで書く。<laugh>・<sigh>・<short pause> も入れられる
+  - {id: nare, text: むかしむかし、ある森に。, voice: Kore, style: 落ち着いた語り, takes: 1}
+```
+
 ## 声（voices.yml）
 - 声はキャラごとに約束（利用規約）がちがう。ゲームに使えるのは、司令塔が約束を確かめて `ok: true` にした声だけ
 - 声の一覧と約束の文は Actions「声の一覧と約束を取る」で `policies/` に取る。新しい声を使いたいときは司令塔に頼む
 - ゲームやアプリに入れる音は claude/game-art-rule.md の「音」のとおり（出どころを一覧に書く）
 
 ## しくみ（司令塔）
-- scripts/lib.mjs（点検・鍵・クレジット）・check.mjs（PR の点検）・make.mjs（声を作る）・policies.mjs（約束を取る）。テストは `node --test`
+- scripts/lib.mjs（点検・鍵・クレジット）・gemini.mjs（Gemini の点検と呼び出し）・check.mjs（PR の点検）・make.mjs（声を作る）・policies.mjs（約束を取る）。テストは `node --test`
 - Actions：irai.yml（PR → 点検 → requests/ だけなら squash でマージ → make.yml を動かす）・make.yml（VOICEVOX のエンジンを横で動かして out/ を作り main に push）・policies.yml（手で）
 - エンジンは Docker の voicevox/voicevox_engine:cpu-latest。同じ声・文・数字・エンジンの版なら作りなおさない（make.yml を all=true で動かすと全部作りなおす）
-- 公開リポジトリなので Actions は無料。鍵は GITHUB_TOKEN だけ
+- 公開リポジトリなので Actions は無料。鍵は GITHUB_TOKEN と Secrets の GEMINI_API_KEY（make.yml だけが使う。ほかのリポジトリからの PR は自動マージしない）
