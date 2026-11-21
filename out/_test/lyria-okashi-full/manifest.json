@@ -1,0 +1,168 @@
+{
+  "game": "_test",
+  "set": "lyria-okashi-full",
+  "engine": "lyria",
+  "request": "requests/_test/lyria-okashi-full.yml",
+  "songs": [
+    {
+      "id": "hiru",
+      "model": "lyria-3.5",
+      "prompt": "Cozy, cheerful background music for a cute sweets-shop management game, daytime in a sunny little forest town. Music box melody, pizzicato strings, soft flute, gentle piano chords, light upright bass, soft shaker. F major, 100 BPM, steady tempo. Warm, playful and relaxing. About 2 minutes long, with an A section and a B section that keep the same tempo, key and energy from start to end. Loopable game BGM with consistent energy, no fade-out. Instrumental only, no vocals.",
+      "loop": true,
+      "wav": false,
+      "key": "b8c145003f845e11",
+      "takes": [
+        {
+          "file": "hiru.mp3",
+          "seconds": 127.765,
+          "text": "hiru.txt",
+          "loop": {
+            "file": "hiru_loop.mp3",
+            "start": 31.951,
+            "end": 89.551,
+            "seconds": 57.6,
+            "samples": 2540164,
+            "score": 0.979,
+            "seam": 0.223,
+            "song_seconds": 127.765
+          }
+        },
+        {
+          "file": "hiru_2.mp3",
+          "seconds": 117.342,
+          "text": "hiru_2.txt",
+          "loop": {
+            "file": "hiru_2_loop.mp3",
+            "start": 30.488,
+            "end": 88.088,
+            "seconds": 57.6,
+            "samples": 2540165,
+            "score": 0.868,
+            "seam": 0.169,
+            "song_seconds": 117.342
+          }
+        }
+      ]
+    },
+    {
+      "id": "yoru-honoka",
+      "model": "lyria-3.5",
+      "prompt": "Energetic battle music for a cute card battle game at night in a magical sweets shop. Bright square-wave synth lead, brass stabs, driving strings, punchy bass, xylophone accents, energetic drums. A minor, 150 BPM, steady tempo. Exciting and tense but still cute and fun, not scary. About 2 minutes long, with an A section and a B section that keep the same tempo, key and energy from start to end. Loopable game BGM with consistent energy, no fade-out. Instrumental only, no vocals.",
+      "loop": true,
+      "wav": false,
+      "key": "7b5c5d5ce5cd7323",
+      "takes": [
+        {
+          "file": "yoru-honoka.mp3",
+          "seconds": 125.858,
+          "text": "yoru-honoka.txt",
+          "loop": {
+            "file": "yoru-honoka_loop.mp3",
+            "start": 29.071,
+            "end": 86.671,
+            "seconds": 57.6,
+            "samples": 2540159,
+            "score": 0.952,
+            "seam": 0.018,
+            "song_seconds": 125.858
+          }
+        },
+        {
+          "file": "yoru-honoka_2.mp3",
+          "seconds": 118.805,
+          "text": "yoru-honoka_2.txt",
+          "loop": {
+            "file": "yoru-honoka_2_loop.mp3",
+            "start": 14.721,
+            "end": 78.721,
+            "seconds": 64,
+            "samples": 2822399,
+            "score": 0.723,
+            "seam": 0.293,
+            "song_seconds": 118.805
+          }
+        }
+      ]
+    },
+    {
+      "id": "yoru-minamo",
+      "model": "lyria-3.5",
+      "prompt": "Upbeat electronic pop battle music for a cute card game at a night festival. Plucky synths, sparkling arpeggios, bouncy synth bass, claps and a four-on-the-floor kick, bright bell lead. E minor, 145 BPM, steady tempo. Exciting, colorful and fun. About 2 minutes long, with an A section and a B section that keep the same tempo, key and energy from start to end. Loopable game BGM with consistent energy, no fade-out. Instrumental only, no vocals, no vocal chops.",
+      "loop": true,
+      "wav": false,
+      "key": "c5ff3779477dbd54",
+      "takes": [
+        {
+          "file": "yoru-minamo.mp3",
+          "seconds": 122.488,
+          "text": "yoru-minamo.txt",
+          "loop": {
+            "file": "yoru-minamo_loop.mp3",
+            "start": 6.037,
+            "end": 111.967,
+            "seconds": 105.93,
+            "samples": 4671514,
+            "score": 0.894,
+            "seam": 0.086,
+            "song_seconds": 122.488
+          }
+        },
+        {
+          "file": "yoru-minamo_2.mp3",
+          "seconds": 120.189,
+          "text": "yoru-minamo_2.txt",
+          "loop": {
+            "file": "yoru-minamo_2_loop.mp3",
+            "start": 12.934,
+            "end": 67.791,
+            "seconds": 54.857,
+            "samples": 2419195,
+            "score": 0.93,
+            "seam": 0.055,
+            "song_seconds": 120.189
+          }
+        }
+      ]
+    },
+    {
+      "id": "yoru-wakaba",
+      "model": "lyria-3.5",
+      "prompt": "Whimsical orchestral battle music for a cute fantasy card game set at night. Staccato strings, pizzicato, playful woodwinds, bold brass, timpani, glockenspiel and celesta sparkles. D minor, 140 BPM, steady tempo. Magical, adventurous, a little mischievous, never dark. About 2 minutes long, with an A section and a B section that keep the same tempo, key and energy from start to end. Loopable game BGM with consistent energy, no fade-out. Instrumental only, no vocals, no choir.",
+      "loop": true,
+      "wav": false,
+      "key": "4bd3c37fe9ba299a",
+      "takes": [
+        {
+          "file": "yoru-wakaba.mp3",
+          "seconds": 123.037,
+          "text": "yoru-wakaba.txt",
+          "loop": {
+            "file": "yoru-wakaba_loop.mp3",
+            "start": 33.739,
+            "end": 88.596,
+            "seconds": 54.857,
+            "samples": 2419195,
+            "score": 0.921,
+            "seam": 0.066,
+            "song_seconds": 123.037
+          }
+        },
+        {
+          "file": "yoru-wakaba_2.mp3",
+          "seconds": 120.79,
+          "text": "yoru-wakaba_2.txt",
+          "loop": {
+            "file": "yoru-wakaba_2_loop.mp3",
+            "start": 38.754,
+            "end": 111.083,
+            "seconds": 72.329,
+            "samples": 3189724,
+            "score": 0.609,
+            "seam": 0.629,
+            "song_seconds": 120.79
+          }
+        }
+      ]
+    }
+  ]
+}
