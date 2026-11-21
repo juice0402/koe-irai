@@ -1,0 +1,36 @@
+# ためし（11/21 司令塔）：clip でえらんだ方向を lyria-3.5（2分くらい）で2本ずつ
+# 昼のお店＝hiru-a の方向（しょーくん「一応Aで決定」）
+# 夜のバトルはキャラごと（しょーくん「ほのかの戦闘がAで、みなもがCで、わかばがBみたいなのもできる？」）
+#   ほのか＝yoru-a・みなも＝yoru-c・わかば＝yoru-b の方向
+engine: lyria
+model: lyria-3.5
+takes: 2
+songs:
+  - id: hiru
+    prompt: >-
+      Cozy, cheerful background music for a cute sweets-shop management game, daytime in a sunny little forest town.
+      Music box melody, pizzicato strings, soft flute, gentle piano chords, light upright bass, soft shaker.
+      F major, 100 BPM, steady tempo. Warm, playful and relaxing.
+      About 2 minutes long, with an A section and a B section that keep the same tempo, key and energy from start to end.
+      Loopable game BGM with consistent energy, no fade-out. Instrumental only, no vocals.
+  - id: yoru-honoka
+    prompt: >-
+      Energetic battle music for a cute card battle game at night in a magical sweets shop.
+      Bright square-wave synth lead, brass stabs, driving strings, punchy bass, xylophone accents, energetic drums.
+      A minor, 150 BPM, steady tempo. Exciting and tense but still cute and fun, not scary.
+      About 2 minutes long, with an A section and a B section that keep the same tempo, key and energy from start to end.
+      Loopable game BGM with consistent energy, no fade-out. Instrumental only, no vocals.
+  - id: yoru-minamo
+    prompt: >-
+      Upbeat electronic pop battle music for a cute card game at a night festival.
+      Plucky synths, sparkling arpeggios, bouncy synth bass, claps and a four-on-the-floor kick, bright bell lead.
+      E minor, 145 BPM, steady tempo. Exciting, colorful and fun.
+      About 2 minutes long, with an A section and a B section that keep the same tempo, key and energy from start to end.
+      Loopable game BGM with consistent energy, no fade-out. Instrumental only, no vocals, no vocal chops.
+  - id: yoru-wakaba
+    prompt: >-
+      Whimsical orchestral battle music for a cute fantasy card game set at night.
+      Staccato strings, pizzicato, playful woodwinds, bold brass, timpani, glockenspiel and celesta sparkles.
+      D minor, 140 BPM, steady tempo. Magical, adventurous, a little mischievous, never dark.
+      About 2 minutes long, with an A section and a B section that keep the same tempo, key and energy from start to end.
+      Loopable game BGM with consistent energy, no fade-out. Instrumental only, no vocals, no choir.

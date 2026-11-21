@@ -1,6 +1,6 @@
-# koe-irai（声の依頼箱・公開）
+# koe-irai（声と曲の依頼箱・公開）
 
-全ゲームで使う「声」の共通のしくみ（2026-11-17 司令塔が作った）。ゲームのチャットが依頼書を出すと、GitHub の Actions が声を作る。掛け声などの短い声は VOICEVOX（無料の読み上げ）、自然な抑揚のセリフ・語りは Gemini（下の「Gemini の声」・11/20〜）。
+全ゲームで使う「声」と「曲」の共通のしくみ（2026-11-17 司令塔が作った）。ゲームのチャットが依頼書を出すと、GitHub の Actions が作る。掛け声などの短い声は VOICEVOX（無料の読み上げ）、自然な抑揚のセリフ・語りは Gemini（下の「Gemini の声」・11/20〜）、BGM は Lyria（下の「Lyria の曲」・11/21〜・お金がかかる）。
 
 ## 頼み方（ゲームのチャット）
 1. add_repo（juice0402/koe-irai・push）→ clone → ブランチ `koe/<記号>-<名前>`
@@ -56,13 +56,33 @@ lines:
   - {id: nare, text: むかしむかし、ある森に。, voice: Kore, style: 落ち着いた語り, takes: 1}
 ```
 
+## Lyria の曲（engine: lyria・11/21〜）
+- Google の Gemini API の曲づくり。**お金がかかる**（前払いの残高から・clip 1本 約6円／3.5 1本 約12円・無料枠なし）。依頼書を出す前に、何本作るかを司令塔かしょーくんに伝える。PR の点検が「新しく作る曲 N 本・約◯円」を出す
+- 同じ文でも毎回ちがう曲になる。1回で作るだけ（直しのやりとりはできない）→ ためしは clip の30秒で方向をえらび、きまったら 3.5 で長い曲
+- できるもの：`<id>.mp3`（44.1kHz ステレオ・SynthID 入り）・`<id>.txt`（構成の文）・`<id>_loop.mp3`（ゲーム用のつなぎ目のないループ・scripts/loop.py）。manifest.json の `loop.seconds` がループ1回の長さ（Web Audio の loopEnd に使う。mp3 の頭のすき間がずれるときは decode した長さとくらべる）
+- prompt は英語で、楽器・調・BPM・雰囲気と「Loopable game BGM with consistent energy, no fade-out. Instrumental only, no vocals.」。ほかの作品名・曲名・アーティスト名・「〇〇風」は書かない（公開のリポジトリに残る・安全フィルターでも止まる）
+- お金を守るしくみ：prompt・model・wav を変えた曲だけ作りなおす（`all=true` でも作りなおさない）・takes をふやしたら足した本だけ・1回の「声を作る」で12本まで・402（残高切れ）や安全フィルターで止まったら前の音を残して赤＋まとめ
+- 選んだ音は、依頼書を変える前に自分の assets にコピー。えらばなかったけれど残したい曲は kept/<記号>/ にコピー（make.mjs はさわらない・kept/README.md に出どころ）。音の一覧（出どころ）に「koe-irai・Lyria:<model>（作った日・prompt は依頼書）」。AI で作った曲なので「人が演奏した」と書かない。クレジットの義務なし。App Store に出す前に Gemini API の規約をもう一度読む（game-art-rule.md の「Lyria」）
+```yaml
+engine: lyria
+model: lyria-3-clip-preview   # 30秒（takes 1〜3）／lyria-3.5 は2分くらい（takes 1〜2・wav: true で .wav も）
+takes: 1
+loop: true                    # なくてよい（ループ版がいらない曲だけ false）
+songs:
+  - id: hiru-a                # 小文字の英数字と - _
+    prompt: >-
+      Cozy background music for a cute sweets-shop game. Music box, pizzicato strings, soft flute.
+      F major, 100 BPM, steady tempo. Loopable game BGM with consistent energy, no fade-out. Instrumental only, no vocals.
+  - {id: hiru-full, model: lyria-3.5, takes: 2, prompt: ...}
+```
+
 ## 声（voices.yml）
 - 声はキャラごとに約束（利用規約）がちがう。ゲームに使えるのは、司令塔が約束を確かめて `ok: true` にした声だけ
 - 声の一覧と約束の文は Actions「声の一覧と約束を取る」で `policies/` に取る。新しい声を使いたいときは司令塔に頼む
 - ゲームやアプリに入れる音は claude/game-art-rule.md の「音」のとおり（出どころを一覧に書く）
 
 ## しくみ（司令塔）
-- scripts/lib.mjs（点検・鍵・クレジット）・gemini.mjs（Gemini の点検と呼び出し）・check.mjs（PR の点検）・make.mjs（声を作る）・policies.mjs（約束を取る）。テストは `node --test`
+- 地図は docs/MAP.md。scripts/lib.mjs（点検・鍵・クレジット）・gemini.mjs（Gemini の声）・lyria.mjs（Lyria の曲）・loop.py（ループ版）・check.mjs（PR の点検）・make.mjs（作る）・policies.mjs（約束を取る）。テストは `node --test`
 - Actions：irai.yml（PR → 点検 → requests/ だけなら squash でマージ → make.yml を動かす）・make.yml（VOICEVOX のエンジンを横で動かして out/ を作り main に push）・policies.yml（手で）
 - エンジンは Docker の voicevox/voicevox_engine:cpu-latest。同じ声・文・数字・エンジンの版なら作りなおさない（make.yml を all=true で動かすと全部作りなおす）
-- 公開リポジトリなので Actions は無料。鍵は GITHUB_TOKEN と Secrets の GEMINI_API_KEY（make.yml だけが使う。ほかのリポジトリからの PR は自動マージしない）
+- 公開リポジトリなので Actions は無料。鍵は GITHUB_TOKEN と Secrets の GEMINI_API_KEY（make.yml だけが使う。ほかのリポジトリからの PR は自動マージしない）。Gemini の声と Lyria は同じ前払いの残高（オートチャージなし・0円で止まるだけ）

@@ -1,0 +1,24 @@
+# ためし（11/21 司令塔）：まぜまぜおかし屋の昼のお店の曲。3つの方向を Clip（30秒）で1本ずつ → しょーくんがえらぶ → lyria-3.5 で2本
+# a：いまのコードの曲（tools/bgm の hiru）に近い方向／b：アコースティックのカフェ／c：かるいジャズ
+engine: lyria
+model: lyria-3-clip-preview
+takes: 1
+songs:
+  - id: hiru-a
+    prompt: >-
+      Cozy, cheerful background music for a cute sweets-shop management game, daytime in a sunny little forest town.
+      Music box melody, pizzicato strings, soft flute, gentle piano chords, light upright bass, soft shaker.
+      F major, 100 BPM, steady tempo. Warm, playful and relaxing.
+      Loopable game BGM with consistent energy, no fade-out. Instrumental only, no vocals.
+  - id: hiru-b
+    prompt: >-
+      Bright acoustic cafe music for a cozy sweets shop game.
+      Ukulele and acoustic guitar strumming, glockenspiel melody, light hand claps and tambourine, warm bass.
+      C major, 96 BPM, steady tempo. Sunny, happy, homey morning feeling.
+      Loopable game BGM with consistent energy, no fade-out. Instrumental only, no vocals, no whistling.
+  - id: hiru-c
+    prompt: >-
+      Light jazz cafe background music for a cute pastry shop game.
+      Soft piano melody, vibraphone, celesta sparkles, upright bass, brushed drums with a gentle swing.
+      B-flat major, 108 BPM, steady tempo. Elegant, sweet and cozy.
+      Loopable game BGM with consistent energy, no fade-out. Instrumental only, no vocals.
