@@ -25,25 +25,6 @@
       "key": "de4c12accd8984f5"
     },
     {
-      "id": "mina-all-despina",
-      "text": "はっ。\nふっ。\nうん。\nよし。\nんー。",
-      "engine": "gemini",
-      "model": "gemini-3.8-flash-tts",
-      "voice": "Despina",
-      "style": "クールで口数の少ない飴細工職人の女の子（十代後半）。落ち着いた声だけど低くしすぎず、若い女の子らしい少し高めの声で、そっけなく短く。ひとことずつ、あいだを1秒あけて言う。息だけにせず、どのことばもはっきり声に出す。はっ は小さく気合い、ふっ は小さく鼻で笑う、うん は小さくうなずく、よし は静かに気合いを入れる、んー は考えこむ",
-      "takes": 2,
-      "file": "mina-all-despina.mp3",
-      "files": [
-        "mina-all-despina.mp3",
-        "mina-all-despina_2.mp3"
-      ],
-      "seconds": [
-        9.12,
-        9.6
-      ],
-      "key": "4ea1256353f77468"
-    },
-    {
       "id": "waka-all-achernar",
       "text": "それっ。\nえいっ。\nうふふ。\nあらあら。\nまぁ。\nうーん。",
       "engine": "gemini",
@@ -80,6 +61,101 @@
         1.2
       ],
       "key": "e978b03bc1e986e3"
+    },
+    {
+      "id": "mina-ha",
+      "text": "はっ。",
+      "engine": "gemini",
+      "model": "gemini-3.8-flash-tts",
+      "voice": "Despina",
+      "style": "クールで口数の少ない飴細工職人の女の子（十代後半）。落ち着いた声だけど低くしすぎず、若い女の子らしい少し高めの声。息だけにせず、はっきり声に出す。攻撃のときの小さな気合い。短く鋭く",
+      "takes": 2,
+      "file": "mina-ha.mp3",
+      "files": [
+        "mina-ha.mp3",
+        "mina-ha_2.mp3"
+      ],
+      "seconds": [
+        0.8,
+        0.68
+      ],
+      "key": "087fa51ec4954b01"
+    },
+    {
+      "id": "mina-fu",
+      "text": "ふっ。",
+      "engine": "gemini",
+      "model": "gemini-3.8-flash-tts",
+      "voice": "Despina",
+      "style": "クールで口数の少ない飴細工職人の女の子（十代後半）。落ち着いた声だけど低くしすぎず、若い女の子らしい少し高めの声。息だけにせず、はっきり声に出す。攻撃のときに小さく息をはく気合い。短く、でも声に出す",
+      "takes": 2,
+      "file": "mina-fu.mp3",
+      "files": [
+        "mina-fu.mp3",
+        "mina-fu_2.mp3"
+      ],
+      "seconds": [
+        0.8,
+        0.76
+      ],
+      "key": "83d0ec6c89d00b81"
+    },
+    {
+      "id": "mina-n",
+      "text": "うん。",
+      "engine": "gemini",
+      "model": "gemini-3.8-flash-tts",
+      "voice": "Despina",
+      "style": "クールで口数の少ない飴細工職人の女の子（十代後半）。落ち着いた声だけど低くしすぎず、若い女の子らしい少し高めの声。息だけにせず、はっきり声に出す。そっけなく小さくうなずく",
+      "takes": 2,
+      "file": "mina-n.mp3",
+      "files": [
+        "mina-n.mp3",
+        "mina-n_2.mp3"
+      ],
+      "seconds": [
+        1.04,
+        0.84
+      ],
+      "key": "1e54674a493b0f1c"
+    },
+    {
+      "id": "mina-yoshi",
+      "text": "よし。",
+      "engine": "gemini",
+      "model": "gemini-3.8-flash-tts",
+      "voice": "Despina",
+      "style": "クールで口数の少ない飴細工職人の女の子（十代後半）。落ち着いた声だけど低くしすぎず、若い女の子らしい少し高めの声。息だけにせず、はっきり声に出す。うまくいって、静かに小さくガッツポーズ",
+      "takes": 2,
+      "file": "mina-yoshi.mp3",
+      "files": [
+        "mina-yoshi.mp3",
+        "mina-yoshi_2.mp3"
+      ],
+      "seconds": [
+        1.04,
+        1.08
+      ],
+      "key": "ddf89842d8ae7b33"
+    },
+    {
+      "id": "mina-uun",
+      "text": "んー。",
+      "engine": "gemini",
+      "model": "gemini-3.8-flash-tts",
+      "voice": "Despina",
+      "style": "クールで口数の少ない飴細工職人の女の子（十代後半）。落ち着いた声だけど低くしすぎず、若い女の子らしい少し高めの声。息だけにせず、はっきり声に出す。うまくいかなくて、少しむっとして考えこむ",
+      "takes": 2,
+      "file": "mina-uun.mp3",
+      "files": [
+        "mina-uun.mp3",
+        "mina-uun_2.mp3"
+      ],
+      "seconds": [
+        1.28,
+        1.36
+      ],
+      "key": "dc4c59cdadd197dc"
     }
   ]
 }
