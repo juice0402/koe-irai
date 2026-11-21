@@ -7,22 +7,24 @@
   "lines": [
     {
       "id": "hono-dekita",
-      "text": "できた！",
+      "text": "できたー！",
       "engine": "gemini",
       "model": "gemini-3.8-flash-tts",
       "voice": "Leda",
-      "style": "元気な見習いパティシエの女の子（十代後半）。夜のおもてなしで、まぜて最高のお菓子（★3）が完成した瞬間。うれしくて、パッと元気に言い切る",
-      "takes": 2,
+      "style": "元気な見習いパティシエの女の子（十代後半）。ずっとがんばって作っていたお菓子が、とうとう最高のできばえで完成！目をきらきらさせて、両手をあげて大よろこび。はずむように元気いっぱいに",
+      "takes": 3,
       "file": "hono-dekita.mp3",
       "files": [
         "hono-dekita.mp3",
-        "hono-dekita_2.mp3"
+        "hono-dekita_2.mp3",
+        "hono-dekita_3.mp3"
       ],
       "seconds": [
-        1.28,
-        1.2
+        1.24,
+        1.84,
+        1.52
       ],
-      "key": "e046f04b1850ad06"
+      "key": "29a3f1ecf475cbf9"
     },
     {
       "id": "mina-kansei",
@@ -45,22 +47,24 @@
     },
     {
       "id": "waka-dekita",
-      "text": "できた",
+      "text": "できたわぁ",
       "engine": "gemini",
       "model": "gemini-3.8-flash-tts",
       "voice": "Achernar",
-      "style": "おっとりした優しいお姉さん。ゆったり、ふんわり、ほほえみながら。くだもののお菓子の大作ができた瞬間。うれしそうに、やわらかく",
-      "takes": 2,
+      "style": "おっとりした優しいお姉さん。ゆったり、ふんわり、ほほえみながら。大きなくだもののお菓子が完成して、両手をあわせて ほっこりうれしそう。やさしく、語尾を少しのばして",
+      "takes": 3,
       "file": "waka-dekita.mp3",
       "files": [
         "waka-dekita.mp3",
-        "waka-dekita_2.mp3"
+        "waka-dekita_2.mp3",
+        "waka-dekita_3.mp3"
       ],
       "seconds": [
-        2.04,
-        1.6
+        1.96,
+        2.48,
+        2.2
       ],
-      "key": "0d6e7a6b61ccd00b"
+      "key": "5a19ce2ab8a2997f"
     },
     {
       "id": "hono-yattane",
@@ -121,22 +125,24 @@
     },
     {
       "id": "hono-ikke",
-      "text": "いっけー！",
+      "text": "いっけええ！",
       "engine": "gemini",
       "model": "gemini-3.8-flash-tts",
       "voice": "Leda",
-      "style": "元気な見習いパティシエの女の子（十代後半）。夜のおもてなしバトルのいちばん大きな一撃。思いきり気合いをこめて、力いっぱい叫ぶ",
-      "takes": 2,
+      "style": "元気な見習いパティシエの女の子（十代後半）。夜のおもてなしバトルの、いちばん大きな必殺の一撃。お菓子に全部の気持ちをこめて、腹の底から力いっぱい叫ぶ。熱血アニメの主人公のように勢いよく",
+      "takes": 3,
       "file": "hono-ikke.mp3",
       "files": [
         "hono-ikke.mp3",
-        "hono-ikke_2.mp3"
+        "hono-ikke_2.mp3",
+        "hono-ikke_3.mp3"
       ],
       "seconds": [
-        1.6,
-        1.96
+        2,
+        1.56,
+        1.8
       ],
-      "key": "8d87e9bca0810400"
+      "key": "cfe6ff793be56299"
     },
     {
       "id": "mina-korede",
