@@ -384,6 +384,27 @@
         1.28
       ],
       "key": "6f0ddac908a09c90"
+    },
+    {
+      "id": "hono-achaa",
+      "text": "あちゃー……",
+      "engine": "gemini",
+      "model": "gemini-3.8-flash-tts",
+      "voice": "Leda",
+      "style": "元気な見習いパティシエの女の子。お菓子をうっかり焦がしてしまって、おでこに手をあてて「あちゃー」と苦笑い。しょんぼりしつつも明るく、語尾を少しのばす",
+      "takes": 3,
+      "file": "hono-achaa.mp3",
+      "files": [
+        "hono-achaa.mp3",
+        "hono-achaa_2.mp3",
+        "hono-achaa_3.mp3"
+      ],
+      "seconds": [
+        2.04,
+        2.2,
+        2.12
+      ],
+      "key": "f93782df11a9dd9e"
     }
   ]
 }
