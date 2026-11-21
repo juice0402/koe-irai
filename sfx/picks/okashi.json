@@ -1,0 +1,33 @@
+{
+"note": "まぜまぜおかし屋（okashi）・2026-11-21 しょーくんが聞きくらべでえらんだ（https://claude.ai/artifact/Eeetm8pMx7XFv4vKPLsyQ4）。level はいまの音の大きさ（jg-dame は jg-manzoku）。jg- は assets/bgm/、ほかは assets/se/ へ。ゲームでは残響「たっぷり」をかける",
+"sounds": [
+  {"name": "tap", "sfx": "wyzowl/foley/foley-wood-touch", "level": -18.5},
+  {"name": "wipe", "sfx": "wyzowl/whooshes/whoosh-medium-soft", "level": -19.8},
+  {"name": "pick", "sfx": "wyzowl/pops/pop-medium-in", "level": -18.8},
+  {"name": "drop", "sfx": "wyzowl/pops/pop-large-bubble", "level": -15.4},
+  {"name": "bake", "sfx": "wyzowl/whooshes/whoosh-slow-medium", "level": -14.1},
+  {"name": "done", "sfx": "wyzowl/tones/tone-ding-high", "level": -15.1},
+  {"name": "burnt", "sfx": "wyzowl/notifications/notification-failure-deflate", "level": -20.4},
+  {"name": "place", "sfx": "wyzowl/impacts/impact-light-firm", "level": -18.5},
+  {"name": "kanban", "sfx": "wyzowl/shimmers/shimmer-short-bright", "level": -13.4},
+  {"name": "soroi", "sfx": "wyzowl/shimmers/shimmer-medium-sparkle", "level": -16.3},
+  {"name": "door", "sfx": "wyzowl/everyday-props/props-shop-bell", "level": -16.0},
+  {"name": "sale", "sfx": "wyzowl/money/money-register", "level": -14.4},
+  {"name": "heart", "sfx": "wyzowl/notifications/notification-success-bubble", "level": -16.6},
+  {"name": "soldout", "sfx": "wyzowl/notifications/notification-alert-clear", "level": -13.5},
+  {"name": "close", "sfx": "wyzowl/everyday-props/props-shop-bell", "level": -17.0, "rate": 0.85},
+  {"name": "card", "sfx": "wyzowl/appear-and-vanish/appear-flip-quick", "level": -23.0},
+  {"name": "serve", "sfx": "oculus/user-interface/UIClick_MagicalOpen_OS_01", "level": -15.5},
+  {"name": "hit", "sfx": "wyzowl/tones/tone-step-1", "level": -16.6},
+  {"name": "mult", "sfx": "oculus/user-interface/UIMisc_Powerup_OS_01", "level": -10.9},
+  {"name": "star", "sfx": "wyzowl/shimmers/shimmer-medium-bright", "level": -15.0},
+  {"name": "coin", "sfx": "kenney/rpg/handleCoins", "level": -15.2},
+  {"name": "reroll", "sfx": "wyzowl/swipes/swipe-medium-firm", "level": -21.8},
+  {"name": "manzoku", "sfx": "wyzowl/notifications/notification-success-flourish", "level": -13.7},
+  {"name": "fire", "sfx": "wyzowl/risers-and-fallers/riser-1s-strong", "level": -16.0},
+  {"name": "jg-hirameki", "sfx": "oculus/musical/MUSCStngr_LevelUpMallet_OS_01", "level": -12.2},
+  {"name": "jg-nakama", "sfx": "oculus/musical/MUSCStngr_LevelUpOrchestral_OS_02", "level": -11.9},
+  {"name": "jg-manzoku", "sfx": "oculus/musical/MUSCStngr_VictoryMallet_OS_01", "level": -13.4},
+  {"name": "jg-dame", "sfx": "oculus/musical/MUSCStngr_LossMallet_OS_01", "level": -13.4}
+]
+}

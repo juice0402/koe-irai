@@ -76,6 +76,10 @@ songs:
   - {id: hiru-full, model: lyria-3.5, takes: 2, prompt: ...}
 ```
 
+## 効果音（sfx/・11/21〜）
+- 作らずに、ゲームに入れてよい集（CC0・CC BY）から取りこんだ音をえらんで使う：Wyzowl・Kenney・Oculus の 1,181 音。さがし方・入れ方・クレジットは **sfx/README.md**
+- Oculus（CC BY）を使ったゲームはクレジット画面に1行いる（sfx/README.md）
+
 ## 声（voices.yml）
 - 声はキャラごとに約束（利用規約）がちがう。ゲームに使えるのは、司令塔が約束を確かめて `ok: true` にした声だけ
 - 声の一覧と約束の文は Actions「声の一覧と約束を取る」で `policies/` に取る。新しい声を使いたいときは司令塔に頼む

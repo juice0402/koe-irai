@@ -11,6 +11,9 @@
 | scripts/check.mjs | PR の点検（エンジンなし）。Lyria は新しく作る本数とお金のめやすも出す |
 | scripts/policies.mjs | 声の約束のページを policies/ に取る |
 | kept/ | とっておく曲（make.mjs はさわらない・README.md に出どころ） |
+| sfx/README.md | 効果音の集の一覧・出どころ・クレジット・使い方 |
+| scripts/sfx_import.py | 効果音の集を sfx/<集>/ に mp3 で取りこみ、sfx/catalog.json を作る（SETS に集ごとの写しの版・ライセンス） |
+| scripts/sfx_pick.py | sfx/picks/<記号>.json のとおり、えらんだ音を前の音と同じ大きさ・高さにして sfx/picks/<記号>/ に出す |
 | test/*.test.mjs | `node --test`（lyria.test.mjs は呼び出しをにせものの返事でためす） |
 | .github/workflows/irai.yml | PR → 点検 → requests/ だけなら squash → make.yml を動かす |
 | .github/workflows/make.yml | VOICEVOX を横で動かして make.mjs → out/ を main に push。作れない行があれば最後に赤 |
@@ -24,3 +27,4 @@
 
 ## 自動で作るファイル（読まない・手で直さない）
 - out/（mp3・wav・txt・manifest.json・CREDITS.md・credits.json）・package-lock.json・policies/
+- sfx/catalog.json（grep で引く）・sfx/<集>/ の mp3 と LICENSE・sfx/picks/<記号>/ の mp3
