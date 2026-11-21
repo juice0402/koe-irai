@@ -134,6 +134,7 @@ export async function synthGemini({ apiKey, model, line, fetchImpl = fetch, wait
     if (res.ok) return audioFromResponse(await res.json());
     const body = (await res.text()).slice(0, 400);
     if (res.status === 400 && shape === 'new' && /speech_metadata|voiceConfig|Unknown name|Invalid JSON payload/i.test(body)) { shape = 'old'; continue; }
+    if (res.status === 402) throw new Error('Gemini API の残高切れ（402・しょーくんが AI Studio でチャージ → 「声を作る」をもう一度）');
     if (res.status === 429 && !/per ?day|PerDay|daily/i.test(body) && tryNo <= 2) { await wait(20000 * tryNo); continue; }
     if (res.status === 429) throw new Error('Gemini の無料枠の回数を使いきった（あしたまた作る）');
     if (res.status === 400 && /API key not valid|API_KEY_INVALID/i.test(body)) throw new Error('Gemini の鍵がちがう（GEMINI_API_KEY を作りなおして入れなおす）');

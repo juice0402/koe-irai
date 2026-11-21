@@ -1,0 +1,24 @@
+# ためし（11/21 司令塔）：まぜまぜおかし屋の夜のバトル（おもてなし）の曲。3つの方向を Clip（30秒）で1本ずつ → しょーくんがえらぶ → lyria-3.5 で2本
+# a：いまのコードの曲（tools/bgm の yoru）に近い方向／b：かわいいオーケストラ／c：エレクトロポップ
+engine: lyria
+model: lyria-3-clip-preview
+takes: 1
+songs:
+  - id: yoru-a
+    prompt: >-
+      Energetic battle music for a cute card battle game at night in a magical sweets shop.
+      Bright square-wave synth lead, brass stabs, driving strings, punchy bass, xylophone accents, energetic drums.
+      A minor, 150 BPM, steady tempo. Exciting and tense but still cute and fun, not scary.
+      Loopable game BGM with consistent energy, no fade-out. Instrumental only, no vocals.
+  - id: yoru-b
+    prompt: >-
+      Whimsical orchestral battle music for a cute fantasy card game set at night.
+      Staccato strings, pizzicato, playful woodwinds, bold brass, timpani, glockenspiel and celesta sparkles.
+      D minor, 140 BPM, steady tempo. Magical, adventurous, a little mischievous, never dark.
+      Loopable game BGM with consistent energy, no fade-out. Instrumental only, no vocals, no choir.
+  - id: yoru-c
+    prompt: >-
+      Upbeat electronic pop battle music for a cute card game at a night festival.
+      Plucky synths, sparkling arpeggios, bouncy synth bass, claps and a four-on-the-floor kick, bright bell lead.
+      E minor, 145 BPM, steady tempo. Exciting, colorful and fun.
+      Loopable game BGM with consistent energy, no fade-out. Instrumental only, no vocals, no vocal chops.
