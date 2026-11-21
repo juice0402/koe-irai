@@ -10,6 +10,7 @@
 | scripts/loop.py | 曲からつなぎ目のないループ版（python3 + numpy + ffmpeg）。最後に JSON を1行 |
 | scripts/check.mjs | PR の点検（エンジンなし）。Lyria は新しく作る本数とお金のめやすも出す |
 | scripts/policies.mjs | 声の約束のページを policies/ に取る |
+| kept/ | とっておく曲（make.mjs はさわらない・README.md に出どころ） |
 | test/*.test.mjs | `node --test`（lyria.test.mjs は呼び出しをにせものの返事でためす） |
 | .github/workflows/irai.yml | PR → 点検 → requests/ だけなら squash → make.yml を動かす |
 | .github/workflows/make.yml | VOICEVOX を横で動かして make.mjs → out/ を main に push。作れない行があれば最後に赤 |

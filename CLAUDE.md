@@ -62,7 +62,7 @@ lines:
 - できるもの：`<id>.mp3`（44.1kHz ステレオ・SynthID 入り）・`<id>.txt`（構成の文）・`<id>_loop.mp3`（ゲーム用のつなぎ目のないループ・scripts/loop.py）。manifest.json の `loop.seconds` がループ1回の長さ（Web Audio の loopEnd に使う。mp3 の頭のすき間がずれるときは decode した長さとくらべる）
 - prompt は英語で、楽器・調・BPM・雰囲気と「Loopable game BGM with consistent energy, no fade-out. Instrumental only, no vocals.」。ほかの作品名・曲名・アーティスト名・「〇〇風」は書かない（公開のリポジトリに残る・安全フィルターでも止まる）
 - お金を守るしくみ：prompt・model・wav を変えた曲だけ作りなおす（`all=true` でも作りなおさない）・takes をふやしたら足した本だけ・1回の「声を作る」で12本まで・402（残高切れ）や安全フィルターで止まったら前の音を残して赤＋まとめ
-- 選んだ音は、依頼書を変える前に自分の assets にコピー。音の一覧（出どころ）に「koe-irai・Lyria:<model>（作った日・prompt は依頼書）」。AI で作った曲なので「人が演奏した」と書かない。クレジットの義務なし。App Store に出す前に Gemini API の規約をもう一度読む（game-art-rule.md の「Lyria」）
+- 選んだ音は、依頼書を変える前に自分の assets にコピー。えらばなかったけれど残したい曲は kept/<記号>/ にコピー（make.mjs はさわらない・kept/README.md に出どころ）。音の一覧（出どころ）に「koe-irai・Lyria:<model>（作った日・prompt は依頼書）」。AI で作った曲なので「人が演奏した」と書かない。クレジットの義務なし。App Store に出す前に Gemini API の規約をもう一度読む（game-art-rule.md の「Lyria」）
 ```yaml
 engine: lyria
 model: lyria-3-clip-preview   # 30秒（takes 1〜3）／lyria-3.5 は2分くらい（takes 1〜2・wav: true で .wav も）
