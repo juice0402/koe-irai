@@ -1,0 +1,65 @@
+name: ためし（Lyria・枝）
+
+# koe-try/lyria* の枝に push すると、requests/_test/lyria-* の曲だけ作って、この枝にのせる（main には入れない・司令塔のためし）
+# お金がかかる：枝にある manifest.json とくらべて、新しい曲だけ作る（同じ枝に何回 push しても作りなおさない）
+on:
+  push:
+    branches: ['koe-try/lyria*']
+
+permissions:
+  contents: write
+
+concurrency:
+  group: try-lyria
+  cancel-in-progress: false
+
+jobs:
+  try:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm ci
+      - name: ffmpeg
+        run: which ffmpeg || (sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg)
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -q numpy
+      - name: 点検
+        run: |
+          node --test > /tmp/test.log 2>&1 || { tail -30 /tmp/test.log; exit 1; }
+          node scripts/check.mjs
+      - name: 曲を作る
+        env:
+          KOE_ONLY: requests/_test/lyria-
+          KOE_SKIPPED: ${{ runner.temp }}/koe-skipped.txt
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: node scripts/make.mjs
+      - name: 音の大きさ（LUFS）
+        if: always()
+        run: |
+          mkdir -p out-try
+          for f in out/_test/lyria-*/*.mp3; do
+            [ -f "$f" ] || continue
+            echo "$f $(ffmpeg -nostats -i "$f" -af ebur128 -f null - 2>&1 | grep -E '^ +I:' | tail -1 | tr -s ' ')"
+          done | tee out-try/lufs.txt
+      - name: 枝にのせる（司令塔が取る）
+        if: always()
+        run: |
+          git config user.name "koe-irai"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A out out-try
+          if git diff --cached --quiet; then echo "変わりなし"; exit 0; fi
+          git commit -q -m "ためしの曲（${GITHUB_RUN_ID}）" && git push
+      - name: 作れなかった曲
+        if: always()
+        run: |
+          f="${{ runner.temp }}/koe-skipped.txt"
+          if [ -s "$f" ]; then cat "$f"; exit 1; fi
+          echo "ぜんぶ作れた"
