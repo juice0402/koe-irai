@@ -25,38 +25,23 @@
       "key": "de4c12accd8984f5"
     },
     {
-      "id": "mina-all-kore",
-      "text": "はっ。\nふっ。\nうん。\nよし。\nんー。",
-      "engine": "gemini",
-      "model": "gemini-3.8-flash-tts",
-      "voice": "Kore",
-      "style": "クールで口数の少ない飴細工職人の女の子。低めの落ち着いた声で、そっけなく短く。ひとことずつ、あいだを1秒あけて言う。息だけにせず、どのことばもはっきり声に出す。はっ は小さく気合い、ふっ は小さく鼻で笑う、うん は小さくうなずく、よし は静かに気合いを入れる、んー は考えこむ",
-      "takes": 1,
-      "file": "mina-all-kore.mp3",
-      "files": [
-        "mina-all-kore.mp3"
-      ],
-      "seconds": [
-        6.36
-      ],
-      "key": "b0e9eb2782e09cef"
-    },
-    {
       "id": "mina-all-despina",
       "text": "はっ。\nふっ。\nうん。\nよし。\nんー。",
       "engine": "gemini",
       "model": "gemini-3.8-flash-tts",
       "voice": "Despina",
-      "style": "クールで口数の少ない飴細工職人の女の子。低めの落ち着いた声で、そっけなく短く。ひとことずつ、あいだを1秒あけて言う。息だけにせず、どのことばもはっきり声に出す。はっ は小さく気合い、ふっ は小さく鼻で笑う、うん は小さくうなずく、よし は静かに気合いを入れる、んー は考えこむ",
-      "takes": 1,
+      "style": "クールで口数の少ない飴細工職人の女の子（十代後半）。落ち着いた声だけど低くしすぎず、若い女の子らしい少し高めの声で、そっけなく短く。ひとことずつ、あいだを1秒あけて言う。息だけにせず、どのことばもはっきり声に出す。はっ は小さく気合い、ふっ は小さく鼻で笑う、うん は小さくうなずく、よし は静かに気合いを入れる、んー は考えこむ",
+      "takes": 2,
       "file": "mina-all-despina.mp3",
       "files": [
-        "mina-all-despina.mp3"
+        "mina-all-despina.mp3",
+        "mina-all-despina_2.mp3"
       ],
       "seconds": [
-        9.08
+        9.12,
+        9.6
       ],
-      "key": "844a602a9f855336"
+      "key": "4ea1256353f77468"
     },
     {
       "id": "waka-all-achernar",
@@ -76,21 +61,25 @@
       "key": "cc94a1d4fe3586e1"
     },
     {
-      "id": "waka-all-vindemiatrix",
-      "text": "それっ。\nえいっ。\nうふふ。\nあらあら。\nまぁ。\nうーん。",
+      "id": "hono-yatta",
+      "text": "やった！",
       "engine": "gemini",
       "model": "gemini-3.8-flash-tts",
-      "voice": "Vindemiatrix",
-      "style": "おっとりした優しいお姉さん。ゆったり、ふんわり、ほほえみながら。ひとつずつしっかり間をあけて言う。それ・えい は力をぬいてかわいく、うふふ は上品に笑う、あらあら・まぁ はやさしくおどろく、うーん はのんびり考える",
-      "takes": 1,
-      "file": "waka-all-vindemiatrix.mp3",
+      "voice": "Leda",
+      "style": "元気な見習いパティシエの女の子。新しいお菓子ができてうれしくて、思わず短く「やった！」。のばさずに、パッと元気に言い切る",
+      "takes": 3,
+      "file": "hono-yatta.mp3",
       "files": [
-        "waka-all-vindemiatrix.mp3"
+        "hono-yatta.mp3",
+        "hono-yatta_2.mp3",
+        "hono-yatta_3.mp3"
       ],
       "seconds": [
-        11.84
+        1.64,
+        1.2,
+        1.2
       ],
-      "key": "e6f010160197c9b2"
+      "key": "e978b03bc1e986e3"
     }
   ]
 }
