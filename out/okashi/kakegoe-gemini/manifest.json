@@ -156,6 +156,177 @@
         1.36
       ],
       "key": "dc4c59cdadd197dc"
+    },
+    {
+      "id": "hono-taa",
+      "text": "たぁっ！",
+      "engine": "gemini",
+      "model": "gemini-3.8-flash-tts",
+      "voice": "Leda",
+      "style": "元気な見習いパティシエの女の子。夜のおもてなしバトルで、お菓子をくり出すときの短い掛け声。気合いをこめて、短く元気に言い切る",
+      "takes": 2,
+      "file": "hono-taa.mp3",
+      "files": [
+        "hono-taa.mp3",
+        "hono-taa_2.mp3"
+      ],
+      "seconds": [
+        1.04,
+        1.36
+      ],
+      "key": "d26b7e2a9d671aa6"
+    },
+    {
+      "id": "hono-tou",
+      "text": "とうっ！",
+      "engine": "gemini",
+      "model": "gemini-3.8-flash-tts",
+      "voice": "Leda",
+      "style": "元気な見習いパティシエの女の子。夜のおもてなしバトルで、お菓子をくり出すときの短い掛け声。気合いをこめて、短く元気に言い切る",
+      "takes": 2,
+      "file": "hono-tou.mp3",
+      "files": [
+        "hono-tou.mp3",
+        "hono-tou_2.mp3"
+      ],
+      "seconds": [
+        1.08,
+        0.88
+      ],
+      "key": "7dbdc6634eaa1036"
+    },
+    {
+      "id": "hono-sei",
+      "text": "せいっ！",
+      "engine": "gemini",
+      "model": "gemini-3.8-flash-tts",
+      "voice": "Leda",
+      "style": "元気な見習いパティシエの女の子。夜のおもてなしバトルで、お菓子をくり出すときの短い掛け声。気合いをこめて、短く元気に言い切る",
+      "takes": 2,
+      "file": "hono-sei.mp3",
+      "files": [
+        "hono-sei.mp3",
+        "hono-sei_2.mp3"
+      ],
+      "seconds": [
+        0.96,
+        1.04
+      ],
+      "key": "d878d076f206dcf7"
+    },
+    {
+      "id": "mina-fun",
+      "text": "ふんっ。",
+      "engine": "gemini",
+      "model": "gemini-3.8-flash-tts",
+      "voice": "Despina",
+      "style": "クールで口数の少ない飴細工職人の女の子（十代後半）。落ち着いた声だけど低くしすぎず、若い女の子らしい少し高めの声。息だけにせず、はっきり声に出す。夜のおもてなしバトルで飴をくり出すときの、短くそっけない掛け声",
+      "takes": 2,
+      "file": "mina-fun.mp3",
+      "files": [
+        "mina-fun.mp3",
+        "mina-fun_2.mp3"
+      ],
+      "seconds": [
+        0.88,
+        0.76
+      ],
+      "key": "6ff05b9816240415"
+    },
+    {
+      "id": "mina-sei",
+      "text": "せいっ。",
+      "engine": "gemini",
+      "model": "gemini-3.8-flash-tts",
+      "voice": "Despina",
+      "style": "クールで口数の少ない飴細工職人の女の子（十代後半）。落ち着いた声だけど低くしすぎず、若い女の子らしい少し高めの声。息だけにせず、はっきり声に出す。夜のおもてなしバトルで飴をくり出すときの、短くそっけない掛け声",
+      "takes": 2,
+      "file": "mina-sei.mp3",
+      "files": [
+        "mina-sei.mp3",
+        "mina-sei_2.mp3"
+      ],
+      "seconds": [
+        1.04,
+        0.68
+      ],
+      "key": "7db3eca0c0d516e1"
+    },
+    {
+      "id": "mina-soko",
+      "text": "そこ。",
+      "engine": "gemini",
+      "model": "gemini-3.8-flash-tts",
+      "voice": "Despina",
+      "style": "クールで口数の少ない飴細工職人の女の子（十代後半）。落ち着いた声だけど低くしすぎず、若い女の子らしい少し高めの声。息だけにせず、はっきり声に出す。夜のおもてなしバトルで飴をくり出すときの、短くそっけない掛け声。ねらいをさだめて小さく",
+      "takes": 2,
+      "file": "mina-soko.mp3",
+      "files": [
+        "mina-soko.mp3",
+        "mina-soko_2.mp3"
+      ],
+      "seconds": [
+        1,
+        1.12
+      ],
+      "key": "40a3b13865f98d51"
+    },
+    {
+      "id": "waka-hoi",
+      "text": "ほいっ。",
+      "engine": "gemini",
+      "model": "gemini-3.8-flash-tts",
+      "voice": "Achernar",
+      "style": "おっとりした優しいお姉さん。ゆったり、ふんわり、ほほえみながら。夜のおもてなしバトルで、くだものをくり出すときの掛け声。力をぬいてかわいく",
+      "takes": 2,
+      "file": "waka-hoi.mp3",
+      "files": [
+        "waka-hoi.mp3",
+        "waka-hoi_2.mp3"
+      ],
+      "seconds": [
+        1,
+        1.16
+      ],
+      "key": "d4e680ea0c0b773a"
+    },
+    {
+      "id": "waka-yoisho",
+      "text": "よいしょっ。",
+      "engine": "gemini",
+      "model": "gemini-3.8-flash-tts",
+      "voice": "Achernar",
+      "style": "おっとりした優しいお姉さん。ゆったり、ふんわり、ほほえみながら。夜のおもてなしバトルで、くだものをくり出すときの掛け声。力をぬいてかわいく",
+      "takes": 2,
+      "file": "waka-yoisho.mp3",
+      "files": [
+        "waka-yoisho.mp3",
+        "waka-yoisho_2.mp3"
+      ],
+      "seconds": [
+        1.88,
+        2.08
+      ],
+      "key": "b2b778df104418df"
+    },
+    {
+      "id": "waka-eei",
+      "text": "えーいっ。",
+      "engine": "gemini",
+      "model": "gemini-3.8-flash-tts",
+      "voice": "Achernar",
+      "style": "おっとりした優しいお姉さん。ゆったり、ふんわり、ほほえみながら。夜のおもてなしバトルで、くだものをくり出すときの掛け声。力をぬいてかわいく",
+      "takes": 2,
+      "file": "waka-eei.mp3",
+      "files": [
+        "waka-eei.mp3",
+        "waka-eei_2.mp3"
+      ],
+      "seconds": [
+        1.6,
+        1.44
+      ],
+      "key": "80ae01b370321553"
     }
   ]
 }
