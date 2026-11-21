@@ -1,0 +1,237 @@
+{
+  "game": "okashi",
+  "set": "kakegoe-night2",
+  "engine": "gemini",
+  "model": "gemini-3.8-flash-tts",
+  "request": "requests/okashi/kakegoe-night2.yml",
+  "lines": [
+    {
+      "id": "hono-dekita",
+      "text": "できた！",
+      "engine": "gemini",
+      "model": "gemini-3.8-flash-tts",
+      "voice": "Leda",
+      "style": "元気な見習いパティシエの女の子（十代後半）。夜のおもてなしで、まぜて最高のお菓子（★3）が完成した瞬間。うれしくて、パッと元気に言い切る",
+      "takes": 2,
+      "file": "hono-dekita.mp3",
+      "files": [
+        "hono-dekita.mp3",
+        "hono-dekita_2.mp3"
+      ],
+      "seconds": [
+        1.28,
+        1.2
+      ],
+      "key": "e046f04b1850ad06"
+    },
+    {
+      "id": "mina-kansei",
+      "text": "完成。",
+      "engine": "gemini",
+      "model": "gemini-3.8-flash-tts",
+      "voice": "Despina",
+      "style": "クールで口数の少ない飴細工職人の女の子（十代後半）。落ち着いた声だけど低くしすぎず、若い女の子らしい少し高めの声。息だけにせず、はっきり声に出す。攻撃のときの小さな気合い。短く鋭く。飴細工の大作が完成した瞬間。静かに、でも誇らしげに短く言い切る",
+      "takes": 2,
+      "file": "mina-kansei.mp3",
+      "files": [
+        "mina-kansei.mp3",
+        "mina-kansei_2.mp3"
+      ],
+      "seconds": [
+        1.32,
+        1.24
+      ],
+      "key": "30161aa95e16bd7d"
+    },
+    {
+      "id": "waka-dekita",
+      "text": "できた",
+      "engine": "gemini",
+      "model": "gemini-3.8-flash-tts",
+      "voice": "Achernar",
+      "style": "おっとりした優しいお姉さん。ゆったり、ふんわり、ほほえみながら。くだもののお菓子の大作ができた瞬間。うれしそうに、やわらかく",
+      "takes": 2,
+      "file": "waka-dekita.mp3",
+      "files": [
+        "waka-dekita.mp3",
+        "waka-dekita_2.mp3"
+      ],
+      "seconds": [
+        2.04,
+        1.6
+      ],
+      "key": "0d6e7a6b61ccd00b"
+    },
+    {
+      "id": "hono-yattane",
+      "text": "やったね！",
+      "engine": "gemini",
+      "model": "gemini-3.8-flash-tts",
+      "voice": "Leda",
+      "style": "元気な見習いパティシエの女の子（十代後半）。お客さんのおなかがいっぱいになって、ガッツポーズで元気に",
+      "takes": 2,
+      "file": "hono-yattane.mp3",
+      "files": [
+        "hono-yattane.mp3",
+        "hono-yattane_2.mp3"
+      ],
+      "seconds": [
+        1.44,
+        1.36
+      ],
+      "key": "d85e979af19843aa"
+    },
+    {
+      "id": "mina-joudeki",
+      "text": "上出来。",
+      "engine": "gemini",
+      "model": "gemini-3.8-flash-tts",
+      "voice": "Despina",
+      "style": "クールで口数の少ない飴細工職人の女の子（十代後半）。落ち着いた声だけど低くしすぎず、若い女の子らしい少し高めの声。息だけにせず、はっきり声に出す。攻撃のときの小さな気合い。短く鋭く。うまくいったときに、小さく満足そうに。少し間をおいてから",
+      "takes": 2,
+      "file": "mina-joudeki.mp3",
+      "files": [
+        "mina-joudeki.mp3",
+        "mina-joudeki_2.mp3"
+      ],
+      "seconds": [
+        1.32,
+        1.28
+      ],
+      "key": "1e5faa1376c65d6d"
+    },
+    {
+      "id": "waka-iikao",
+      "text": "うふふ、いいお顔",
+      "engine": "gemini",
+      "model": "gemini-3.8-flash-tts",
+      "voice": "Achernar",
+      "style": "おっとりした優しいお姉さん。ゆったり、ふんわり、ほほえみながら。お客さんが満足した顔を見て、うれしそうに笑いながら",
+      "takes": 2,
+      "file": "waka-iikao.mp3",
+      "files": [
+        "waka-iikao.mp3",
+        "waka-iikao_2.mp3"
+      ],
+      "seconds": [
+        2.96,
+        3.24
+      ],
+      "key": "f6b220ef45de2692"
+    },
+    {
+      "id": "hono-ikke",
+      "text": "いっけー！",
+      "engine": "gemini",
+      "model": "gemini-3.8-flash-tts",
+      "voice": "Leda",
+      "style": "元気な見習いパティシエの女の子（十代後半）。夜のおもてなしバトルのいちばん大きな一撃。思いきり気合いをこめて、力いっぱい叫ぶ",
+      "takes": 2,
+      "file": "hono-ikke.mp3",
+      "files": [
+        "hono-ikke.mp3",
+        "hono-ikke_2.mp3"
+      ],
+      "seconds": [
+        1.6,
+        1.96
+      ],
+      "key": "8d87e9bca0810400"
+    },
+    {
+      "id": "mina-korede",
+      "text": "これで。",
+      "engine": "gemini",
+      "model": "gemini-3.8-flash-tts",
+      "voice": "Despina",
+      "style": "クールで口数の少ない飴細工職人の女の子（十代後半）。落ち着いた声だけど低くしすぎず、若い女の子らしい少し高めの声。息だけにせず、はっきり声に出す。攻撃のときの小さな気合い。短く鋭く。いちばん大きな一撃を放つ瞬間。低めに、静かに、でも鋭く決める",
+      "takes": 2,
+      "file": "mina-korede.mp3",
+      "files": [
+        "mina-korede.mp3",
+        "mina-korede_2.mp3"
+      ],
+      "seconds": [
+        1.08,
+        1.16
+      ],
+      "key": "c40c2ed78a087a41"
+    },
+    {
+      "id": "waka-soree",
+      "text": "それーっ！",
+      "engine": "gemini",
+      "model": "gemini-3.8-flash-tts",
+      "voice": "Achernar",
+      "style": "おっとりした優しいお姉さん。ゆったり、ふんわり、ほほえみながら。いちばん大きな一撃。ふだんよりちょっと力を入れて、かわいく元気に",
+      "takes": 2,
+      "file": "waka-soree.mp3",
+      "files": [
+        "waka-soree.mp3",
+        "waka-soree_2.mp3"
+      ],
+      "seconds": [
+        1.44,
+        2
+      ],
+      "key": "0f4cf8e7763fa26d"
+    },
+    {
+      "id": "hono-achi",
+      "text": "あちっ！",
+      "engine": "gemini",
+      "model": "gemini-3.8-flash-tts",
+      "voice": "Leda",
+      "style": "元気な見習いパティシエの女の子（十代後半）。生地を焦がしてしまって、熱さにびっくり。短く、あわてて",
+      "takes": 2,
+      "file": "hono-achi.mp3",
+      "files": [
+        "hono-achi.mp3",
+        "hono-achi_2.mp3"
+      ],
+      "seconds": [
+        0.84,
+        1.08
+      ],
+      "key": "8b1f58cdc8993b12"
+    },
+    {
+      "id": "mina-hieta",
+      "text": "冷えた。",
+      "engine": "gemini",
+      "model": "gemini-3.8-flash-tts",
+      "voice": "Despina",
+      "style": "クールで口数の少ない飴細工職人の女の子（十代後半）。落ち着いた声だけど低くしすぎず、若い女の子らしい少し高めの声。息だけにせず、はっきり声に出す。攻撃のときの小さな気合い。短く鋭く。飴が冷えて固まった瞬間。静かに、手ごたえを感じて",
+      "takes": 2,
+      "file": "mina-hieta.mp3",
+      "files": [
+        "mina-hieta.mp3",
+        "mina-hieta_2.mp3"
+      ],
+      "seconds": [
+        1.12,
+        1.16
+      ],
+      "key": "17ca0b135767d9cf"
+    },
+    {
+      "id": "waka-jukushita",
+      "text": "熟したわぁ",
+      "engine": "gemini",
+      "model": "gemini-3.8-flash-tts",
+      "voice": "Achernar",
+      "style": "おっとりした優しいお姉さん。ゆったり、ふんわり、ほほえみながら。くだものが熟した瞬間。うっとり、のんびりうれしそうに",
+      "takes": 2,
+      "file": "waka-jukushita.mp3",
+      "files": [
+        "waka-jukushita.mp3",
+        "waka-jukushita_2.mp3"
+      ],
+      "seconds": [
+        2.2,
+        2.44
+      ],
+      "key": "c5cee1a93ae74b6a"
+    }
+  ]
+}
