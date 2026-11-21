@@ -327,6 +327,63 @@
         1.44
       ],
       "key": "80ae01b370321553"
+    },
+    {
+      "id": "hono-atk-ei",
+      "text": "えいっ！",
+      "engine": "gemini",
+      "model": "gemini-3.8-flash-tts",
+      "voice": "Leda",
+      "style": "元気な見習いパティシエの女の子。夜のおもてなしバトルで、お菓子をくり出すときの短い掛け声。気合いをこめて、短く元気に言い切る",
+      "takes": 2,
+      "file": "hono-atk-ei.mp3",
+      "files": [
+        "hono-atk-ei.mp3",
+        "hono-atk-ei_2.mp3"
+      ],
+      "seconds": [
+        1.04,
+        0.96
+      ],
+      "key": "0ea311cdc5483529"
+    },
+    {
+      "id": "hono-atk-ya",
+      "text": "やっ！",
+      "engine": "gemini",
+      "model": "gemini-3.8-flash-tts",
+      "voice": "Leda",
+      "style": "元気な見習いパティシエの女の子。夜のおもてなしバトルで、お菓子をくり出すときの短い掛け声。気合いをこめて、短く元気に言い切る",
+      "takes": 2,
+      "file": "hono-atk-ya.mp3",
+      "files": [
+        "hono-atk-ya.mp3",
+        "hono-atk-ya_2.mp3"
+      ],
+      "seconds": [
+        0.84,
+        1
+      ],
+      "key": "8890318184815dac"
+    },
+    {
+      "id": "hono-atk-sore",
+      "text": "それっ！",
+      "engine": "gemini",
+      "model": "gemini-3.8-flash-tts",
+      "voice": "Leda",
+      "style": "元気な見習いパティシエの女の子。夜のおもてなしバトルで、お菓子をくり出すときの短い掛け声。気合いをこめて、短く元気に言い切る",
+      "takes": 2,
+      "file": "hono-atk-sore.mp3",
+      "files": [
+        "hono-atk-sore.mp3",
+        "hono-atk-sore_2.mp3"
+      ],
+      "seconds": [
+        1.12,
+        1.28
+      ],
+      "key": "6f0ddac908a09c90"
     }
   ]
 }
