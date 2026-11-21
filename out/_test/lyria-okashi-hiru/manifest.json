@@ -1,0 +1,83 @@
+{
+  "game": "_test",
+  "set": "lyria-okashi-hiru",
+  "engine": "lyria",
+  "request": "requests/_test/lyria-okashi-hiru.yml",
+  "songs": [
+    {
+      "id": "hiru-a",
+      "model": "lyria-3-clip-preview",
+      "prompt": "Cozy, cheerful background music for a cute sweets-shop management game, daytime in a sunny little forest town. Music box melody, pizzicato strings, soft flute, gentle piano chords, light upright bass, soft shaker. F major, 100 BPM, steady tempo. Warm, playful and relaxing. Loopable game BGM with consistent energy, no fade-out. Instrumental only, no vocals.",
+      "loop": true,
+      "wav": false,
+      "key": "5d79012f7ca1452c",
+      "takes": [
+        {
+          "file": "hiru-a.mp3",
+          "seconds": 30.772,
+          "text": "hiru-a.txt",
+          "loop": {
+            "file": "hiru-a_loop.mp3",
+            "start": 1.649,
+            "end": 20.847,
+            "seconds": 19.199,
+            "samples": 846670,
+            "score": 0.445,
+            "seam": 0.033,
+            "song_seconds": 30.772
+          }
+        }
+      ]
+    },
+    {
+      "id": "hiru-b",
+      "model": "lyria-3-clip-preview",
+      "prompt": "Bright acoustic cafe music for a cozy sweets shop game. Ukulele and acoustic guitar strumming, glockenspiel melody, light hand claps and tambourine, warm bass. C major, 96 BPM, steady tempo. Sunny, happy, homey morning feeling. Loopable game BGM with consistent energy, no fade-out. Instrumental only, no vocals, no whistling.",
+      "loop": true,
+      "wav": false,
+      "key": "7ca1976b047cc270",
+      "takes": [
+        {
+          "file": "hiru-b.mp3",
+          "seconds": 27.69,
+          "text": "hiru-b.txt",
+          "loop": {
+            "file": "hiru-b_loop.mp3",
+            "start": 10.449,
+            "end": 22.818,
+            "seconds": 12.369,
+            "samples": 545494,
+            "score": 0.529,
+            "seam": 0.061,
+            "song_seconds": 27.69
+          }
+        }
+      ]
+    },
+    {
+      "id": "hiru-c",
+      "model": "lyria-3-clip-preview",
+      "prompt": "Light jazz cafe background music for a cute pastry shop game. Soft piano melody, vibraphone, celesta sparkles, upright bass, brushed drums with a gentle swing. B-flat major, 108 BPM, steady tempo. Elegant, sweet and cozy. Loopable game BGM with consistent energy, no fade-out. Instrumental only, no vocals.",
+      "loop": true,
+      "wav": false,
+      "key": "c4a21e864cef0829",
+      "takes": [
+        {
+          "file": "hiru-c.mp3",
+          "seconds": 30.772,
+          "text": "hiru-c.txt",
+          "loop": {
+            "file": "hiru-c_loop.mp3",
+            "start": 5.132,
+            "end": 22.905,
+            "seconds": 17.774,
+            "samples": 783822,
+            "score": 0.514,
+            "seam": 0.269,
+            "song_seconds": 30.772
+          }
+        }
+      ]
+    }
+  ]
+}

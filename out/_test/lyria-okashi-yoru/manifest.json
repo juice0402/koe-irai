@@ -1,0 +1,83 @@
+{
+  "game": "_test",
+  "set": "lyria-okashi-yoru",
+  "engine": "lyria",
+  "request": "requests/_test/lyria-okashi-yoru.yml",
+  "songs": [
+    {
+      "id": "yoru-a",
+      "model": "lyria-3-clip-preview",
+      "prompt": "Energetic battle music for a cute card battle game at night in a magical sweets shop. Bright square-wave synth lead, brass stabs, driving strings, punchy bass, xylophone accents, energetic drums. A minor, 150 BPM, steady tempo. Exciting and tense but still cute and fun, not scary. Loopable game BGM with consistent energy, no fade-out. Instrumental only, no vocals.",
+      "loop": true,
+      "wav": false,
+      "key": "e0f19491211bd45f",
+      "takes": [
+        {
+          "file": "yoru-a.mp3",
+          "seconds": 30.772,
+          "text": "yoru-a.txt",
+          "loop": {
+            "file": "yoru-a_loop.mp3",
+            "start": 13.166,
+            "end": 29.165,
+            "seconds": 16,
+            "samples": 705582,
+            "score": 0.473,
+            "seam": 0.05,
+            "song_seconds": 30.772
+          }
+        }
+      ]
+    },
+    {
+      "id": "yoru-b",
+      "model": "lyria-3-clip-preview",
+      "prompt": "Whimsical orchestral battle music for a cute fantasy card game set at night. Staccato strings, pizzicato, playful woodwinds, bold brass, timpani, glockenspiel and celesta sparkles. D minor, 140 BPM, steady tempo. Magical, adventurous, a little mischievous, never dark. Loopable game BGM with consistent energy, no fade-out. Instrumental only, no vocals, no choir.",
+      "loop": true,
+      "wav": false,
+      "key": "4d86857fcc18b3d5",
+      "takes": [
+        {
+          "file": "yoru-b.mp3",
+          "seconds": 30.772,
+          "text": "yoru-b.txt",
+          "loop": {
+            "file": "yoru-b_loop.mp3",
+            "start": 9.776,
+            "end": 23.501,
+            "seconds": 13.726,
+            "samples": 605301,
+            "score": 0.575,
+            "seam": 0.146,
+            "song_seconds": 30.772
+          }
+        }
+      ]
+    },
+    {
+      "id": "yoru-c",
+      "model": "lyria-3-clip-preview",
+      "prompt": "Upbeat electronic pop battle music for a cute card game at a night festival. Plucky synths, sparkling arpeggios, bouncy synth bass, claps and a four-on-the-floor kick, bright bell lead. E minor, 145 BPM, steady tempo. Exciting, colorful and fun. Loopable game BGM with consistent energy, no fade-out. Instrumental only, no vocals, no vocal chops.",
+      "loop": true,
+      "wav": false,
+      "key": "791ff75d4660f5f4",
+      "takes": [
+        {
+          "file": "yoru-c.mp3",
+          "seconds": 30.772,
+          "text": "yoru-c.txt",
+          "loop": {
+            "file": "yoru-c_loop.mp3",
+            "start": 6.711,
+            "end": 26.632,
+            "seconds": 19.921,
+            "samples": 878528,
+            "score": 0.737,
+            "seam": 0.221,
+            "song_seconds": 30.772
+          }
+        }
+      ]
+    }
+  ]
+}
