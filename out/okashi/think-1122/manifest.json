@@ -1,0 +1,198 @@
+{
+  "game": "okashi",
+  "set": "think-1122",
+  "engine": "gemini",
+  "model": "gemini-3.8-flash-tts",
+  "request": "requests/okashi/think-1122.yml",
+  "lines": [
+    {
+      "id": "hono-think1",
+      "text": "うーん、どれにしようかなぁ",
+      "engine": "gemini",
+      "model": "gemini-3.8-flash-tts",
+      "voice": "Leda",
+      "style": "元気な見習いパティシエの女の子（十代後半）。夜のお店で、ならんだカードを見くらべて、あごに指をあてて考えこむ。ひとりごとのように、明るく自然に",
+      "takes": 3,
+      "file": "hono-think1.mp3",
+      "files": [
+        "hono-think1.mp3",
+        "hono-think1_2.mp3",
+        "hono-think1_3.mp3"
+      ],
+      "seconds": [
+        3.12,
+        3.8,
+        3.76
+      ],
+      "key": "075f82aa7af767a7"
+    },
+    {
+      "id": "hono-think2",
+      "text": "迷うなぁ……どれもおいしそう！",
+      "engine": "gemini",
+      "model": "gemini-3.8-flash-tts",
+      "voice": "Leda",
+      "style": "元気な見習いパティシエの女の子（十代後半）。どれもよさそうで決められず、うれしそうに迷っている。ひとりごとのように、明るく自然に",
+      "takes": 3,
+      "file": "hono-think2.mp3",
+      "files": [
+        "hono-think2.mp3",
+        "hono-think2_2.mp3",
+        "hono-think2_3.mp3"
+      ],
+      "seconds": [
+        3.4,
+        4.08,
+        3.48
+      ],
+      "key": "2459ac18b690fba9"
+    },
+    {
+      "id": "hono-think3",
+      "text": "これとこれ、まぜたらどうなるかな？",
+      "engine": "gemini",
+      "model": "gemini-3.8-flash-tts",
+      "voice": "Leda",
+      "style": "元気な見習いパティシエの女の子（十代後半）。カードを見ていて、いいことを思いついてわくわく。ひとりごとのように、明るく自然に",
+      "takes": 3,
+      "file": "hono-think3.mp3",
+      "files": [
+        "hono-think3.mp3",
+        "hono-think3_2.mp3",
+        "hono-think3_3.mp3"
+      ],
+      "seconds": [
+        4,
+        3,
+        2.84
+      ],
+      "key": "da4028abf31280bb"
+    },
+    {
+      "id": "mina-think1",
+      "text": "……どれに、しよう",
+      "engine": "gemini",
+      "model": "gemini-3.8-flash-tts",
+      "voice": "Despina",
+      "style": "クールで口数の少ない飴細工職人の女の子（十代後半）。落ち着いた声だけど低くしすぎず、若い女の子らしい少し高めの声。息だけにせず、はっきり声に出す。カードを見くらべて、静かに考えている小さなひとりごと",
+      "takes": 3,
+      "file": "mina-think1.mp3",
+      "files": [
+        "mina-think1.mp3",
+        "mina-think1_2.mp3",
+        "mina-think1_3.mp3"
+      ],
+      "seconds": [
+        2.96,
+        3.04,
+        3.56
+      ],
+      "key": "a0566c05985843bf"
+    },
+    {
+      "id": "mina-think2",
+      "text": "……迷う。どれも、いい",
+      "engine": "gemini",
+      "model": "gemini-3.8-flash-tts",
+      "voice": "Despina",
+      "style": "クールで口数の少ない飴細工職人の女の子（十代後半）。落ち着いた声だけど低くしすぎず、若い女の子らしい少し高めの声。息だけにせず、はっきり声に出す。めずらしく決められなくて、少しこまっている小さなひとりごと",
+      "takes": 3,
+      "file": "mina-think2.mp3",
+      "files": [
+        "mina-think2.mp3",
+        "mina-think2_2.mp3",
+        "mina-think2_3.mp3"
+      ],
+      "seconds": [
+        3.12,
+        3.08,
+        3.72
+      ],
+      "key": "2face191d16a100b"
+    },
+    {
+      "id": "mina-think3",
+      "text": "……ん。これ、かな",
+      "engine": "gemini",
+      "model": "gemini-3.8-flash-tts",
+      "voice": "Despina",
+      "style": "クールで口数の少ない飴細工職人の女の子（十代後半）。落ち着いた声だけど低くしすぎず、若い女の子らしい少し高めの声。息だけにせず、はっきり声に出す。じっと見て、ひとつにしぼりかけている小さなひとりごと",
+      "takes": 3,
+      "file": "mina-think3.mp3",
+      "files": [
+        "mina-think3.mp3",
+        "mina-think3_2.mp3",
+        "mina-think3_3.mp3"
+      ],
+      "seconds": [
+        2.68,
+        2.92,
+        3.08
+      ],
+      "key": "ad1b5b5fce5406bc"
+    },
+    {
+      "id": "waka-think1",
+      "text": "どれにしようかしらねぇ",
+      "engine": "gemini",
+      "model": "gemini-3.8-flash-tts",
+      "voice": "Achernar",
+      "style": "おっとりした優しいお姉さんのパティシエ（二十代前半）。ほおに手をあてて、のんびりカードを見くらべる。ゆったり、ふんわり、ひとりごとのように",
+      "takes": 3,
+      "file": "waka-think1.mp3",
+      "files": [
+        "waka-think1.mp3",
+        "waka-think1_2.mp3",
+        "waka-think1_3.mp3"
+      ],
+      "seconds": [
+        3.04,
+        3.36,
+        2.76
+      ],
+      "key": "e9036f227a8b4829"
+    },
+    {
+      "id": "waka-think2",
+      "text": "あらあら、迷っちゃうわぁ",
+      "engine": "gemini",
+      "model": "gemini-3.8-flash-tts",
+      "voice": "Achernar",
+      "style": "おっとりした優しいお姉さんのパティシエ（二十代前半）。どれもすてきで決められず、うれしそうに迷っている。ゆったり、ふんわり、ひとりごとのように",
+      "takes": 3,
+      "file": "waka-think2.mp3",
+      "files": [
+        "waka-think2.mp3",
+        "waka-think2_2.mp3",
+        "waka-think2_3.mp3"
+      ],
+      "seconds": [
+        3.24,
+        4.04,
+        4.6
+      ],
+      "key": "7021e51b9725d9a1"
+    },
+    {
+      "id": "waka-think3",
+      "text": "うーん、どれもおいしそうねぇ",
+      "engine": "gemini",
+      "model": "gemini-3.8-flash-tts",
+      "voice": "Achernar",
+      "style": "おっとりした優しいお姉さんのパティシエ（二十代前半）。ならんだカードを見て、うっとり。ゆったり、ふんわり、ひとりごとのように",
+      "takes": 3,
+      "file": "waka-think3.mp3",
+      "files": [
+        "waka-think3.mp3",
+        "waka-think3_2.mp3",
+        "waka-think3_3.mp3"
+      ],
+      "seconds": [
+        4.04,
+        3.84,
+        4.12
+      ],
+      "key": "c24f597d2e1c0680"
+    }
+  ]
+}
