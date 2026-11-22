@@ -1,0 +1,282 @@
+{
+  "game": "okashi",
+  "set": "waka-tip-1122",
+  "engine": "gemini",
+  "model": "gemini-3.8-flash-tts",
+  "request": "requests/okashi/waka-tip-1122.yml",
+  "lines": [
+    {
+      "id": "waka-sore",
+      "text": "それっ。",
+      "engine": "gemini",
+      "model": "gemini-3.8-flash-tts",
+      "voice": "Achernar",
+      "style": "おっとりした優しいお姉さんのパティシエ（二十代前半）。夜のおもてなしバトルで、くだものをくり出すときの短い掛け声。息だけにせず、ふんわりした声ではっきり、かわいく軽やかに言い切る",
+      "takes": 3,
+      "file": "waka-sore.mp3",
+      "files": [
+        "waka-sore.mp3",
+        "waka-sore_2.mp3",
+        "waka-sore_3.mp3"
+      ],
+      "seconds": [
+        1.12,
+        0.96,
+        1.32
+      ],
+      "key": "50bbcc5d2be67930"
+    },
+    {
+      "id": "waka-ei",
+      "text": "えいっ。",
+      "engine": "gemini",
+      "model": "gemini-3.8-flash-tts",
+      "voice": "Achernar",
+      "style": "おっとりした優しいお姉さんのパティシエ（二十代前半）。夜のおもてなしバトルで、くだものをくり出すときの短い掛け声。息だけにせず、ふんわりした声ではっきり、かわいく軽やかに言い切る",
+      "takes": 3,
+      "file": "waka-ei.mp3",
+      "files": [
+        "waka-ei.mp3",
+        "waka-ei_2.mp3",
+        "waka-ei_3.mp3"
+      ],
+      "seconds": [
+        0.88,
+        1.04,
+        0.84
+      ],
+      "key": "e990a0ce96cd5b85"
+    },
+    {
+      "id": "waka-hoi",
+      "text": "ほいっ。",
+      "engine": "gemini",
+      "model": "gemini-3.8-flash-tts",
+      "voice": "Achernar",
+      "style": "おっとりした優しいお姉さんのパティシエ（二十代前半）。夜のおもてなしバトルで、くだものをくり出すときの短い掛け声。息だけにせず、ふんわりした声ではっきり、かわいく軽やかに言い切る",
+      "takes": 3,
+      "file": "waka-hoi.mp3",
+      "files": [
+        "waka-hoi.mp3",
+        "waka-hoi_2.mp3",
+        "waka-hoi_3.mp3"
+      ],
+      "seconds": [
+        0.88,
+        1.04,
+        1.2
+      ],
+      "key": "df4fb3bf889905ba"
+    },
+    {
+      "id": "waka-eei",
+      "text": "えーいっ。",
+      "engine": "gemini",
+      "model": "gemini-3.8-flash-tts",
+      "voice": "Achernar",
+      "style": "おっとりした優しいお姉さんのパティシエ（二十代前半）。夜のおもてなしバトルで、くだものをくり出すときの掛け声。少しだけ力を入れて、かわいく元気に。息だけにせず、はっきり声に出す",
+      "takes": 3,
+      "file": "waka-eei.mp3",
+      "files": [
+        "waka-eei.mp3",
+        "waka-eei_2.mp3",
+        "waka-eei_3.mp3"
+      ],
+      "seconds": [
+        1.4,
+        1.28,
+        1.8
+      ],
+      "key": "cb5aab4dd91114e1"
+    },
+    {
+      "id": "waka-dekita",
+      "text": "できたわぁ",
+      "engine": "gemini",
+      "model": "gemini-3.8-flash-tts",
+      "voice": "Achernar",
+      "style": "おっとりした優しいお姉さんのパティシエ（二十代前半）。大きなくだもののお菓子が完成して、両手をあわせて ほっこりうれしそう。やさしく、語尾を少しのばして",
+      "takes": 3,
+      "file": "waka-dekita.mp3",
+      "files": [
+        "waka-dekita.mp3",
+        "waka-dekita_2.mp3",
+        "waka-dekita_3.mp3"
+      ],
+      "seconds": [
+        1.92,
+        2.24,
+        2.4
+      ],
+      "key": "8eac3b994b9179d3"
+    },
+    {
+      "id": "waka-iikao",
+      "text": "うふふ、いいお顔",
+      "engine": "gemini",
+      "model": "gemini-3.8-flash-tts",
+      "voice": "Achernar",
+      "style": "おっとりした優しいお姉さんのパティシエ（二十代前半）。お客さんが満足した顔を見て、うれしそうに小さく笑いながら、やさしく",
+      "takes": 3,
+      "file": "waka-iikao.mp3",
+      "files": [
+        "waka-iikao.mp3",
+        "waka-iikao_2.mp3",
+        "waka-iikao_3.mp3"
+      ],
+      "seconds": [
+        3.88,
+        2.96,
+        2.92
+      ],
+      "key": "45bc88bfee4a5700"
+    },
+    {
+      "id": "waka-soree",
+      "text": "それーっ！",
+      "engine": "gemini",
+      "model": "gemini-3.8-flash-tts",
+      "voice": "Achernar",
+      "style": "おっとりした優しいお姉さんのパティシエ（二十代前半）。いちばん大きな一撃。ふだんよりちょっと力を入れて、かわいく元気に",
+      "takes": 3,
+      "file": "waka-soree.mp3",
+      "files": [
+        "waka-soree.mp3",
+        "waka-soree_2.mp3",
+        "waka-soree_3.mp3"
+      ],
+      "seconds": [
+        1.6,
+        1.72,
+        1.6
+      ],
+      "key": "c39d5f6c91d90889"
+    },
+    {
+      "id": "waka-jukushita",
+      "text": "熟したわぁ",
+      "engine": "gemini",
+      "model": "gemini-3.8-flash-tts",
+      "voice": "Achernar",
+      "style": "おっとりした優しいお姉さんのパティシエ（二十代前半）。くだものが熟した瞬間。うっとり、のんびりうれしそうに",
+      "takes": 3,
+      "file": "waka-jukushita.mp3",
+      "files": [
+        "waka-jukushita.mp3",
+        "waka-jukushita_2.mp3",
+        "waka-jukushita_3.mp3"
+      ],
+      "seconds": [
+        2.52,
+        2.44,
+        2.24
+      ],
+      "key": "bc1d0fa6d838bd38"
+    },
+    {
+      "id": "waka-ufufu",
+      "text": "うふふっ。",
+      "engine": "gemini",
+      "model": "gemini-3.8-flash-tts",
+      "voice": "Achernar",
+      "style": "おっとりした優しいお姉さんのパティシエ（二十代前半）。お客さんが大満足してくれて、口もとに手をあてて上品に、うれしそうに笑う",
+      "takes": 3,
+      "file": "waka-ufufu.mp3",
+      "files": [
+        "waka-ufufu.mp3",
+        "waka-ufufu_2.mp3",
+        "waka-ufufu_3.mp3"
+      ],
+      "seconds": [
+        1.32,
+        1.44,
+        1.76
+      ],
+      "key": "5e6d9e96d8cd8aa2"
+    },
+    {
+      "id": "waka-uun",
+      "text": "うーん",
+      "engine": "gemini",
+      "model": "gemini-3.8-flash-tts",
+      "voice": "Achernar",
+      "style": "おっとりした優しいお姉さんのパティシエ（二十代前半）。どのくだものを使おうか、首をかしげて のんびり考えこむ。息だけにせず、やわらかい声で",
+      "takes": 3,
+      "file": "waka-uun.mp3",
+      "files": [
+        "waka-uun.mp3",
+        "waka-uun_2.mp3",
+        "waka-uun_3.mp3"
+      ],
+      "seconds": [
+        2.52,
+        2,
+        1.88
+      ],
+      "key": "4c22a2ee4e6344d9"
+    },
+    {
+      "id": "hono-tip-shop1",
+      "text": "カードを、下の ちょうりだいへ ドラッグ！ いちラウンドめは、さんまい タダだよ！",
+      "engine": "gemini",
+      "model": "gemini-3.8-flash-tts",
+      "voice": "Leda",
+      "style": "元気な見習いパティシエの女の子（十代後半）。はじめて夜のお店を手伝ってくれる人に、となりで明るくやさしく教えてあげる。テンポよく、聞き取りやすく、自然な声で",
+      "takes": 3,
+      "file": "hono-tip-shop1.mp3",
+      "files": [
+        "hono-tip-shop1.mp3",
+        "hono-tip-shop1_2.mp3",
+        "hono-tip-shop1_3.mp3"
+      ],
+      "seconds": [
+        5.12,
+        5.48,
+        5.56
+      ],
+      "key": "45b1845b32b10bdc"
+    },
+    {
+      "id": "hono-tip-bake",
+      "text": "じゅんびができたら、おもてなし！を タップして、おなかいっぱいに！",
+      "engine": "gemini",
+      "model": "gemini-3.8-flash-tts",
+      "voice": "Leda",
+      "style": "元気な見習いパティシエの女の子（十代後半）。はじめて夜のお店を手伝ってくれる人に、となりで明るくやさしく教えてあげる。テンポよく、聞き取りやすく、自然な声で",
+      "takes": 3,
+      "file": "hono-tip-bake.mp3",
+      "files": [
+        "hono-tip-bake.mp3",
+        "hono-tip-bake_2.mp3",
+        "hono-tip-bake_3.mp3"
+      ],
+      "seconds": [
+        4.44,
+        4.4,
+        4.4
+      ],
+      "key": "7030fec03fe4585c"
+    },
+    {
+      "id": "hono-tip-mix",
+      "text": "かさねると、まぜまぜできるよ！ まぜると、ほしが上がるんだよ",
+      "engine": "gemini",
+      "model": "gemini-3.8-flash-tts",
+      "voice": "Leda",
+      "style": "元気な見習いパティシエの女の子（十代後半）。はじめて夜のお店を手伝ってくれる人に、となりで明るくやさしく教えてあげる。テンポよく、聞き取りやすく、自然な声で",
+      "takes": 3,
+      "file": "hono-tip-mix.mp3",
+      "files": [
+        "hono-tip-mix.mp3",
+        "hono-tip-mix_2.mp3",
+        "hono-tip-mix_3.mp3"
+      ],
+      "seconds": [
+        4.84,
+        4.72,
+        4.52
+      ],
+      "key": "660feb6254e6d7e7"
+    }
+  ]
+}
