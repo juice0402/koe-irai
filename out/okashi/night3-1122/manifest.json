@@ -1,0 +1,47 @@
+{
+  "game": "okashi",
+  "set": "night3-1122",
+  "engine": "gemini",
+  "model": "gemini-3.8-flash-tts",
+  "request": "requests/okashi/night3-1122.yml",
+  "lines": [
+    {
+      "id": "hono-tane1",
+      "text": "こねこね……ふっくら、パン種できた！",
+      "engine": "gemini",
+      "model": "gemini-3.8-flash-tts",
+      "voice": "Leda",
+      "style": "元気な見習いパティシエの女の子（十代後半）。パン生地をこねていたら、ふっくらパン種が生まれて、うれしくてはしゃぐ。明るく元気に",
+      "takes": 2,
+      "file": "hono-tane1.mp3",
+      "files": [
+        "hono-tane1.mp3",
+        "hono-tane1_2.mp3"
+      ],
+      "seconds": [
+        5.76,
+        5.16
+      ],
+      "key": "6cb22435220e2a8d"
+    },
+    {
+      "id": "hono-tane2",
+      "text": "やった、パン種がふえたよ！",
+      "engine": "gemini",
+      "model": "gemini-3.8-flash-tts",
+      "voice": "Leda",
+      "style": "元気な見習いパティシエの女の子（十代後半）。パン生地をこねていたら、ふっくらパン種が生まれて、うれしくてはしゃぐ。明るく元気に",
+      "takes": 2,
+      "file": "hono-tane2.mp3",
+      "files": [
+        "hono-tane2.mp3",
+        "hono-tane2_2.mp3"
+      ],
+      "seconds": [
+        3.32,
+        2.56
+      ],
+      "key": "363391a75fc30e9c"
+    }
+  ]
+}
