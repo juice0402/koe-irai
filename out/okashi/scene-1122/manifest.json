@@ -1,0 +1,93 @@
+{
+  "game": "okashi",
+  "set": "scene-1122",
+  "engine": "gemini",
+  "model": "gemini-3.8-flash-tts",
+  "request": "requests/okashi/scene-1122.yml",
+  "lines": [
+    {
+      "id": "hono-max1",
+      "text": "よーし、火力マックス！",
+      "engine": "gemini",
+      "model": "gemini-3.8-flash-tts",
+      "voice": "Leda",
+      "style": "元気な見習いパティシエの女の子（十代後半）。オーブンの火がごうっと燃えあがって、テンションが一気に上がる。こぶしをにぎって、元気いっぱいに",
+      "takes": 3,
+      "file": "hono-max1.mp3",
+      "files": [
+        "hono-max1.mp3",
+        "hono-max1_2.mp3",
+        "hono-max1_3.mp3"
+      ],
+      "seconds": [
+        2.56,
+        3.12,
+        2.6
+      ],
+      "key": "99f7609e4408243b"
+    },
+    {
+      "id": "hono-max2",
+      "text": "火力、マックスー！ いっくよー！",
+      "engine": "gemini",
+      "model": "gemini-3.8-flash-tts",
+      "voice": "Leda",
+      "style": "元気な見習いパティシエの女の子（十代後半）。オーブンの火がごうっと燃えあがって、テンションが一気に上がる。こぶしをにぎって、元気いっぱいに",
+      "takes": 3,
+      "file": "hono-max2.mp3",
+      "files": [
+        "hono-max2.mp3",
+        "hono-max2_2.mp3",
+        "hono-max2_3.mp3"
+      ],
+      "seconds": [
+        4.24,
+        3.4,
+        3.64
+      ],
+      "key": "6e4e0e8571dc3e82"
+    },
+    {
+      "id": "mina-iikanji1",
+      "text": "……ん、いい感じ",
+      "engine": "gemini",
+      "model": "gemini-3.8-flash-tts",
+      "voice": "Despina",
+      "style": "クールで口数の少ない飴細工職人の女の子（十代後半）。落ち着いた声だけど低くしすぎず、若い女の子らしい少し高めの声。息だけにせず、はっきり声に出す。飴細工がちょうどよく冷えて固まり、小さく満足してうなずく",
+      "takes": 3,
+      "file": "mina-iikanji1.mp3",
+      "files": [
+        "mina-iikanji1.mp3",
+        "mina-iikanji1_2.mp3",
+        "mina-iikanji1_3.mp3"
+      ],
+      "seconds": [
+        2.44,
+        2.28,
+        1.92
+      ],
+      "key": "602fb5afb3ff8b45"
+    },
+    {
+      "id": "mina-iikanji2",
+      "text": "……いい感じに、冷えた",
+      "engine": "gemini",
+      "model": "gemini-3.8-flash-tts",
+      "voice": "Despina",
+      "style": "クールで口数の少ない飴細工職人の女の子（十代後半）。落ち着いた声だけど低くしすぎず、若い女の子らしい少し高めの声。息だけにせず、はっきり声に出す。飴細工がちょうどよく冷えて固まり、小さく満足してうなずく",
+      "takes": 3,
+      "file": "mina-iikanji2.mp3",
+      "files": [
+        "mina-iikanji2.mp3",
+        "mina-iikanji2_2.mp3",
+        "mina-iikanji2_3.mp3"
+      ],
+      "seconds": [
+        3.32,
+        3.6,
+        3.56
+      ],
+      "key": "11153737c2134226"
+    }
+  ]
+}
