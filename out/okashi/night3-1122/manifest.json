@@ -42,6 +42,329 @@
         2.56
       ],
       "key": "363391a75fc30e9c"
+    },
+    {
+      "id": "mina-chain1",
+      "text": "……きれいに、つながった",
+      "engine": "gemini",
+      "model": "gemini-3.8-flash-tts",
+      "voice": "Despina",
+      "style": "クールで口数の少ない飴細工職人の女の子（十代後半）。落ち着いた声だけど低くしすぎず、若い女の子らしい少し高めの声。息だけにせず、はっきり声に出す。キャンディがきれいに続いて、小さく満足している",
+      "takes": 2,
+      "file": "mina-chain1.mp3",
+      "files": [
+        "mina-chain1.mp3",
+        "mina-chain1_2.mp3"
+      ],
+      "seconds": [
+        3.88,
+        3.2
+      ],
+      "key": "cf76961e4fea8418"
+    },
+    {
+      "id": "mina-chain2",
+      "text": "……まだ、つながる",
+      "engine": "gemini",
+      "model": "gemini-3.8-flash-tts",
+      "voice": "Despina",
+      "style": "クールで口数の少ない飴細工職人の女の子（十代後半）。落ち着いた声だけど低くしすぎず、若い女の子らしい少し高めの声。息だけにせず、はっきり声に出す。キャンディがどんどん続いて、静かに気持ちがのってきた",
+      "takes": 2,
+      "file": "mina-chain2.mp3",
+      "files": [
+        "mina-chain2.mp3",
+        "mina-chain2_2.mp3"
+      ],
+      "seconds": [
+        1.64,
+        1.92
+      ],
+      "key": "57668e7cbd01ed06"
+    },
+    {
+      "id": "hono-go1",
+      "text": "いっくよー！ おもてなし、スタート！",
+      "engine": "gemini",
+      "model": "gemini-3.8-flash-tts",
+      "voice": "Leda",
+      "style": "元気な見習いパティシエの女の子（十代後半）。夜のおもてなしの始まり。お客さんのモンスターに、こぶしをあげて元気いっぱいに",
+      "takes": 2,
+      "file": "hono-go1.mp3",
+      "files": [
+        "hono-go1.mp3",
+        "hono-go1_2.mp3"
+      ],
+      "seconds": [
+        4.12,
+        3.6
+      ],
+      "key": "30c3ce070a483ede"
+    },
+    {
+      "id": "hono-go2",
+      "text": "さあ、めしあがれー！",
+      "engine": "gemini",
+      "model": "gemini-3.8-flash-tts",
+      "voice": "Leda",
+      "style": "元気な見習いパティシエの女の子（十代後半）。夜のおもてなしの始まり。お客さんのモンスターに、明るくはりきって",
+      "takes": 2,
+      "file": "hono-go2.mp3",
+      "files": [
+        "hono-go2.mp3",
+        "hono-go2_2.mp3"
+      ],
+      "seconds": [
+        1.8,
+        2.36
+      ],
+      "key": "b019b10f0b262a40"
+    },
+    {
+      "id": "mina-go1",
+      "text": "……いくよ。見てて",
+      "engine": "gemini",
+      "model": "gemini-3.8-flash-tts",
+      "voice": "Despina",
+      "style": "クールで口数の少ない飴細工職人の女の子（十代後半）。落ち着いた声だけど低くしすぎず、若い女の子らしい少し高めの声。息だけにせず、はっきり声に出す。おもてなしの始まり。静かに、でも少しだけ気合いをこめて",
+      "takes": 2,
+      "file": "mina-go1.mp3",
+      "files": [
+        "mina-go1.mp3",
+        "mina-go1_2.mp3"
+      ],
+      "seconds": [
+        2.28,
+        2.44
+      ],
+      "key": "707c20b093b10171"
+    },
+    {
+      "id": "mina-go2",
+      "text": "……さあ、おもてなし",
+      "engine": "gemini",
+      "model": "gemini-3.8-flash-tts",
+      "voice": "Despina",
+      "style": "クールで口数の少ない飴細工職人の女の子（十代後半）。落ち着いた声だけど低くしすぎず、若い女の子らしい少し高めの声。息だけにせず、はっきり声に出す。おもてなしの始まり。静かに、でも少しだけ気合いをこめて",
+      "takes": 2,
+      "file": "mina-go2.mp3",
+      "files": [
+        "mina-go2.mp3",
+        "mina-go2_2.mp3"
+      ],
+      "seconds": [
+        2.36,
+        2.48
+      ],
+      "key": "03cb6e356c298275"
+    },
+    {
+      "id": "waka-go1",
+      "text": "うふふ、めしあがれぇ",
+      "engine": "gemini",
+      "model": "gemini-3.8-flash-tts",
+      "voice": "Achernar",
+      "style": "おっとりした優しいお姉さんのパティシエ（二十代前半）。おもてなしの始まり。お客さんにほほえみかけて、やさしく",
+      "takes": 2,
+      "file": "waka-go1.mp3",
+      "files": [
+        "waka-go1.mp3",
+        "waka-go1_2.mp3"
+      ],
+      "seconds": [
+        2.8,
+        2.72
+      ],
+      "key": "204116cb176065a5"
+    },
+    {
+      "id": "waka-go2",
+      "text": "さあ、おもてなしの時間よぉ",
+      "engine": "gemini",
+      "model": "gemini-3.8-flash-tts",
+      "voice": "Achernar",
+      "style": "おっとりした優しいお姉さんのパティシエ（二十代前半）。おもてなしの始まり。お客さんにほほえみかけて、やさしく",
+      "takes": 2,
+      "file": "waka-go2.mp3",
+      "files": [
+        "waka-go2.mp3",
+        "waka-go2_2.mp3"
+      ],
+      "seconds": [
+        3.08,
+        3
+      ],
+      "key": "7d2c2b845fd9db9a"
+    },
+    {
+      "id": "hono-wow1",
+      "text": "すっごーい！",
+      "engine": "gemini",
+      "model": "gemini-3.8-flash-tts",
+      "voice": "Leda",
+      "style": "元気な見習いパティシエの女の子（十代後半）。ものすごい一撃が出て、目を丸くして大よろこび。大きな声で",
+      "takes": 2,
+      "file": "hono-wow1.mp3",
+      "files": [
+        "hono-wow1.mp3",
+        "hono-wow1_2.mp3"
+      ],
+      "seconds": [
+        1.88,
+        2.08
+      ],
+      "key": "784bfbc25aa70d30"
+    },
+    {
+      "id": "hono-wow2",
+      "text": "わぁっ、すごいの出ちゃった！",
+      "engine": "gemini",
+      "model": "gemini-3.8-flash-tts",
+      "voice": "Leda",
+      "style": "元気な見習いパティシエの女の子（十代後半）。ものすごい一撃が出て、目を丸くして大よろこび。大きな声で",
+      "takes": 2,
+      "file": "hono-wow2.mp3",
+      "files": [
+        "hono-wow2.mp3",
+        "hono-wow2_2.mp3"
+      ],
+      "seconds": [
+        3.44,
+        3.24
+      ],
+      "key": "180060d2ceae9a66"
+    },
+    {
+      "id": "mina-wow1",
+      "text": "……今の、すごかった",
+      "engine": "gemini",
+      "model": "gemini-3.8-flash-tts",
+      "voice": "Despina",
+      "style": "クールで口数の少ない飴細工職人の女の子（十代後半）。落ち着いた声だけど低くしすぎず、若い女の子らしい少し高めの声。息だけにせず、はっきり声に出す。ものすごい一撃が出て、めずらしく少しおどろいている",
+      "takes": 2,
+      "file": "mina-wow1.mp3",
+      "files": [
+        "mina-wow1.mp3",
+        "mina-wow1_2.mp3"
+      ],
+      "seconds": [
+        3.4,
+        3.24
+      ],
+      "key": "b792564c376ff62f"
+    },
+    {
+      "id": "mina-wow2",
+      "text": "……え。すごい",
+      "engine": "gemini",
+      "model": "gemini-3.8-flash-tts",
+      "voice": "Despina",
+      "style": "クールで口数の少ない飴細工職人の女の子（十代後半）。落ち着いた声だけど低くしすぎず、若い女の子らしい少し高めの声。息だけにせず、はっきり声に出す。ものすごい一撃が出て、めずらしく少しおどろいている",
+      "takes": 2,
+      "file": "mina-wow2.mp3",
+      "files": [
+        "mina-wow2.mp3",
+        "mina-wow2_2.mp3"
+      ],
+      "seconds": [
+        2.16,
+        2.12
+      ],
+      "key": "253c81cbe56e1510"
+    },
+    {
+      "id": "waka-wow1",
+      "text": "あらあら、すごいわぁ！",
+      "engine": "gemini",
+      "model": "gemini-3.8-flash-tts",
+      "voice": "Achernar",
+      "style": "おっとりした優しいお姉さんのパティシエ（二十代前半）。ものすごい一撃が出て、手を口にあてておどろき、うれしそうに",
+      "takes": 2,
+      "file": "waka-wow1.mp3",
+      "files": [
+        "waka-wow1.mp3",
+        "waka-wow1_2.mp3"
+      ],
+      "seconds": [
+        3.44,
+        2.68
+      ],
+      "key": "58fc9c71e59b2002"
+    },
+    {
+      "id": "waka-wow2",
+      "text": "まぁ、こんなにたくさん……！",
+      "engine": "gemini",
+      "model": "gemini-3.8-flash-tts",
+      "voice": "Achernar",
+      "style": "おっとりした優しいお姉さんのパティシエ（二十代前半）。ものすごい一撃が出て、手を口にあてておどろき、うれしそうに",
+      "takes": 2,
+      "file": "waka-wow2.mp3",
+      "files": [
+        "waka-wow2.mp3",
+        "waka-wow2_2.mp3"
+      ],
+      "seconds": [
+        2.72,
+        3.6
+      ],
+      "key": "3a1fb0e470ca9c17"
+    },
+    {
+      "id": "hono-pick",
+      "text": "よーし、まかせて！",
+      "engine": "gemini",
+      "model": "gemini-3.8-flash-tts",
+      "voice": "Leda",
+      "style": "元気な見習いパティシエの女の子（十代後半）。今夜のおもてなしをまかされて、胸をたたいて元気に",
+      "takes": 2,
+      "file": "hono-pick.mp3",
+      "files": [
+        "hono-pick.mp3",
+        "hono-pick_2.mp3"
+      ],
+      "seconds": [
+        2.4,
+        2.24
+      ],
+      "key": "c2299cb18b32a782"
+    },
+    {
+      "id": "mina-pick",
+      "text": "……ん。まかせて",
+      "engine": "gemini",
+      "model": "gemini-3.8-flash-tts",
+      "voice": "Despina",
+      "style": "クールで口数の少ない飴細工職人の女の子（十代後半）。落ち着いた声だけど低くしすぎず、若い女の子らしい少し高めの声。息だけにせず、はっきり声に出す。今夜のおもてなしをまかされて、静かにうなずく",
+      "takes": 2,
+      "file": "mina-pick.mp3",
+      "files": [
+        "mina-pick.mp3",
+        "mina-pick_2.mp3"
+      ],
+      "seconds": [
+        2.16,
+        2.52
+      ],
+      "key": "65b890677d2a0da2"
+    },
+    {
+      "id": "waka-pick",
+      "text": "うふふ、まかせてねぇ",
+      "engine": "gemini",
+      "model": "gemini-3.8-flash-tts",
+      "voice": "Achernar",
+      "style": "おっとりした優しいお姉さんのパティシエ（二十代前半）。今夜のおもてなしをまかされて、ほほえんでやさしく",
+      "takes": 2,
+      "file": "waka-pick.mp3",
+      "files": [
+        "waka-pick.mp3",
+        "waka-pick_2.mp3"
+      ],
+      "seconds": [
+        2.88,
+        2.72
+      ],
+      "key": "53fe7c7f742261a1"
     }
   ]
 }
