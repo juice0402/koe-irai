@@ -1,0 +1,14 @@
+# まぜまぜおかし屋（okashi）：夜市のページの曲（11/23 しょーくん「ベルタのシーンは専用の音楽を」→ えらぶ質問で「ランタンの夜市」）
+# 夕方、来店の前に寄るドワーフの行商人ベルタの屋台。lyria-3.5 で2本（約24円）→ 聞きくらべで しょーくんがえらぶ
+engine: lyria
+model: lyria-3.5
+takes: 2
+songs:
+  - id: ichi
+    prompt: >-
+      Warm, charming background music for a cute fantasy card game: a small lantern-lit night market at dusk,
+      where a cheerful traveling merchant sells magical ingredients from her wooden stall.
+      Accordion melody, mandolin tremolo, nylon guitar, soft hand percussion, upright bass, a little glockenspiel.
+      Gentle waltz in 3/4, D minor with bright moments in F major, 96 BPM, steady tempo. Slightly exotic, cozy and a bit mysterious, never scary.
+      About 2 minutes long, with an A section and a B section that keep the same tempo, key and energy from start to end.
+      Loopable game BGM with consistent energy, no fade-out. Instrumental only, no vocals.
