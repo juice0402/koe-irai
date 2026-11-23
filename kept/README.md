@@ -19,3 +19,10 @@
 | yoru-c.mp3 | 夜のバトル C：エレクトロポップ（ホ短調・145BPM）→ みなもの2分の曲 | yoru-c_loop.mp3 |
 
 2分の曲（lyria-3.5・8本）は out/_test/lyria-okashi-full/ にある（requests/_test/lyria-okashi-full.yml を変えると作りなおされて消えるので、変える前にここへコピーする）。
+
+## okashi/lyria-2026-11-23（まぜまぜおかし屋の夜市・2分）
+出どころ：koe-irai・Lyria:lyria-3.5（2026-11-23・prompt は requests/okashi/bgm-ichi.yml）。しょーくんは A（ichi.mp3）をえらんで夜市に入れた。B も「どこかで使うかもしれない」（11/23）
+
+| ファイル | 曲 | ループ版 |
+| --- | --- | --- |
+| ichi_2.mp3 | 夜市 B：ランタンの夜市・アコーディオン・マンドリン・ゆったり3拍子（ニ短調・96BPM）・ループ 67.2秒 | ichi_2_loop.mp3 |
